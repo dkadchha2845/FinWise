@@ -1,0 +1,198 @@
+{
+ "provider": {
+  "provider": "groq",
+  "model": "openai/gpt-oss-120b",
+  "available": true
+ },
+ "dataset": "535 transactions, 3 personas, 3 months, 15 planted anomalies",
+ "categorisation": {
+  "rules": {
+   "accuracy": 0.643,
+   "macro_f1": 0.6764,
+   "weighted_f1": 0.7635,
+   "llm_calls": 0,
+   "prompt_tokens": 0,
+   "completion_tokens": 0,
+   "txns_labelled_by_llm": 0,
+   "seconds": 0.01,
+   "n": 535
+  },
+  "llm": {
+   "accuracy": 0.9327,
+   "macro_f1": 0.8581,
+   "weighted_f1": 0.9367,
+   "llm_calls": 6,
+   "prompt_tokens": 9795,
+   "completion_tokens": 3524,
+   "txns_labelled_by_llm": 535,
+   "seconds": 78.49,
+   "n": 535
+  },
+  "hybrid": {
+   "accuracy": 0.972,
+   "macro_f1": 0.9672,
+   "weighted_f1": 0.9721,
+   "llm_calls": 3,
+   "prompt_tokens": 4934,
+   "completion_tokens": 1898,
+   "txns_labelled_by_llm": 191,
+   "seconds": 46.24,
+   "n": 535
+  }
+ },
+ "anomaly_true_categories": {
+  "zscore_global": {
+   "tp": 6,
+   "fp": 0,
+   "fn": 9,
+   "precision": 1.0,
+   "recall": 0.4,
+   "f1": 0.5714
+  },
+  "zscore_category": {
+   "tp": 5,
+   "fp": 1,
+   "fn": 10,
+   "precision": 0.8333,
+   "recall": 0.3333,
+   "f1": 0.4762
+  },
+  "finwise": {
+   "tp": 15,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0
+  }
+ },
+ "anomaly_ablation": {
+  "full": {
+   "tp": 15,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0
+  },
+  "suppression": {
+   "tp": 15,
+   "fp": 6,
+   "fn": 0,
+   "precision": 0.7143,
+   "recall": 1.0,
+   "f1": 0.8333
+  },
+  "min_history": {
+   "tp": 15,
+   "fp": 2,
+   "fn": 0,
+   "precision": 0.8824,
+   "recall": 1.0,
+   "f1": 0.9375
+  },
+  "merchant": {
+   "tp": 15,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0
+  },
+  "duplicate": {
+   "tp": 12,
+   "fp": 0,
+   "fn": 3,
+   "precision": 1.0,
+   "recall": 0.8,
+   "f1": 0.8889
+  },
+  "new_merchant": {
+   "tp": 15,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0
+  }
+ },
+ "anomaly_pred_categories": {
+  "zscore_global": {
+   "tp": 5,
+   "fp": 3,
+   "fn": 10,
+   "precision": 0.625,
+   "recall": 0.3333,
+   "f1": 0.4348
+  },
+  "zscore_category": {
+   "tp": 6,
+   "fp": 1,
+   "fn": 9,
+   "precision": 0.8571,
+   "recall": 0.4,
+   "f1": 0.5455
+  },
+  "finwise": {
+   "tp": 15,
+   "fp": 2,
+   "fn": 0,
+   "precision": 0.8824,
+   "recall": 1.0,
+   "f1": 0.9375
+  }
+ },
+ "qa": {
+  "stuffing": {
+   "n": 20,
+   "correct": 5,
+   "claims": 29,
+   "supported": 15,
+   "gfs_sum": 12.625,
+   "fully_verified": 12,
+   "tokens": 126676,
+   "calls": 20,
+   "seconds": 855.5419958728598,
+   "accuracy": 0.25,
+   "claim_precision": 0.5172,
+   "mean_gfs": 0.6312,
+   "fully_verified_rate": 0.6,
+   "avg_tokens": 6334,
+   "avg_latency_s": 42.78
+  },
+  "tool": {
+   "n": 30,
+   "correct": 27,
+   "claims": 31,
+   "supported": 30,
+   "gfs_sum": 29.5,
+   "fully_verified": 29,
+   "tokens": 23865,
+   "calls": 40,
+   "seconds": 181.46936483198078,
+   "accuracy": 0.9,
+   "claim_precision": 0.9677,
+   "mean_gfs": 0.9833,
+   "fully_verified_rate": 0.9667,
+   "avg_tokens": 796,
+   "avg_latency_s": 6.05
+  },
+  "tool+verify": {
+   "n": 30,
+   "correct": 27,
+   "claims": 30,
+   "supported": 30,
+   "gfs_sum": 30.0,
+   "fully_verified": 30,
+   "tokens": 798,
+   "calls": 1,
+   "seconds": 6.469446833012626,
+   "accuracy": 0.9,
+   "claim_precision": 1.0,
+   "mean_gfs": 1.0,
+   "fully_verified_rate": 1.0,
+   "avg_tokens": 27,
+   "avg_latency_s": 0.22
+  }
+ }
+}

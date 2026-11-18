@@ -1,0 +1,826 @@
+[
+ {
+  "persona": "aarav",
+  "variant": "tool",
+  "q": "How much did I spend on Food & Dining in September 2026?",
+  "expected": 11215.0,
+  "answer": "- **Food & Dining spend in September 2026:** ₹11,215  \n\n**Tip:** Track daily expenses in a simple spreadsheet to spot patterns early.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool+verify",
+  "q": "How much did I spend on Food & Dining in September 2026?",
+  "expected": 11215.0,
+  "answer": "- **Food & Dining spend in September 2026:** ₹11,215  \n\n**Tip:** Track daily expenses in a simple spreadsheet to spot patterns early.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool",
+  "q": "What was my total spending in October 2026?",
+  "expected": 99680.0,
+  "answer": "- **Total spending in October 2026:** ₹99,680  \n\n**Practical tip:** Track each category weekly to spot overspending early and adjust before month‑end.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool+verify",
+  "q": "What was my total spending in October 2026?",
+  "expected": 99680.0,
+  "answer": "- **Total spending in October 2026:** ₹99,680  \n\n**Practical tip:** Track each category weekly to spot overspending early and adjust before month‑end.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool",
+  "q": "Which merchant did I spend the most money at overall, and how much?",
+  "expected": 48000.0,
+  "answer": "- **Merchant:** Ramesh Kumar  \n- **Amount spent:** ₹48,000  \n\n**Tip:** Review your rent & housing expenses each month to spot any possible savings.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool+verify",
+  "q": "Which merchant did I spend the most money at overall, and how much?",
+  "expected": 48000.0,
+  "answer": "- **Merchant:** Ramesh Kumar  \n- **Amount spent:** ₹48,000  \n\n**Tip:** Review your rent & housing expenses each month to spot any possible savings.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool",
+  "q": "How much do my subscriptions cost me per year?",
+  "expected": 34752.0,
+  "answer": "- **Annual subscription cost:** ₹34,752  \n\n**Practical tip:** Review each service annually and cancel any you haven’t used in the last three months to keep costs in check.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool+verify",
+  "q": "How much do my subscriptions cost me per year?",
+  "expected": 34752.0,
+  "answer": "- **Annual subscription cost:** ₹34,752  \n\n**Practical tip:** Review each service annually and cancel any you haven’t used in the last three months to keep costs in check.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool",
+  "q": "By how much did my total spending change from September 2026 to October 2026?",
+  "expected": 37451.0,
+  "answer": "- Your total spending increased by **₹37,451** from September 2026 to October 2026.  \n\n**Tip:** Track big‑ticket categories like Shopping to spot spikes early and adjust your budget.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool+verify",
+  "q": "By how much did my total spending change from September 2026 to October 2026?",
+  "expected": 37451.0,
+  "answer": "- Your total spending increased by **₹37,451** from September 2026 to October 2026.  \n\n**Tip:** Track big‑ticket categories like Shopping to spot spikes early and adjust your budget.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool",
+  "q": "What is my overall savings rate across all months?",
+  "expected": 18.54,
+  "answer": "- Overall savings rate: **18.54 %**  \n\n**Tip:** Review discretionary categories like Shopping and Subscriptions to boost that rate.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool+verify",
+  "q": "What is my overall savings rate across all months?",
+  "expected": 18.54,
+  "answer": "- Overall savings rate: **18.54 %**  \n\n**Tip:** Review discretionary categories like Shopping and Subscriptions to boost that rate.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool",
+  "q": "How much did I spend on Transport in October 2026?",
+  "expected": 5936.0,
+  "answer": "- **Transport spend (October 2026):** ₹5,936  \n\n**Tip:** Review recurring transport subscriptions and consider consolidating trips to lower the total cost.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool+verify",
+  "q": "How much did I spend on Transport in October 2026?",
+  "expected": 5936.0,
+  "answer": "- **Transport spend (October 2026):** ₹5,936  \n\n**Tip:** Review recurring transport subscriptions and consider consolidating trips to lower the total cost.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool",
+  "q": "What was my single largest Shopping purchase?",
+  "expected": 18990.0,
+  "answer": "- Your single largest Shopping purchase: **₹18,990**  \n\n**Tip:** Review that transaction’s details to see if it was a needed expense or an occasional treat.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool+verify",
+  "q": "What was my single largest Shopping purchase?",
+  "expected": 18990.0,
+  "answer": "- Your single largest Shopping purchase: **₹18,990**  \n\n**Tip:** Review that transaction’s details to see if it was a needed expense or an occasional treat.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool",
+  "q": "How much income did I receive in August 2026?",
+  "expected": 90000.0,
+  "answer": "- **Income in August 2026:** ₹90,000  \n\n**Practical tip:** Set aside a small, fixed portion of each month’s income (e.g., 10%) into a separate savings account to build an emergency fund effortlessly.",
+  "correct": true,
+  "gfs": 0.5,
+  "unsupported": [
+   "10%"
+  ]
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool+verify",
+  "q": "How much income did I receive in August 2026?",
+  "expected": 90000.0,
+  "answer": "- **Income in August 2026:** ₹90,000  \n\n**Practical tip:** Automatically transfer a portion of each month’s salary to a dedicated savings account to grow your emergency fund.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool",
+  "q": "How much did I spend on Groceries over all three months?",
+  "expected": 13228.0,
+  "answer": "- Total spent on Groceries (all three months): **₹11,812**  \n\n**Tip:** Track your grocery receipts weekly to spot any unexpected spikes early.",
+  "correct": false,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "aarav",
+  "variant": "tool+verify",
+  "q": "How much did I spend on Groceries over all three months?",
+  "expected": 13228.0,
+  "answer": "- Total spent on Groceries (all three months): **₹11,812**  \n\n**Tip:** Track your grocery receipts weekly to spot any unexpected spikes early.",
+  "correct": false,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "stuffing",
+  "q": "How much did I spend on Food & Dining in September 2026?",
+  "expected": 8068.0,
+  "answer": "**Food & Dining spend in September 2026:** ₹ 6,917.",
+  "correct": false,
+  "gfs": 0.0,
+  "unsupported": [
+   "₹ 6,917"
+  ]
+ },
+ {
+  "persona": "priya",
+  "variant": "tool",
+  "q": "How much did I spend on Food & Dining in September 2026?",
+  "expected": 8068.0,
+  "answer": "- Total spent on **Food & Dining** in September 2026: **₹8,068**  \n\n**Tip:** Review your top merchants and set a modest weekly budget to keep spending in check.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "tool+verify",
+  "q": "How much did I spend on Food & Dining in September 2026?",
+  "expected": 8068.0,
+  "answer": "- Total spent on **Food & Dining** in September 2026: **₹8,068**  \n\n**Tip:** Review your top merchants and set a modest weekly budget to keep spending in check.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "stuffing",
+  "q": "What was my total spending in October 2026?",
+  "expected": 144791.0,
+  "answer": "",
+  "correct": false,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "tool",
+  "q": "What was my total spending in October 2026?",
+  "expected": 144791.0,
+  "answer": "- Total spending in October 2026: **₹1,44,791**  \n\n**Tip:** Track each category weekly to spot any sudden spikes early.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "tool+verify",
+  "q": "What was my total spending in October 2026?",
+  "expected": 144791.0,
+  "answer": "- Total spending in October 2026: **₹1,44,791**  \n\n**Tip:** Track each category weekly to spot any sudden spikes early.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "stuffing",
+  "q": "Which merchant did I spend the most money at overall, and how much?",
+  "expected": 84000.0,
+  "answer": "**Highest‑spending merchant:** **Zomato**  \n**Total amount spent:** **₹6,128** (sum of all Zomato debits across the statement).",
+  "correct": false,
+  "gfs": 0.0,
+  "unsupported": [
+   "₹6,128"
+  ]
+ },
+ {
+  "persona": "priya",
+  "variant": "tool",
+  "q": "Which merchant did I spend the most money at overall, and how much?",
+  "expected": 84000.0,
+  "answer": "- **Merchant:** Nestaway  \n- **Amount spent:** ₹84,000  \n\n**Tip:** Review subscription services regularly to ensure you still need them.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "tool+verify",
+  "q": "Which merchant did I spend the most money at overall, and how much?",
+  "expected": 84000.0,
+  "answer": "- **Merchant:** Nestaway  \n- **Amount spent:** ₹84,000  \n\n**Tip:** Review subscription services regularly to ensure you still need them.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "stuffing",
+  "q": "How much do my subscriptions cost me per year?",
+  "expected": 49164.0,
+  "answer": "Your subscription spending totals **₹ 95,693 per year**.",
+  "correct": false,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "tool",
+  "q": "How much do my subscriptions cost me per year?",
+  "expected": 49164.0,
+  "answer": "- **Annual subscription cost:** ₹3,85,164  \n\n**Tip:** Review each service annually and cancel any you haven’t used in the last 3 months to keep spending in check.",
+  "correct": false,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "tool+verify",
+  "q": "How much do my subscriptions cost me per year?",
+  "expected": 49164.0,
+  "answer": "- **Annual subscription cost:** ₹3,85,164  \n\n**Tip:** Review each service annually and cancel any you haven’t used in the last 3 months to keep spending in check.",
+  "correct": false,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "stuffing",
+  "q": "By how much did my total spending change from September 2026 to October 2026?",
+  "expected": 47405.0,
+  "answer": "**Total spending (debits)**\n- **September 2026:** ≈ ₹ 2,71,000  \n- **October 2026:** ≈ ₹ 3,02,000  \n\n**Change:** Spending rose by about **₹ 31,000** in October compared with September.",
+  "correct": false,
+  "gfs": 0.0,
+  "unsupported": [
+   "₹ 2,71,000",
+   "₹ 3,02,000",
+   "₹ 31,000"
+  ]
+ },
+ {
+  "persona": "priya",
+  "variant": "tool",
+  "q": "By how much did my total spending change from September 2026 to October 2026?",
+  "expected": 47405.0,
+  "answer": "- Your total spending increased by **₹47,405** from September 2026 to October 2026.  \n\n**Tip:** Review the categories with the biggest jumps (e.g., Shopping, Entertainment) to see if any expenses can be trimmed next month.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "tool+verify",
+  "q": "By how much did my total spending change from September 2026 to October 2026?",
+  "expected": 47405.0,
+  "answer": "- Your total spending increased by **₹47,405** from September 2026 to October 2026.  \n\n**Tip:** Review the categories with the biggest jumps (e.g., Shopping, Entertainment) to see if any expenses can be trimmed next month.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "stuffing",
+  "q": "What is my overall savings rate across all months?",
+  "expected": 4.05,
+  "answer": "I’m sorry, but I can’t calculate an overall savings rate from the CSV you provided because it contains dozens of individual debit entries and summing them accurately would require a full spreadsheet‑style calculation, which exceeds the brief response format you requested. If you’d like, you can export the data to a spreadsheet program (Excel, Google Sheets, etc.) and use a simple formula:\n\n```\nTotal Income = SUMIF(direction,\"credit\",amount)\nTotal Expenses = SUMIF(direction,\"debit\",amount)\nSavings Rate = (Total Income – Total Expenses) / Total Income × 100\n```\n\nThat will give you the precise savings percentage across all months.",
+  "correct": false,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "tool",
+  "q": "What is my overall savings rate across all months?",
+  "expected": 4.05,
+  "answer": "- Overall savings rate: **4.05%**  \n\n**Tip:** Review discretionary categories like Subscriptions and Shopping each month to boost that rate.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "tool+verify",
+  "q": "What is my overall savings rate across all months?",
+  "expected": 4.05,
+  "answer": "- Overall savings rate: **4.05%**  \n\n**Tip:** Review discretionary categories like Subscriptions and Shopping each month to boost that rate.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "stuffing",
+  "q": "How much did I spend on Transport in October 2026?",
+  "expected": 7620.0,
+  "answer": "**Transport spending in October 2026:** ₹7,323.",
+  "correct": false,
+  "gfs": 0.0,
+  "unsupported": [
+   "₹7,323"
+  ]
+ },
+ {
+  "persona": "priya",
+  "variant": "tool",
+  "q": "How much did I spend on Transport in October 2026?",
+  "expected": 7620.0,
+  "answer": "- **Transport spend (October 2026):** ₹7,620  \n\n**Tip:** Review recurring transport costs (e.g., Uber) and see if any can be reduced or combined.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "tool+verify",
+  "q": "How much did I spend on Transport in October 2026?",
+  "expected": 7620.0,
+  "answer": "- **Transport spend (October 2026):** ₹7,620  \n\n**Tip:** Review recurring transport costs (e.g., Uber) and see if any can be reduced or combined.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "stuffing",
+  "q": "What was my single largest Shopping purchase?",
+  "expected": 15800.0,
+  "answer": "Your single largest **Shopping** purchase was **₹ 15,800** (Myntra order on 2026‑10‑13).",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "tool",
+  "q": "What was my single largest Shopping purchase?",
+  "expected": 15800.0,
+  "answer": "- Your single largest Shopping purchase: **₹15,800**  \n\n**Tip:** Keep receipts for big buys; they help track spending and spot any errors.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "tool+verify",
+  "q": "What was my single largest Shopping purchase?",
+  "expected": 15800.0,
+  "answer": "- Your single largest Shopping purchase: **₹15,800**  \n\n**Tip:** Keep receipts for big buys; they help track spending and spot any errors.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "stuffing",
+  "q": "How much income did I receive in August 2026?",
+  "expected": 120000.0,
+  "answer": "**Income received in August 2026:** ₹120,000.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "tool",
+  "q": "How much income did I receive in August 2026?",
+  "expected": 120000.0,
+  "answer": "- Income in August 2026: **₹1,20,000**  \n\n**Tip:** Track your income sources each month to spot any changes early.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "tool+verify",
+  "q": "How much income did I receive in August 2026?",
+  "expected": 120000.0,
+  "answer": "- Income in August 2026: **₹1,20,000**  \n\n**Tip:** Track your income sources each month to spot any changes early.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "stuffing",
+  "q": "How much did I spend on Groceries over all three months?",
+  "expected": 43728.0,
+  "answer": "I’m sorry, but I can’t calculate that total from the data you provided.",
+  "correct": false,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "tool",
+  "q": "How much did I spend on Groceries over all three months?",
+  "expected": 43728.0,
+  "answer": "- Total spent on Groceries (all three months): **₹44,692**  \n\n**Tip:** Track weekly grocery receipts to spot any spikes and plan smarter shopping trips.",
+  "correct": false,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "priya",
+  "variant": "tool+verify",
+  "q": "How much did I spend on Groceries over all three months?",
+  "expected": 43728.0,
+  "answer": "- Total spent on Groceries (all three months): **₹44,692**  \n\n**Tip:** Track weekly grocery receipts to spot any spikes and plan smarter shopping trips.",
+  "correct": false,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "stuffing",
+  "q": "How much did I spend on Food & Dining in September 2026?",
+  "expected": 6970.0,
+  "answer": "**Food & Dining spend in September 2026:** ₹ 6,970.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool",
+  "q": "How much did I spend on Food & Dining in September 2026?",
+  "expected": 6970.0,
+  "answer": "- **Food & Dining (September 2026):** ₹6,970  \n\n*Tip:* Review your top merchants to see where you can trim occasional splurges.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool+verify",
+  "q": "How much did I spend on Food & Dining in September 2026?",
+  "expected": 6970.0,
+  "answer": "- **Food & Dining (September 2026):** ₹6,970  \n\n*Tip:* Review your top merchants to see where you can trim occasional splurges.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "stuffing",
+  "q": "What was my total spending in October 2026?",
+  "expected": 70452.0,
+  "answer": "Your total spending in October 2026 was **₹ 64,344**.",
+  "correct": false,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool",
+  "q": "What was my total spending in October 2026?",
+  "expected": 70452.0,
+  "answer": "- **Total spending in October 2026:** ₹70,452  \n\n**Practical tip:** Track each category weekly to spot any spikes early and adjust your budget before the month ends.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool+verify",
+  "q": "What was my total spending in October 2026?",
+  "expected": 70452.0,
+  "answer": "- **Total spending in October 2026:** ₹70,452  \n\n**Practical tip:** Track each category weekly to spot any spikes early and adjust your budget before the month ends.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "stuffing",
+  "q": "Which merchant did I spend the most money at overall, and how much?",
+  "expected": 36000.0,
+  "answer": "**Merchant with the highest total spend:** **Suresh Naik (Rent & Housing)**  \n**Total amount spent:** **₹ 36,000** (three rent payments of ₹12,000 each).",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool",
+  "q": "Which merchant did I spend the most money at overall, and how much?",
+  "expected": 36000.0,
+  "answer": "- Merchant: **Suresh Naik**  \n- Amount spent: **₹36,000**  \n\n**Tip:** Review your rent‑related expenses each month to ensure they stay within your budget.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool+verify",
+  "q": "Which merchant did I spend the most money at overall, and how much?",
+  "expected": 36000.0,
+  "answer": "- Merchant: **Suresh Naik**  \n- Amount spent: **₹36,000**  \n\n**Tip:** Review your rent‑related expenses each month to ensure they stay within your budget.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "stuffing",
+  "q": "How much do my subscriptions cost me per year?",
+  "expected": 55476.0,
+  "answer": "Your subscription expenses total **₹15,544 per year**. This includes Spotify, Notion Labs, OpenAI ChatGPT, and Adobe Systems recurring charges.",
+  "correct": false,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool",
+  "q": "How much do my subscriptions cost me per year?",
+  "expected": 55476.0,
+  "answer": "- Your subscriptions cost **₹55,476** per year.  \n\n**Tip:** Review each service annually and cancel any you no longer use to keep costs down.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool+verify",
+  "q": "How much do my subscriptions cost me per year?",
+  "expected": 55476.0,
+  "answer": "- Your subscriptions cost **₹55,476** per year.  \n\n**Tip:** Review each service annually and cancel any you no longer use to keep costs down.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "stuffing",
+  "q": "By how much did my total spending change from September 2026 to October 2026?",
+  "expected": 32425.0,
+  "answer": "**Total spending (debits only)**  \n\n- **September 2026:** ≈ ₹ 2,71,000  \n- **October 2026:** ≈ ₹ 3,12,000  \n\n**Change:** Spending rose by **about ₹ 41,000** in October compared with September.  ",
+  "correct": false,
+  "gfs": 0.0,
+  "unsupported": [
+   "₹ 2,71,000",
+   "₹ 3,12,000",
+   "₹ 41,000"
+  ]
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool",
+  "q": "By how much did my total spending change from September 2026 to October 2026?",
+  "expected": 32425.0,
+  "answer": "- Total spending change from September 2026 to October 2026: **₹32,425**  \n\n**Tip:** Track the categories that jumped most (e.g., Transport) to see where you can trim next month.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool+verify",
+  "q": "By how much did my total spending change from September 2026 to October 2026?",
+  "expected": 32425.0,
+  "answer": "- Total spending change from September 2026 to October 2026: **₹32,425**  \n\n**Tip:** Track the categories that jumped most (e.g., Transport) to see where you can trim next month.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "stuffing",
+  "q": "What is my overall savings rate across all months?",
+  "expected": 47.44,
+  "answer": "**Overall savings rate:** ≈ ‑9 %  \n\n*How it’s calculated*  \n- Total credit (income) for the period = **₹ 279,227**.  \n- Total debit (expenses) for the period = **≈ ₹ 306,000**.  \n- Net saving = ₹ 279,227 ‑ ₹ 306,000 = ‑₹ 26,773 (a loss).  \n- Savings rate = (Net saving ÷ Income) × 100 ≈ ‑9 %.\n\nSo you’re spending about 9 % more than you earn across the months shown.",
+  "correct": false,
+  "gfs": 0.625,
+  "unsupported": [
+   "₹ 306,000",
+   "₹ 306,000",
+   "₹ 26,773"
+  ]
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool",
+  "q": "What is my overall savings rate across all months?",
+  "expected": 47.44,
+  "answer": "- Overall savings rate: **47.44 %**  \n\n**Tip:** Keep tracking each month; a steady or improving rate shows healthy budgeting.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool+verify",
+  "q": "What is my overall savings rate across all months?",
+  "expected": 47.44,
+  "answer": "- Overall savings rate: **47.44 %**  \n\n**Tip:** Keep tracking each month; a steady or improving rate shows healthy budgeting.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "stuffing",
+  "q": "How much did I spend on Transport in October 2026?",
+  "expected": 25365.0,
+  "answer": "**Transport spending in October 2026:** ₹ 24,677.",
+  "correct": false,
+  "gfs": 0.0,
+  "unsupported": [
+   "₹ 24,677"
+  ]
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool",
+  "q": "How much did I spend on Transport in October 2026?",
+  "expected": 25365.0,
+  "answer": "- **Transport spend in October 2026:** ₹25,273  \n\n**Tip:** Review recurring transport subscriptions and consider cheaper alternatives to keep monthly costs low.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool+verify",
+  "q": "How much did I spend on Transport in October 2026?",
+  "expected": 25365.0,
+  "answer": "- **Transport spend in October 2026:** ₹25,273  \n\n**Tip:** Review recurring transport subscriptions and consider cheaper alternatives to keep monthly costs low.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "stuffing",
+  "q": "What was my single largest Shopping purchase?",
+  "expected": 2447.0,
+  "answer": "Your biggest single Shopping expense was **₹ 3,950** for **Blinkit** on 2026‑10‑21.",
+  "correct": false,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool",
+  "q": "What was my single largest Shopping purchase?",
+  "expected": 2447.0,
+  "answer": "- Your single largest Shopping purchase: **₹2,447**  \n\n**Tip:** Review that transaction’s details to see if it was a one‑off splurge or a recurring need, and plan future budgets accordingly.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool+verify",
+  "q": "What was my single largest Shopping purchase?",
+  "expected": 2447.0,
+  "answer": "- Your single largest Shopping purchase: **₹2,447**  \n\n**Tip:** Review that transaction’s details to see if it was a one‑off splurge or a recurring need, and plan future budgets accordingly.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "stuffing",
+  "q": "How much income did I receive in August 2026?",
+  "expected": 102877.0,
+  "answer": "**Income received in August 2026:** ₹ 102,877.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool",
+  "q": "How much income did I receive in August 2026?",
+  "expected": 102877.0,
+  "answer": "- Income in August 2026: **₹1,02,877**  \n\n**Tip:** Keep a simple spreadsheet to track monthly income and expenses for quick reviews.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool+verify",
+  "q": "How much income did I receive in August 2026?",
+  "expected": 102877.0,
+  "answer": "- Income in August 2026: **₹1,02,877**  \n\n**Tip:** Keep a simple spreadsheet to track monthly income and expenses for quick reviews.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "stuffing",
+  "q": "How much did I spend on Groceries over all three months?",
+  "expected": 14850.0,
+  "answer": "You spent **₹10,335** on Groceries across the three‑month period.",
+  "correct": false,
+  "gfs": 0.0,
+  "unsupported": [
+   "₹10,335"
+  ]
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool",
+  "q": "How much did I spend on Groceries over all three months?",
+  "expected": 14850.0,
+  "answer": "- Total spent on Groceries (all three months): **₹14,850**  \n\n**Tip:** Review your top merchants and see if any bulk‑buy options could lower future grocery costs.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ },
+ {
+  "persona": "rohan",
+  "variant": "tool+verify",
+  "q": "How much did I spend on Groceries over all three months?",
+  "expected": 14850.0,
+  "answer": "- Total spent on Groceries (all three months): **₹14,850**  \n\n**Tip:** Review your top merchants and see if any bulk‑buy options could lower future grocery costs.",
+  "correct": true,
+  "gfs": 1.0,
+  "unsupported": []
+ }
+]

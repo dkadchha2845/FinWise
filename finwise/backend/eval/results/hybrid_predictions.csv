@@ -1,0 +1,536 @@
+date,description,amount,direction,balance,true_category,is_anomaly,anomaly_type,merchant,masked,pred,src,persona
+2026-08-01,SALARY CREDIT ACME TECHNOLOGIES AUG,90000.0,credit,132000.0,Income,False,,Acme,SALARY CREDIT ACME TECHNOLOGIES AUG,Income,rule,aarav
+2026-08-01,UPI/DR/218549145244/SWIGGY/okaxis/Payment,580.0,debit,131420.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX44/SWIGGY/okaxis/Payment,Food & Dining,rule,aarav
+2026-08-01,UPI/DR/552182488619/NAMMA METRO/oksbi/Payment,200.0,debit,131220.0,Transport,False,,Namma Metro,UPI/DR/XXXX19/NAMMA METRO/oksbi/Payment,Transport,rule,aarav
+2026-08-02,UPI/DR/976846978809/NETFLIX/oksbi/Subscription,649.0,debit,130571.0,Subscriptions,False,,Netflix,UPI/DR/XXXX09/NETFLIX/oksbi/Subscription,Subscriptions,rule,aarav
+2026-08-03,NEFT/N1588139986/RAMESH KUMAR/RENT AUG,16000.0,debit,114571.0,Rent & Housing,False,,Ramesh Kumar,NEFT/NXXXX86/[PERSON]/RENT AUG,Rent & Housing,rule,aarav
+2026-08-03,UPI/DR/258771884133/STARBUCKS/okaxis/Payment,307.0,debit,114264.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX33/STARBUCKS/okaxis/Payment,Food & Dining,rule,aarav
+2026-08-04,UPI/DR/627010798193/SWIGGY/oksbi/Payment,253.0,debit,114011.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX93/SWIGGY/oksbi/Payment,Food & Dining,rule,aarav
+2026-08-04,UPI/DR/939494821416/DOMINOS PIZZA/oksbi/Payment,462.0,debit,113549.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX16/DOMINOS PIZZA/oksbi/Payment,Food & Dining,rule,aarav
+2026-08-05,ACH/BAJAJ FINANCE LTD/9879730911,3499.0,debit,110050.0,EMI & Loans,False,,Bajaj Finance,ACH/BAJAJ FINANCE LTD/[PHONE],EMI & Loans,rule,aarav
+2026-08-05,UPI/DR/452059972837/SWIGGY/paytm/Payment,576.0,debit,109474.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX37/SWIGGY/paytm/Payment,Food & Dining,rule,aarav
+2026-08-05,UPI/DR/845850037038/TRUFFLES CAFE/okicici/Payment,822.0,debit,108652.0,Food & Dining,False,,Truffles Cafe,UPI/DR/XXXX38/TRUFFLES CAFE/okicici/Payment,Food & Dining,llm,aarav
+2026-08-07,UPI/DR/417075364556/AIRTEL POSTPAID/ibl/Bill,599.0,debit,108053.0,Bills & Utilities,False,,Airtel Postpaid,UPI/DR/XXXX56/AIRTEL POSTPAID/ibl/Bill,Bills & Utilities,rule,aarav
+2026-08-07,UPI/DR/286675347897/BLUSMART MOBILITY/okaxis/Payment,87.0,debit,107966.0,Transport,False,,Blusmart Mobility,UPI/DR/XXXX97/BLUSMART MOBILITY/okaxis/Payment,Transport,llm,aarav
+2026-08-08,UPI/DR/842599677500/OLA CABS/okicici/Payment,74.0,debit,107892.0,Transport,False,,Ola Cabs,UPI/DR/XXXX00/OLA CABS/okicici/Payment,Transport,rule,aarav
+2026-08-08,UPI/DR/560787457212/MYNTRA/paytm/Payment,1225.0,debit,106667.0,Shopping,False,,Myntra,UPI/DR/XXXX12/MYNTRA/paytm/Payment,Shopping,rule,aarav
+2026-08-09,UPI/DR/815188447294/BESCOM ELECTRICITY/okaxis/Bill,1534.0,debit,105133.0,Bills & Utilities,False,,Bescom Electricity,UPI/DR/XXXX94/BESCOM ELECTRICITY/okaxis/Bill,Bills & Utilities,rule,aarav
+2026-08-09,UPI/DR/845142038178/SNEHA PATIL/ibl/Split,345.0,debit,104788.0,Transfers,False,,Sneha Patil,UPI/DR/XXXX78/[PERSON]/ibl/Split,Transfers,llm,aarav
+2026-08-10,UPI/DR/557616987168/ACT FIBERNET/okicici/Bill,1059.0,debit,103729.0,Bills & Utilities,False,,Act Fibernet,UPI/DR/XXXX68/ACT FIBERNET/okicici/Bill,Bills & Utilities,rule,aarav
+2026-08-10,UPI/DR/432627058602/TRUFFLES CAFE/okaxis/Payment,612.0,debit,103117.0,Food & Dining,False,,Truffles Cafe,UPI/DR/XXXX02/TRUFFLES CAFE/okaxis/Payment,Food & Dining,llm,aarav
+2026-08-10,UPI/DR/025822018051/ZEPTO/okhdfcbank/Payment,1225.0,debit,101892.0,Groceries,False,,Zepto,UPI/DR/XXXX51/ZEPTO/okhdfcbank/Payment,Groceries,rule,aarav
+2026-08-11,UPI/DR/906188479188/NAMMA METRO/paytm/Payment,195.0,debit,101697.0,Transport,False,,Namma Metro,UPI/DR/XXXX88/NAMMA METRO/paytm/Payment,Transport,rule,aarav
+2026-08-12,UPI/DR/208196727317/SPOTIFY/ibl/Subscription,119.0,debit,101578.0,Subscriptions,False,,Spotify,UPI/DR/XXXX17/SPOTIFY/ibl/Subscription,Subscriptions,rule,aarav
+2026-08-12,UPI/DR/571784726714/SWIGGY/ybl/Payment,622.0,debit,100956.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX14/SWIGGY/ybl/Payment,Food & Dining,rule,aarav
+2026-08-12,UPI/DR/460013041189/STARBUCKS/okicici/Payment,643.0,debit,100313.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX89/STARBUCKS/okicici/Payment,Food & Dining,rule,aarav
+2026-08-12,UPI/DR/220226978043/RAPIDO/paytm/Payment,122.0,debit,100191.0,Transport,False,,Rapido,UPI/DR/XXXX43/RAPIDO/paytm/Payment,Transport,rule,aarav
+2026-08-12,UPI/DR/854690598281/APOLLO PHARMACY/paytm/Payment,392.0,debit,99799.0,Health,False,,Apollo Pharmacy,UPI/DR/XXXX81/APOLLO PHARMACY/paytm/Payment,Health,rule,aarav
+2026-08-12,UPI/DR/803704121430/KAVYA NAIR/okhdfcbank/Split,378.0,debit,99421.0,Transfers,False,,Kavya Nair,UPI/DR/XXXX30/[PERSON]/okhdfcbank/Split,Transfers,llm,aarav
+2026-08-13,UPI/DR/229486628360/DOMINOS PIZZA/okaxis/Payment,189.0,debit,99232.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX60/DOMINOS PIZZA/okaxis/Payment,Food & Dining,rule,aarav
+2026-08-13,UPI/DR/856517883655/NAMMA METRO/okaxis/Payment,234.0,debit,98998.0,Transport,False,,Namma Metro,UPI/DR/XXXX55/NAMMA METRO/okaxis/Payment,Transport,rule,aarav
+2026-08-13,UPI/DR/688283472855/NAMMA METRO/ibl/Payment,169.0,debit,98829.0,Transport,False,,Namma Metro,UPI/DR/XXXX55/NAMMA METRO/ibl/Payment,Transport,rule,aarav
+2026-08-13,ATM WDL HDFC DELHI 130066,5000.0,debit,93829.0,Cash Withdrawal,False,,ATM Withdrawal,ATM WDL HDFC DELHI XXXX66,Cash Withdrawal,rule,aarav
+2026-08-14,UPI/DR/784864887663/YOUTUBE PREMIUM/okhdfcbank/Subscription,129.0,debit,93700.0,Subscriptions,False,,Youtube Premium,UPI/DR/XXXX63/YOUTUBE PREMIUM/okhdfcbank/Subscription,Subscriptions,rule,aarav
+2026-08-14,UPI/DR/012911028594/DOMINOS PIZZA/okaxis/Payment,255.0,debit,93445.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX94/DOMINOS PIZZA/okaxis/Payment,Food & Dining,rule,aarav
+2026-08-15,UPI/DR/742843528144/SRI BALAJI STORES/paytm/Payment,506.0,debit,92939.0,Groceries,False,,Sri Balaji Stores,UPI/DR/XXXX44/SRI BALAJI STORES/paytm/Payment,Shopping,llm,aarav
+2026-08-15,UPI/DR/197967807360/WONDERLA PARKS/paytm/Payment,882.0,debit,92057.0,Entertainment,False,,Wonderla Parks,UPI/DR/XXXX60/WONDERLA PARKS/paytm/Payment,Entertainment,llm,aarav
+2026-08-16,UPI/CR/182889837085/ANKIT SHARMA/oksbi/Split,1399.0,credit,93456.0,Transfers,False,,Ankit Sharma,UPI/CR/XXXX85/[PERSON]/oksbi/Split,Transfers,llm,aarav
+2026-08-16,UPI/DR/653845355778/BIRYANI BLUES/okicici/Payment,781.0,debit,92675.0,Food & Dining,False,,Biryani Blues,UPI/DR/XXXX78/BIRYANI BLUES/okicici/Payment,Food & Dining,llm,aarav
+2026-08-16,UPI/DR/718835795111/BLINKIT/okicici/Payment,720.0,debit,91955.0,Groceries,False,,Blinkit,UPI/DR/XXXX11/BLINKIT/okicici/Payment,Groceries,rule,aarav
+2026-08-16,UPI/DR/460288375555/OLA CABS/paytm/Payment,114.0,debit,91841.0,Transport,False,,Ola Cabs,UPI/DR/XXXX55/OLA CABS/paytm/Payment,Transport,rule,aarav
+2026-08-17,UPI/DR/990659397615/DOMINOS PIZZA/okicici/Payment,592.0,debit,91249.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX15/DOMINOS PIZZA/okicici/Payment,Food & Dining,rule,aarav
+2026-08-17,UPI/DR/421083949066/THIRD WAVE COFFEE/paytm/Payment,519.0,debit,90730.0,Food & Dining,False,,Third Wave Coffee,UPI/DR/XXXX66/THIRD WAVE COFFEE/paytm/Payment,Food & Dining,llm,aarav
+2026-08-17,UPI/DR/540720754735/RAPIDO/okhdfcbank/Payment,270.0,debit,90460.0,Transport,False,,Rapido,UPI/DR/XXXX35/RAPIDO/okhdfcbank/Payment,Transport,rule,aarav
+2026-08-17,UPI/DR/990854177588/MYNTRA/okicici/Payment,1740.0,debit,88720.0,Shopping,False,,Myntra,UPI/DR/XXXX88/MYNTRA/okicici/Payment,Shopping,rule,aarav
+2026-08-18,POS 4002978753477876 OPENAI CHATGPT HYDERABAD,1999.0,debit,86721.0,Subscriptions,False,,Openai Chatgpt,POS XXXX76 OPENAI CHATGPT HYDERABAD,Subscriptions,llm,aarav
+2026-08-18,UPI/DR/506045414659/DOMINOS PIZZA/okaxis/Payment,366.0,debit,86355.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX59/DOMINOS PIZZA/okaxis/Payment,Food & Dining,rule,aarav
+2026-08-19,UPI/DR/550087547517/SWIGGY/ybl/Payment,170.0,debit,86185.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX17/SWIGGY/ybl/Payment,Food & Dining,rule,aarav
+2026-08-19,UPI/DR/253739241968/UBER INDIA/ibl/Payment,473.0,debit,85712.0,Transport,False,,Uber,UPI/DR/XXXX68/UBER INDIA/ibl/Payment,Transport,rule,aarav
+2026-08-20,UPI/DR/401901879169/AMAZON SELLER SERVICES/ybl/Payment,2831.0,debit,82881.0,Shopping,False,,Amazon Seller,UPI/DR/XXXX69/AMAZON SELLER SERVICES/ybl/Payment,Shopping,rule,aarav
+2026-08-20,UPI/DR/735736385607/BOOKMYSHOW/oksbi/Payment,546.0,debit,82335.0,Entertainment,False,,Bookmyshow,UPI/DR/XXXX07/BOOKMYSHOW/oksbi/Payment,Entertainment,rule,aarav
+2026-08-21,UPI/DR/836957931860/ZOMATO/oksbi/Payment,229.0,debit,82106.0,Food & Dining,False,,Zomato,UPI/DR/XXXX60/ZOMATO/oksbi/Payment,Food & Dining,rule,aarav
+2026-08-21,UPI/DR/048764529128/ZOMATO/okaxis/Payment,272.0,debit,81834.0,Food & Dining,False,,Zomato,UPI/DR/XXXX28/ZOMATO/okaxis/Payment,Food & Dining,rule,aarav
+2026-08-21,UPI/DR/993215711649/ZEPTO/okhdfcbank/Payment,968.0,debit,80866.0,Groceries,False,,Zepto,UPI/DR/XXXX49/ZEPTO/okhdfcbank/Payment,Groceries,rule,aarav
+2026-08-21,UPI/DR/159212363608/QUICKRIDE/oksbi/Payment,83.0,debit,80783.0,Transport,False,,Quickride,UPI/DR/XXXX08/QUICKRIDE/oksbi/Payment,Transport,llm,aarav
+2026-08-22,UPI/DR/450283166323/QUICKRIDE/oksbi/Payment,219.0,debit,80564.0,Transport,False,,Quickride,UPI/DR/XXXX23/QUICKRIDE/oksbi/Payment,Transport,llm,aarav
+2026-08-23,UPI/DR/682052589831/STARBUCKS/paytm/Payment,514.0,debit,80050.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX31/STARBUCKS/paytm/Payment,Food & Dining,rule,aarav
+2026-08-23,UPI/DR/822290044224/OLA CABS/paytm/Payment,132.0,debit,79918.0,Transport,False,,Ola Cabs,UPI/DR/XXXX24/OLA CABS/paytm/Payment,Transport,rule,aarav
+2026-08-23,UPI/DR/625280700159/UBER INDIA/okicici/Payment,261.0,debit,79657.0,Transport,False,,Uber,UPI/DR/XXXX59/UBER INDIA/okicici/Payment,Transport,rule,aarav
+2026-08-23,POS 2520161284001981 LENSKART PUNE,2284.0,debit,77373.0,Shopping,False,,Lenskart,POS XXXX81 LENSKART PUNE,Shopping,llm,aarav
+2026-08-25,UPI/DR/450378495183/UBER INDIA/paytm/Payment,341.0,debit,77032.0,Transport,False,,Uber,UPI/DR/XXXX83/UBER INDIA/paytm/Payment,Transport,rule,aarav
+2026-08-26,UPI/DR/663632280886/ZOMATO/okhdfcbank/Payment,346.0,debit,76686.0,Food & Dining,False,,Zomato,UPI/DR/XXXX86/ZOMATO/okhdfcbank/Payment,Food & Dining,rule,aarav
+2026-08-26,UPI/DR/281126584409/TRUFFLES CAFE/ibl/Payment,590.0,debit,76096.0,Food & Dining,False,,Truffles Cafe,UPI/DR/XXXX09/TRUFFLES CAFE/ibl/Payment,Food & Dining,llm,aarav
+2026-08-26,UPI/DR/448452630976/CHAI POINT/okhdfcbank/Payment,238.0,debit,75858.0,Food & Dining,False,,Chai Point,UPI/DR/XXXX76/CHAI POINT/okhdfcbank/Payment,Food & Dining,llm,aarav
+2026-08-26,UPI/DR/325688557652/BIGBASKET/oksbi/Payment,608.0,debit,75250.0,Groceries,False,,Bigbasket,UPI/DR/XXXX52/BIGBASKET/oksbi/Payment,Groceries,rule,aarav
+2026-08-26,UPI/DR/918276116603/SNEHA PATIL/oksbi/Split,409.0,debit,74841.0,Transfers,False,,Sneha Patil,UPI/DR/[PHONE]/[PERSON]/oksbi/Split,Transfers,llm,aarav
+2026-08-27,UPI/DR/686164252477/ZOMATO/okicici/Payment,366.0,debit,74475.0,Food & Dining,False,,Zomato,UPI/DR/XXXX77/ZOMATO/okicici/Payment,Food & Dining,rule,aarav
+2026-08-27,UPI/DR/556963279264/FRESH PICK MART/okhdfcbank/Payment,405.0,debit,74070.0,Groceries,False,,Fresh Pick Mart,UPI/DR/XXXX64/FRESH PICK MART/okhdfcbank/Payment,Groceries,llm,aarav
+2026-08-28,UPI/DR/807370283822/ZOMATO/ibl/Payment,166.0,debit,73904.0,Food & Dining,False,,Zomato,UPI/DR/XXXX22/ZOMATO/ibl/Payment,Food & Dining,rule,aarav
+2026-09-01,SALARY CREDIT ACME TECHNOLOGIES SEP,90000.0,credit,163904.0,Income,False,,Acme,SALARY CREDIT ACME TECHNOLOGIES SEP,Income,rule,aarav
+2026-09-01,UPI/DR/544201461338/DMART/okaxis/Payment,347.0,debit,163557.0,Groceries,False,,Dmart,UPI/DR/XXXX38/DMART/okaxis/Payment,Groceries,rule,aarav
+2026-09-01,UPI/DR/417264366282/QUICKRIDE/paytm/Payment,60.0,debit,163497.0,Transport,False,,Quickride,UPI/DR/XXXX82/QUICKRIDE/paytm/Payment,Transport,llm,aarav
+2026-09-01,UPI/DR/215205114829/DR MEHTA CLINIC/ibl/Payment,800.0,debit,162697.0,Health,False,,Dr Mehta Clinic,UPI/DR/XXXX29/DR MEHTA CLINIC/ibl/Payment,Health,llm,aarav
+2026-09-02,UPI/DR/279137298711/NETFLIX/oksbi/Subscription,649.0,debit,162048.0,Subscriptions,False,,Netflix,UPI/DR/XXXX11/NETFLIX/oksbi/Subscription,Subscriptions,rule,aarav
+2026-09-02,UPI/DR/233496770441/OLA CABS/ibl/Payment,102.0,debit,161946.0,Transport,False,,Ola Cabs,UPI/DR/XXXX41/OLA CABS/ibl/Payment,Transport,rule,aarav
+2026-09-02,UPI/DR/991470675548/YULU BIKES/okhdfcbank/Payment,219.0,debit,161727.0,Transport,False,,Yulu Bikes,UPI/DR/XXXX48/YULU BIKES/okhdfcbank/Payment,Transport,llm,aarav
+2026-09-02,UPI/DR/711243351658/APOLLO PHARMACY/okhdfcbank/Payment,702.0,debit,161025.0,Health,False,,Apollo Pharmacy,UPI/DR/XXXX58/APOLLO PHARMACY/okhdfcbank/Payment,Health,rule,aarav
+2026-09-03,NEFT/N1792232838/RAMESH KUMAR/RENT SEP,16000.0,debit,145025.0,Rent & Housing,False,,Ramesh Kumar,NEFT/NXXXX38/[PERSON]/RENT SEP,Rent & Housing,rule,aarav
+2026-09-03,UPI/DR/532771862107/ZOMATO/ybl/Payment,212.0,debit,144813.0,Food & Dining,False,,Zomato,UPI/DR/XXXX07/ZOMATO/ybl/Payment,Food & Dining,rule,aarav
+2026-09-04,UPI/DR/403301320598/DOMINOS PIZZA/ybl/Payment,670.0,debit,144143.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX98/DOMINOS PIZZA/ybl/Payment,Food & Dining,rule,aarav
+2026-09-04,UPI/DR/010005200700/UBER INDIA/paytm/Payment,373.0,debit,143770.0,Transport,False,,Uber,UPI/DR/XXXX00/UBER INDIA/paytm/Payment,Transport,rule,aarav
+2026-09-04,UPI/DR/337027186158/UBER INDIA/okicici/Payment,371.0,debit,143399.0,Transport,False,,Uber,UPI/DR/XXXX58/UBER INDIA/okicici/Payment,Transport,rule,aarav
+2026-09-05,ACH/BAJAJ FINANCE LTD/5642710512,3499.0,debit,139900.0,EMI & Loans,False,,Bajaj Finance,ACH/BAJAJ FINANCE LTD/XXXX12,EMI & Loans,rule,aarav
+2026-09-05,UPI/DR/022386969534/BOOKMYSHOW/oksbi/Payment,665.0,debit,139235.0,Entertainment,False,,Bookmyshow,UPI/DR/XXXX34/BOOKMYSHOW/oksbi/Payment,Entertainment,rule,aarav
+2026-09-06,UPI/DR/816611463511/NAMMA METRO/okaxis/Payment,254.0,debit,138981.0,Transport,False,,Namma Metro,UPI/DR/XXXX11/NAMMA METRO/okaxis/Payment,Transport,rule,aarav
+2026-09-07,UPI/DR/983725278120/AIRTEL POSTPAID/okicici/Bill,599.0,debit,138382.0,Bills & Utilities,False,,Airtel Postpaid,UPI/DR/XXXX20/AIRTEL POSTPAID/okicici/Bill,Bills & Utilities,rule,aarav
+2026-09-08,UPI/DR/811136179581/ZOMATO/ybl/Payment,357.0,debit,138025.0,Food & Dining,False,,Zomato,UPI/DR/XXXX81/ZOMATO/ybl/Payment,Food & Dining,rule,aarav
+2026-09-08,UPI/DR/208242204262/NYKAA/paytm/Payment,2767.0,debit,135258.0,Shopping,False,,Nykaa,UPI/DR/XXXX62/NYKAA/paytm/Payment,Shopping,rule,aarav
+2026-09-09,UPI/DR/617695851904/BESCOM ELECTRICITY/oksbi/Bill,1159.0,debit,134099.0,Bills & Utilities,False,,Bescom Electricity,UPI/DR/XXXX04/BESCOM ELECTRICITY/oksbi/Bill,Bills & Utilities,rule,aarav
+2026-09-09,UPI/DR/945699439828/SWIGGY/ybl/Payment,475.0,debit,133624.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX28/SWIGGY/ybl/Payment,Food & Dining,rule,aarav
+2026-09-09,UPI/DR/487464397258/SWIGGY/okhdfcbank/Payment,462.0,debit,133162.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX58/SWIGGY/okhdfcbank/Payment,Food & Dining,rule,aarav
+2026-09-09,UPI/DR/567959650565/STARBUCKS/okicici/Payment,532.0,debit,132630.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX65/STARBUCKS/okicici/Payment,Food & Dining,rule,aarav
+2026-09-09,UPI/DR/179677204126/MEGHANA FOODS/oksbi/Payment,643.0,debit,131987.0,Food & Dining,False,,Meghana Foods,UPI/DR/XXXX26/MEGHANA FOODS/oksbi/Payment,Food & Dining,llm,aarav
+2026-09-09,UPI/DR/137852223841/SHARMA DHABA/ybl/Payment,722.0,debit,131265.0,Food & Dining,False,,Sharma Dhaba,UPI/DR/XXXX41/SHARMA DHABA/ybl/Payment,Food & Dining,llm,aarav
+2026-09-09,UPI/DR/347042476134/THIRD WAVE COFFEE/okaxis/Payment,739.0,debit,130526.0,Food & Dining,False,,Third Wave Coffee,UPI/DR/XXXX34/THIRD WAVE COFFEE/okaxis/Payment,Food & Dining,llm,aarav
+2026-09-09,UPI/DR/067090727615/BLINKIT/okaxis/Payment,1109.0,debit,129417.0,Groceries,False,,Blinkit,UPI/DR/XXXX15/BLINKIT/okaxis/Payment,Groceries,rule,aarav
+2026-09-09,UPI/DR/989974535813/RAPIDO/ibl/Payment,428.0,debit,128989.0,Transport,False,,Rapido,UPI/DR/XXXX13/RAPIDO/ibl/Payment,Transport,rule,aarav
+2026-09-09,UPI/DR/235953494042/UBER INDIA/paytm/Payment,284.0,debit,128705.0,Transport,False,,Uber,UPI/DR/XXXX42/UBER INDIA/paytm/Payment,Transport,rule,aarav
+2026-09-09,UPI/DR/834190823861/ROHIT VERMA/okicici/Split,1130.0,debit,127575.0,Transfers,False,,Rohit Verma,UPI/DR/XXXX61/[PERSON]/okicici/Split,Transfers,llm,aarav
+2026-09-10,UPI/DR/634999248005/ACT FIBERNET/ibl/Bill,1059.0,debit,126516.0,Bills & Utilities,False,,Act Fibernet,UPI/DR/XXXX05/ACT FIBERNET/ibl/Bill,Bills & Utilities,rule,aarav
+2026-09-10,UPI/DR/521362958639/STARBUCKS/paytm/Payment,270.0,debit,126246.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX39/STARBUCKS/paytm/Payment,Food & Dining,rule,aarav
+2026-09-10,UPI/DR/095060188987/AJIO/okaxis/Payment,2461.0,debit,123785.0,Shopping,False,,Ajio,UPI/DR/XXXX87/AJIO/okaxis/Payment,Shopping,rule,aarav
+2026-09-10,UPI/DR/542468542427/ROHIT VERMA/ybl/Split,1301.0,debit,122484.0,Transfers,False,,Rohit Verma,UPI/DR/XXXX27/[PERSON]/ybl/Split,Transfers,llm,aarav
+2026-09-12,UPI/DR/098426407942/SPOTIFY/ybl/Subscription,119.0,debit,122365.0,Subscriptions,False,,Spotify,UPI/DR/XXXX42/SPOTIFY/ybl/Subscription,Subscriptions,rule,aarav
+2026-09-12,UPI/DR/985568306866/DOMINOS PIZZA/paytm/Payment,605.0,debit,121760.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX66/DOMINOS PIZZA/paytm/Payment,Food & Dining,rule,aarav
+2026-09-12,UPI/DR/122238637877/SNEHA PATIL/ybl/Split,388.0,debit,121372.0,Transfers,False,,Sneha Patil,UPI/DR/XXXX77/[PERSON]/ybl/Split,Transfers,llm,aarav
+2026-09-13,UPI/DR/670904880156/STARBUCKS/okhdfcbank/Payment,146.0,debit,121226.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX56/STARBUCKS/okhdfcbank/Payment,Food & Dining,rule,aarav
+2026-09-13,UPI/DR/923524013761/BIRYANI BLUES/okhdfcbank/Payment,457.0,debit,120769.0,Food & Dining,False,,Biryani Blues,UPI/DR/XXXX61/BIRYANI BLUES/okhdfcbank/Payment,Food & Dining,llm,aarav
+2026-09-13,UPI/DR/942464668631/NATURES BASKET/ybl/Payment,1011.0,debit,119758.0,Groceries,False,,Natures Basket,UPI/DR/XXXX31/NATURES BASKET/ybl/Payment,Groceries,llm,aarav
+2026-09-13,UPI/DR/818244602619/NAMMA METRO/okhdfcbank/Payment,184.0,debit,119574.0,Transport,False,,Namma Metro,UPI/DR/XXXX19/NAMMA METRO/okhdfcbank/Payment,Transport,rule,aarav
+2026-09-13,POS 7827608219612138 LIFESTYLE STORES PUNE,3758.0,debit,115816.0,Shopping,False,,Lifestyle Stores,POS XXXX38 LIFESTYLE STORES PUNE,Shopping,llm,aarav
+2026-09-13,ATM WDL HDFC BANGALORE 550496,3000.0,debit,112816.0,Cash Withdrawal,False,,ATM Withdrawal,ATM WDL HDFC BANGALORE XXXX96,Cash Withdrawal,rule,aarav
+2026-09-14,UPI/DR/079113571647/YOUTUBE PREMIUM/okicici/Subscription,129.0,debit,112687.0,Subscriptions,False,,Youtube Premium,UPI/DR/XXXX47/YOUTUBE PREMIUM/okicici/Subscription,Subscriptions,rule,aarav
+2026-09-14,UPI/DR/775106261488/STARBUCKS/oksbi/Payment,429.0,debit,112258.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX88/STARBUCKS/oksbi/Payment,Food & Dining,rule,aarav
+2026-09-14,UPI/DR/780133252695/AMAZON SELLER SERVICES/ibl/Payment,1303.0,debit,110955.0,Shopping,False,,Amazon Seller,UPI/DR/XXXX95/AMAZON SELLER SERVICES/ibl/Payment,Shopping,rule,aarav
+2026-09-15,UPI/DR/930399551566/DOMINOS PIZZA/paytm/Payment,204.0,debit,110751.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX66/DOMINOS PIZZA/paytm/Payment,Food & Dining,rule,aarav
+2026-09-15,UPI/DR/300403004263/UBER INDIA/okicici/Payment,171.0,debit,110580.0,Transport,False,,Uber,UPI/DR/XXXX63/UBER INDIA/okicici/Payment,Transport,rule,aarav
+2026-09-16,UPI/DR/655013510063/TIMEZONE GAMING/ibl/Payment,725.0,debit,109855.0,Entertainment,False,,Timezone Gaming,UPI/DR/XXXX63/TIMEZONE GAMING/ibl/Payment,Entertainment,llm,aarav
+2026-09-17,UPI/DR/650133279672/ZOMATO/ybl/Payment,464.0,debit,109391.0,Food & Dining,False,,Zomato,UPI/DR/XXXX72/ZOMATO/ybl/Payment,Food & Dining,rule,aarav
+2026-09-17,UPI/DR/392733057030/NAMMA METRO/okhdfcbank/Payment,385.0,debit,109006.0,Transport,False,,Namma Metro,UPI/DR/XXXX30/NAMMA METRO/okhdfcbank/Payment,Transport,rule,aarav
+2026-09-17,UPI/DR/715529301267/UBER INDIA/okaxis/Payment,429.0,debit,108577.0,Transport,False,,Uber,UPI/DR/XXXX67/UBER INDIA/okaxis/Payment,Transport,rule,aarav
+2026-09-18,POS 7447967452198033 OPENAI CHATGPT PUNE,1999.0,debit,106578.0,Subscriptions,False,,Openai Chatgpt,POS XXXX33 OPENAI CHATGPT PUNE,Subscriptions,llm,aarav
+2026-09-18,UPI/DR/163111196027/SWIGGY/okicici/Payment,308.0,debit,106270.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX27/SWIGGY/okicici/Payment,Food & Dining,rule,aarav
+2026-09-18,UPI/DR/059148335414/SHARMA DHABA/paytm/Payment,746.0,debit,105524.0,Food & Dining,False,,Sharma Dhaba,UPI/DR/XXXX14/SHARMA DHABA/paytm/Payment,Food & Dining,llm,aarav
+2026-09-18,UPI/DR/533257192948/HALDIRAMS/okaxis/Payment,592.0,debit,104932.0,Food & Dining,False,,Haldirams,UPI/DR/XXXX48/HALDIRAMS/okaxis/Payment,Food & Dining,llm,aarav
+2026-09-18,UPI/DR/351676825973/BLUSMART MOBILITY/okhdfcbank/Payment,127.0,debit,104805.0,Transport,False,,Blusmart Mobility,UPI/DR/XXXX73/BLUSMART MOBILITY/okhdfcbank/Payment,Transport,llm,aarav
+2026-09-19,UPI/DR/573284093426/STARBUCKS/ibl/Payment,542.0,debit,104263.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX26/STARBUCKS/ibl/Payment,Food & Dining,rule,aarav
+2026-09-20,UPI/DR/011527611387/DOMINOS PIZZA/okhdfcbank/Payment,320.0,debit,103943.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX87/DOMINOS PIZZA/okhdfcbank/Payment,Food & Dining,rule,aarav
+2026-09-20,UPI/DR/465873064248/SWIGGY/oksbi/Payment,579.0,debit,103364.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX48/SWIGGY/oksbi/Payment,Food & Dining,rule,aarav
+2026-09-20,POS 8680154316103022 UDEMY PUNE,499.0,debit,102865.0,Education,False,,Udemy,POS XXXX22 UDEMY PUNE,Education,rule,aarav
+2026-09-21,UPI/DR/202994461351/SWIGGY/ybl/Payment,343.0,debit,102522.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX51/SWIGGY/ybl/Payment,Food & Dining,rule,aarav
+2026-09-22,UPI/DR/514786589305/BIGBASKET/okicici/Payment,523.0,debit,101999.0,Groceries,False,,Bigbasket,UPI/DR/XXXX05/BIGBASKET/okicici/Payment,Groceries,rule,aarav
+2026-09-23,UPI/DR/670940985846/ZOMATO/oksbi/Payment,398.0,debit,101601.0,Food & Dining,False,,Zomato,UPI/DR/XXXX46/ZOMATO/oksbi/Payment,Food & Dining,rule,aarav
+2026-09-23,UPI/DR/751688656114/RAPIDO/okaxis/Payment,412.0,debit,101189.0,Transport,False,,Rapido,UPI/DR/XXXX14/RAPIDO/okaxis/Payment,Transport,rule,aarav
+2026-09-26,UPI/DR/334370108752/SRI BALAJI STORES/ybl/Payment,428.0,debit,100761.0,Groceries,False,,Sri Balaji Stores,UPI/DR/XXXX52/SRI BALAJI STORES/ybl/Payment,Shopping,llm,aarav
+2026-09-27,UPI/CR/297447660471/ROHIT VERMA/oksbi/Split,766.0,credit,101527.0,Transfers,False,,Rohit Verma,UPI/CR/XXXX71/[PERSON]/oksbi/Split,Transfers,llm,aarav
+2026-09-28,UPI/DR/760553848856/DMART/paytm/Payment,1514.0,debit,100013.0,Groceries,False,,Dmart,UPI/DR/XXXX56/DMART/paytm/Payment,Groceries,rule,aarav
+2026-09-28,UPI/DR/977057929923/UBER INDIA/paytm/Payment,391.0,debit,99622.0,Transport,False,,Uber,UPI/DR/XXXX23/UBER INDIA/paytm/Payment,Transport,rule,aarav
+2026-10-01,SALARY CREDIT ACME TECHNOLOGIES OCT,90000.0,credit,189622.0,Income,False,,Acme,SALARY CREDIT ACME TECHNOLOGIES OCT,Income,rule,aarav
+2026-10-01,UPI/DR/845007485148/STARBUCKS/okaxis/Payment,696.0,debit,188926.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX48/STARBUCKS/okaxis/Payment,Food & Dining,rule,aarav
+2026-10-01,UPI/DR/549089823384/OLA CABS/oksbi/Payment,131.0,debit,188795.0,Transport,False,,Ola Cabs,UPI/DR/XXXX84/OLA CABS/oksbi/Payment,Transport,rule,aarav
+2026-10-02,UPI/DR/039622098769/NETFLIX/okhdfcbank/Subscription,649.0,debit,188146.0,Subscriptions,False,,Netflix,UPI/DR/XXXX69/NETFLIX/okhdfcbank/Subscription,Subscriptions,rule,aarav
+2026-10-02,UPI/DR/077091317570/FLIPKART/ybl/Payment,2142.0,debit,186004.0,Shopping,False,,Flipkart,UPI/DR/XXXX70/FLIPKART/ybl/Payment,Shopping,rule,aarav
+2026-10-02,UPI/DR/049979162262/NETFLIX/okhdfcbank/Subscription,649.0,debit,185355.0,Subscriptions,True,duplicate,Netflix,UPI/DR/XXXX62/NETFLIX/okhdfcbank/Subscription,Subscriptions,rule,aarav
+2026-10-03,NEFT/N7096056433/RAMESH KUMAR/RENT OCT,16000.0,debit,169355.0,Rent & Housing,False,,Ramesh Kumar,NEFT/N[PHONE]/[PERSON]/RENT OCT,Rent & Housing,rule,aarav
+2026-10-03,UPI/DR/321266869227/SWIGGY/okicici/Payment,603.0,debit,168752.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX27/SWIGGY/okicici/Payment,Food & Dining,rule,aarav
+2026-10-03,UPI/DR/886918044186/STARBUCKS/okicici/Payment,253.0,debit,168499.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX86/STARBUCKS/okicici/Payment,Food & Dining,rule,aarav
+2026-10-03,UPI/DR/946055183000/NAMMA METRO/ybl/Payment,215.0,debit,168284.0,Transport,False,,Namma Metro,UPI/DR/XXXX00/NAMMA METRO/ybl/Payment,Transport,rule,aarav
+2026-10-03,UPI/DR/973164891984/KAVYA NAIR/okaxis/Split,1063.0,debit,167221.0,Transfers,False,,Kavya Nair,UPI/DR/XXXX84/[PERSON]/okaxis/Split,Transfers,llm,aarav
+2026-10-04,ATM WDL HDFC HYDERABAD 480782,3000.0,debit,164221.0,Cash Withdrawal,False,,ATM Withdrawal,ATM WDL HDFC HYDERABAD XXXX82,Cash Withdrawal,rule,aarav
+2026-10-05,ACH/BAJAJ FINANCE LTD/3879268771,3499.0,debit,160722.0,EMI & Loans,False,,Bajaj Finance,ACH/BAJAJ FINANCE LTD/XXXX71,EMI & Loans,rule,aarav
+2026-10-05,UPI/DR/266279736766/ROHIT VERMA/ybl/Split,2171.0,debit,158551.0,Transfers,False,,Rohit Verma,UPI/DR/XXXX66/[PERSON]/ybl/Split,Transfers,llm,aarav
+2026-10-06,UPI/DR/129471502952/ZOMATO/paytm/Payment,445.0,debit,158106.0,Food & Dining,False,,Zomato,UPI/DR/XXXX52/ZOMATO/paytm/Payment,Food & Dining,rule,aarav
+2026-10-06,UPI/DR/220284852580/MEGHANA FOODS/okicici/Payment,336.0,debit,157770.0,Food & Dining,False,,Meghana Foods,UPI/DR/XXXX80/MEGHANA FOODS/okicici/Payment,Food & Dining,llm,aarav
+2026-10-06,UPI/DR/743680431041/BLUSMART MOBILITY/ybl/Payment,112.0,debit,157658.0,Transport,False,,Blusmart Mobility,UPI/DR/XXXX41/BLUSMART MOBILITY/ybl/Payment,Transport,llm,aarav
+2026-10-06,UPI/DR/760342365966/AMAZON SELLER SERVICES/okaxis/Payment,1771.0,debit,155887.0,Shopping,False,,Amazon Seller,UPI/DR/XXXX66/AMAZON SELLER SERVICES/okaxis/Payment,Shopping,rule,aarav
+2026-10-07,UPI/DR/099644469403/AIRTEL POSTPAID/ybl/Bill,599.0,debit,155288.0,Bills & Utilities,False,,Airtel Postpaid,UPI/DR/XXXX03/AIRTEL POSTPAID/ybl/Bill,Bills & Utilities,rule,aarav
+2026-10-07,UPI/DR/487177483640/CHAI POINT/okicici/Payment,311.0,debit,154977.0,Food & Dining,False,,Chai Point,UPI/DR/XXXX40/CHAI POINT/okicici/Payment,Food & Dining,llm,aarav
+2026-10-08,UPI/DR/817036138730/OLA CABS/ibl/Payment,315.0,debit,154662.0,Transport,False,,Ola Cabs,UPI/DR/XXXX30/OLA CABS/ibl/Payment,Transport,rule,aarav
+2026-10-08,UPI/DR/260581885893/BLUSMART MOBILITY/paytm/Payment,185.0,debit,154477.0,Transport,False,,Blusmart Mobility,UPI/DR/XXXX93/BLUSMART MOBILITY/paytm/Payment,Transport,llm,aarav
+2026-10-09,UPI/DR/205683266075/BESCOM ELECTRICITY/ybl/Bill,4860.0,debit,149617.0,Bills & Utilities,True,spike,Bescom Electricity,UPI/DR/XXXX75/BESCOM ELECTRICITY/ybl/Bill,Bills & Utilities,rule,aarav
+2026-10-09,UPI/DR/124528771327/NATURES BASKET/okhdfcbank/Payment,321.0,debit,149296.0,Groceries,False,,Natures Basket,UPI/DR/XXXX27/NATURES BASKET/okhdfcbank/Payment,Groceries,llm,aarav
+2026-10-10,UPI/DR/896516480788/ACT FIBERNET/oksbi/Bill,1059.0,debit,148237.0,Bills & Utilities,False,,Act Fibernet,UPI/DR/XXXX88/ACT FIBERNET/oksbi/Bill,Bills & Utilities,rule,aarav
+2026-10-10,UPI/DR/643231677792/DOMINOS PIZZA/okaxis/Payment,387.0,debit,147850.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX92/DOMINOS PIZZA/okaxis/Payment,Food & Dining,rule,aarav
+2026-10-10,UPI/DR/256579837176/SWIGGY/oksbi/Payment,425.0,debit,147425.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX76/SWIGGY/oksbi/Payment,Food & Dining,rule,aarav
+2026-10-10,UPI/DR/697951685424/ZOMATO/ybl/Payment,265.0,debit,147160.0,Food & Dining,False,,Zomato,UPI/DR/XXXX24/ZOMATO/ybl/Payment,Food & Dining,rule,aarav
+2026-10-11,UPI/DR/315604083781/SWIGGY/paytm/Payment,260.0,debit,146900.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX81/SWIGGY/paytm/Payment,Food & Dining,rule,aarav
+2026-10-11,UPI/DR/096428243143/SRI BALAJI STORES/oksbi/Payment,482.0,debit,146418.0,Groceries,False,,Sri Balaji Stores,UPI/DR/XXXX43/SRI BALAJI STORES/oksbi/Payment,Shopping,llm,aarav
+2026-10-12,UPI/DR/397110098976/SPOTIFY/ibl/Subscription,119.0,debit,146299.0,Subscriptions,False,,Spotify,UPI/DR/XXXX76/SPOTIFY/ibl/Subscription,Subscriptions,rule,aarav
+2026-10-12,UPI/DR/010195444615/STARBUCKS/okaxis/Payment,177.0,debit,146122.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX15/STARBUCKS/okaxis/Payment,Food & Dining,rule,aarav
+2026-10-12,UPI/DR/805949806558/DOMINOS PIZZA/okicici/Payment,663.0,debit,145459.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX58/DOMINOS PIZZA/okicici/Payment,Food & Dining,rule,aarav
+2026-10-12,UPI/DR/179785575660/HALDIRAMS/ibl/Payment,822.0,debit,144637.0,Food & Dining,False,,Haldirams,UPI/DR/XXXX60/HALDIRAMS/ibl/Payment,Food & Dining,llm,aarav
+2026-10-13,UPI/DR/180756781724/MEGHANA FOODS/ibl/Payment,841.0,debit,143796.0,Food & Dining,False,,Meghana Foods,UPI/DR/XXXX24/MEGHANA FOODS/ibl/Payment,Food & Dining,llm,aarav
+2026-10-13,UPI/DR/483670887853/THIRD WAVE COFFEE/okaxis/Payment,824.0,debit,142972.0,Food & Dining,False,,Third Wave Coffee,UPI/DR/XXXX53/THIRD WAVE COFFEE/okaxis/Payment,Food & Dining,llm,aarav
+2026-10-13,UPI/DR/838149574415/UBER INDIA/paytm/Payment,431.0,debit,142541.0,Transport,False,,Uber,UPI/DR/XXXX15/UBER INDIA/paytm/Payment,Transport,rule,aarav
+2026-10-14,UPI/DR/002822070169/YOUTUBE PREMIUM/oksbi/Subscription,129.0,debit,142412.0,Subscriptions,False,,Youtube Premium,UPI/DR/XXXX69/YOUTUBE PREMIUM/oksbi/Subscription,Subscriptions,rule,aarav
+2026-10-14,POS 3754741547733374 LENSKART MUMBAI,2719.0,debit,139693.0,Shopping,False,,Lenskart,POS XXXX74 LENSKART MUMBAI,Shopping,llm,aarav
+2026-10-15,UPI/DR/331791430747/SWIGGY/ybl/Payment,515.0,debit,139178.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX47/SWIGGY/ybl/Payment,Food & Dining,rule,aarav
+2026-10-15,UPI/DR/937873667471/BLINKIT/okhdfcbank/Payment,410.0,debit,138768.0,Groceries,False,,Blinkit,UPI/DR/XXXX71/BLINKIT/okhdfcbank/Payment,Groceries,rule,aarav
+2026-10-16,UPI/DR/304461811833/PVR CINEMAS/okaxis/Payment,849.0,debit,137919.0,Entertainment,False,,Pvr Cinemas,UPI/DR/XXXX33/PVR CINEMAS/okaxis/Payment,Entertainment,rule,aarav
+2026-10-16,UPI/DR/844317367512/PHARMEASY/okicici/Payment,195.0,debit,137724.0,Health,False,,Pharmeasy,UPI/DR/XXXX12/PHARMEASY/okicici/Payment,Health,rule,aarav
+2026-10-16,UPI/DR/219607638653/AMAZON SELLER SERVICES/okhdfcbank/Order,12999.0,debit,124725.0,Shopping,True,spike,Amazon Seller,UPI/DR/XXXX53/AMAZON SELLER SERVICES/okhdfcbank/Order,Shopping,rule,aarav
+2026-10-17,UPI/DR/917229035750/ZEPTO/okhdfcbank/Payment,268.0,debit,124457.0,Groceries,False,,Zepto,UPI/DR/[PHONE]/ZEPTO/okhdfcbank/Payment,Groceries,rule,aarav
+2026-10-17,UPI/DR/054049153216/SMAAAASH/ibl/Payment,602.0,debit,123855.0,Entertainment,False,,Smaaaash,UPI/DR/XXXX16/SMAAAASH/ibl/Payment,Entertainment,llm,aarav
+2026-10-18,POS 9844278206244317 OPENAI CHATGPT DELHI,1999.0,debit,121856.0,Subscriptions,False,,Openai Chatgpt,POS XXXX17 OPENAI CHATGPT DELHI,Subscriptions,llm,aarav
+2026-10-18,UPI/DR/958359027105/NAMMA METRO/oksbi/Payment,144.0,debit,121712.0,Transport,False,,Namma Metro,UPI/DR/XXXX05/NAMMA METRO/oksbi/Payment,Transport,rule,aarav
+2026-10-18,UPI/DR/906192275535/RAPIDO/okhdfcbank/Payment,416.0,debit,121296.0,Transport,False,,Rapido,UPI/DR/XXXX35/RAPIDO/okhdfcbank/Payment,Transport,rule,aarav
+2026-10-19,UPI/DR/344796725218/SWIGGY/paytm/Payment,545.0,debit,120751.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX18/SWIGGY/paytm/Payment,Food & Dining,rule,aarav
+2026-10-19,UPI/DR/797817688784/BIRYANI BLUES/paytm/Payment,388.0,debit,120363.0,Food & Dining,False,,Biryani Blues,UPI/DR/XXXX84/BIRYANI BLUES/paytm/Payment,Food & Dining,llm,aarav
+2026-10-19,UPI/DR/778545791016/BLINKIT/paytm/Payment,892.0,debit,119471.0,Groceries,False,,Blinkit,UPI/DR/XXXX16/BLINKIT/paytm/Payment,Groceries,rule,aarav
+2026-10-19,UPI/DR/676447978376/AMAZON SELLER SERVICES/paytm/Payment,1553.0,debit,117918.0,Shopping,False,,Amazon Seller,UPI/DR/XXXX76/AMAZON SELLER SERVICES/paytm/Payment,Shopping,rule,aarav
+2026-10-20,UPI/DR/474451995593/OLA CABS/ibl/Payment,396.0,debit,117522.0,Transport,False,,Ola Cabs,UPI/DR/XXXX93/OLA CABS/ibl/Payment,Transport,rule,aarav
+2026-10-21,UPI/DR/890499531423/SWIGGY/ybl/Payment,459.0,debit,117063.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX23/SWIGGY/ybl/Payment,Food & Dining,rule,aarav
+2026-10-21,UPI/DR/252845618634/STARBUCKS/okaxis/Payment,575.0,debit,116488.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX34/STARBUCKS/okaxis/Payment,Food & Dining,rule,aarav
+2026-10-22,UPI/DR/357506942669/DOMINOS PIZZA/paytm/Payment,371.0,debit,116117.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX69/DOMINOS PIZZA/paytm/Payment,Food & Dining,rule,aarav
+2026-10-22,UPI/DR/712520426511/NAMMA METRO/okicici/Payment,139.0,debit,115978.0,Transport,False,,Namma Metro,UPI/DR/XXXX11/NAMMA METRO/okicici/Payment,Transport,rule,aarav
+2026-10-22,UPI/DR/555651747260/SNEHA PATIL/okaxis/Split,548.0,debit,115430.0,Transfers,False,,Sneha Patil,UPI/DR/XXXX60/[PERSON]/okaxis/Split,Transfers,llm,aarav
+2026-10-22,UPI/DR/955043974402/SWIGGY/okhdfcbank/Order,4250.0,debit,111180.0,Food & Dining,True,spike,Swiggy,UPI/DR/XXXX02/SWIGGY/okhdfcbank/Order,Food & Dining,rule,aarav
+2026-10-24,UPI/DR/406956314395/ZOMATO/okhdfcbank/Payment,518.0,debit,110662.0,Food & Dining,False,,Zomato,UPI/DR/XXXX95/ZOMATO/okhdfcbank/Payment,Food & Dining,rule,aarav
+2026-10-24,UPI/DR/680578605183/NAMMA METRO/okicici/Payment,219.0,debit,110443.0,Transport,False,,Namma Metro,UPI/DR/XXXX83/NAMMA METRO/okicici/Payment,Transport,rule,aarav
+2026-10-24,UPI/DR/253982575370/NAMMA METRO/ibl/Payment,236.0,debit,110207.0,Transport,False,,Namma Metro,UPI/DR/XXXX70/NAMMA METRO/ibl/Payment,Transport,rule,aarav
+2026-10-25,UPI/DR/555722348883/RAPIDO/okaxis/Payment,408.0,debit,109799.0,Transport,False,,Rapido,UPI/DR/XXXX83/RAPIDO/okaxis/Payment,Transport,rule,aarav
+2026-10-25,UPI/DR/190470876137/UBER INDIA/okhdfcbank/Ride,2380.0,debit,107419.0,Transport,True,spike,Uber,UPI/DR/XXXX37/UBER INDIA/okhdfcbank/Ride,Transport,rule,aarav
+2026-10-26,UPI/CR/974962245900/KAVYA NAIR/okhdfcbank/Split,1213.0,credit,108632.0,Transfers,False,,Kavya Nair,UPI/CR/XXXX00/[PERSON]/okhdfcbank/Split,Transfers,llm,aarav
+2026-10-26,UPI/DR/225152165767/BLUSMART MOBILITY/ibl/Payment,60.0,debit,108572.0,Transport,False,,Blusmart Mobility,UPI/DR/XXXX67/BLUSMART MOBILITY/ibl/Payment,Transport,llm,aarav
+2026-10-27,UPI/DR/064501145946/DOMINOS PIZZA/okaxis/Payment,227.0,debit,108345.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX46/DOMINOS PIZZA/okaxis/Payment,Food & Dining,rule,aarav
+2026-10-27,UPI/DR/392102549092/STARBUCKS/ibl/Payment,342.0,debit,108003.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX92/STARBUCKS/ibl/Payment,Food & Dining,rule,aarav
+2026-10-27,UPI/DR/809086277326/NAMMA METRO/okhdfcbank/Payment,149.0,debit,107854.0,Transport,False,,Namma Metro,UPI/DR/XXXX26/NAMMA METRO/okhdfcbank/Payment,Transport,rule,aarav
+2026-10-27,POS 9217078874549284 CROMA RETAIL PUNE,18990.0,debit,88864.0,Shopping,True,new_merchant,Croma,POS XXXX84 CROMA RETAIL PUNE,Shopping,llm,aarav
+2026-10-28,UPI/DR/383271745143/ZEPTO/okhdfcbank/Payment,1491.0,debit,87373.0,Groceries,False,,Zepto,UPI/DR/XXXX43/ZEPTO/okhdfcbank/Payment,Groceries,rule,aarav
+2026-10-30,INT.PD 01-07-2026 TO 30-09-2026,412.0,credit,87785.0,Income,False,,Int.Pd 01 07 To 30 09,INT.PD 01-07-2026 TO 30-09-2026,Income,rule,aarav
+2026-08-01,SALARY CREDIT GLOBEX FINSERV AUG,120000.0,credit,205000.0,Income,False,,Globex Finserv,SALARY CREDIT GLOBEX FINSERV AUG,Income,rule,priya
+2026-08-02,UPI/DR/171056262592/NESTAWAY TECHNOLOGIES/okhdfcbank/Monthly,28000.0,debit,177000.0,Rent & Housing,False,,Nestaway,UPI/DR/XXXX92/NESTAWAY TECHNOLOGIES/okhdfcbank/Monthly,Subscriptions,llm,priya
+2026-08-02,POS 7262244229530493 MORE SUPERMARKET BANGALORE,532.0,debit,176468.0,Groceries,False,,More Supermarket,POS XXXX93 MORE SUPERMARKET BANGALORE,Groceries,llm,priya
+2026-08-03,POS 5646105449543481 COURSERA MUMBAI,3999.0,debit,172469.0,Education,False,,Coursera,POS XXXX81 COURSERA MUMBAI,Education,rule,priya
+2026-08-04,NEFT/N3255367627/SUNITA IYER/MOM,10000.0,debit,162469.0,Transfers,False,,Sunita Iyer,NEFT/NXXXX27/[PERSON]/MOM,Transfers,llm,priya
+2026-08-04,UPI/DR/070206934948/DOMINOS PIZZA/ybl/Payment,488.0,debit,161981.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX48/DOMINOS PIZZA/ybl/Payment,Food & Dining,rule,priya
+2026-08-04,UPI/DR/752798372886/ZEPTO/ibl/Payment,2074.0,debit,159907.0,Groceries,False,,Zepto,UPI/DR/XXXX86/ZEPTO/ibl/Payment,Groceries,rule,priya
+2026-08-04,POS 6041577379454969 MORE SUPERMARKET MUMBAI,1920.0,debit,157987.0,Groceries,False,,More Supermarket,POS XXXX69 MORE SUPERMARKET MUMBAI,Groceries,llm,priya
+2026-08-05,ACH/HDB FINANCIAL SERVICES/4915414468,12500.0,debit,145487.0,EMI & Loans,False,,Hdb Financial,ACH/HDB FINANCIAL SERVICES/XXXX68,EMI & Loans,llm,priya
+2026-08-05,UPI/DR/341406294467/ZOMATO/okhdfcbank/Payment,597.0,debit,144890.0,Food & Dining,False,,Zomato,UPI/DR/XXXX67/ZOMATO/okhdfcbank/Payment,Food & Dining,rule,priya
+2026-08-06,UPI/DR/192570200558/HOTSTAR/okhdfcbank/Subscription,299.0,debit,144591.0,Subscriptions,False,,Hotstar,UPI/DR/XXXX58/HOTSTAR/okhdfcbank/Subscription,Subscriptions,rule,priya
+2026-08-06,UPI/DR/089312347310/BOOKMYSHOW/paytm/Payment,414.0,debit,144177.0,Entertainment,False,,Bookmyshow,UPI/DR/XXXX10/BOOKMYSHOW/paytm/Payment,Entertainment,rule,priya
+2026-08-07,UPI/DR/620209785324/DOMINOS PIZZA/okaxis/Payment,800.0,debit,143377.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX24/DOMINOS PIZZA/okaxis/Payment,Food & Dining,rule,priya
+2026-08-08,UPI/DR/559130574814/JIO POSTPAID/okicici/Bill,699.0,debit,142678.0,Bills & Utilities,False,,Jio Postpaid,UPI/DR/XXXX14/JIO POSTPAID/okicici/Bill,Bills & Utilities,rule,priya
+2026-08-08,UPI/DR/345939644431/STARBUCKS/okaxis/Payment,613.0,debit,142065.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX31/STARBUCKS/okaxis/Payment,Food & Dining,rule,priya
+2026-08-09,POS 0116480084484888 BEWAKOOF BRANDS PUNE,2843.0,debit,139222.0,Shopping,False,,Bewakoof Brands,POS XXXX88 BEWAKOOF BRANDS PUNE,Shopping,llm,priya
+2026-08-09,UPI/DR/838033053427/PVR CINEMAS/okhdfcbank/Payment,880.0,debit,138342.0,Entertainment,False,,Pvr Cinemas,UPI/DR/XXXX27/PVR CINEMAS/okhdfcbank/Payment,Entertainment,rule,priya
+2026-08-10,UPI/DR/880722773139/ZOMATO/ibl/Payment,855.0,debit,137487.0,Food & Dining,False,,Zomato,UPI/DR/XXXX39/ZOMATO/ibl/Payment,Food & Dining,rule,priya
+2026-08-10,UPI/DR/242374813530/ZEPTO/okhdfcbank/Payment,2300.0,debit,135187.0,Groceries,False,,Zepto,UPI/DR/XXXX30/ZEPTO/okhdfcbank/Payment,Groceries,rule,priya
+2026-08-11,UPI/DR/669124911988/TORRENT POWER/ybl/Bill,1469.0,debit,133718.0,Bills & Utilities,False,,Torrent Power,UPI/DR/XXXX88/TORRENT POWER/ybl/Bill,Bills & Utilities,llm,priya
+2026-08-11,UPI/DR/959772674559/ROHIT VERMA/okaxis/Split,1677.0,debit,132041.0,Transfers,False,,Rohit Verma,UPI/DR/XXXX59/[PERSON]/okaxis/Split,Transfers,llm,priya
+2026-08-12,UPI/DR/733014981809/INDANE GAS/ibl/Cylinder,905.0,debit,131136.0,Bills & Utilities,False,,Indane Gas,UPI/DR/XXXX09/INDANE GAS/ibl/Cylinder,Bills & Utilities,llm,priya
+2026-08-12,UPI/DR/617493899692/MYNTRA/okhdfcbank/Payment,2142.0,debit,128994.0,Shopping,False,,Myntra,UPI/DR/XXXX92/MYNTRA/okhdfcbank/Payment,Shopping,rule,priya
+2026-08-13,UPI/DR/315312792827/STARBUCKS/okaxis/Payment,334.0,debit,128660.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX27/STARBUCKS/okaxis/Payment,Food & Dining,rule,priya
+2026-08-13,POS 0182494644615886 MEGHANA FOODS PUNE,1553.0,debit,127107.0,Food & Dining,False,,Meghana Foods,POS XXXX86 MEGHANA FOODS PUNE,Food & Dining,llm,priya
+2026-08-13,UPI/DR/655684569265/BLINKIT/paytm/Payment,2210.0,debit,124897.0,Groceries,False,,Blinkit,UPI/DR/XXXX65/BLINKIT/paytm/Payment,Groceries,rule,priya
+2026-08-13,UPI/DR/529089132197/NYKAA/okaxis/Payment,3278.0,debit,121619.0,Shopping,False,,Nykaa,UPI/DR/XXXX97/NYKAA/okaxis/Payment,Shopping,rule,priya
+2026-08-14,UPI/DR/374082555740/TATA 1MG/ibl/Payment,544.0,debit,121075.0,Health,False,,Tata 1Mg,UPI/DR/XXXX40/TATA 1MG/ibl/Payment,Health,rule,priya
+2026-08-15,UPI/DR/867736727439/NETFLIX/okaxis/Subscription,649.0,debit,120426.0,Subscriptions,False,,Netflix,UPI/DR/XXXX39/NETFLIX/okaxis/Subscription,Subscriptions,rule,priya
+2026-08-15,POS 4750154777052683 BIRYANI BLUES HYDERABAD,538.0,debit,119888.0,Food & Dining,False,,Biryani Blues,POS XXXX83 BIRYANI BLUES HYDERABAD,Food & Dining,llm,priya
+2026-08-16,UPI/DR/371791590680/ZEPTO/ibl/Payment,752.0,debit,119136.0,Groceries,False,,Zepto,UPI/DR/XXXX80/ZEPTO/ibl/Payment,Groceries,rule,priya
+2026-08-16,POS 6928106851251815 SHELL FUEL STATION DELHI,2778.0,debit,116358.0,Transport,False,,Shell Fuel Station,POS XXXX15 SHELL FUEL STATION DELHI,Transport,llm,priya
+2026-08-17,POS 4027591599086201 TRUFFLES CAFE BANGALORE,809.0,debit,115549.0,Food & Dining,False,,Truffles Cafe,POS XXXX01 TRUFFLES CAFE BANGALORE,Food & Dining,llm,priya
+2026-08-17,UPI/DR/863390697776/BLINKIT/okaxis/Payment,715.0,debit,114834.0,Groceries,False,,Blinkit,UPI/DR/XXXX76/BLINKIT/okaxis/Payment,Groceries,rule,priya
+2026-08-17,UPI/DR/993808069181/BLINKIT/okhdfcbank/Payment,2062.0,debit,112772.0,Groceries,False,,Blinkit,UPI/DR/XXXX81/BLINKIT/okhdfcbank/Payment,Groceries,rule,priya
+2026-08-17,POS 5457460439033695 INDIAN OIL PETROL MUMBAI,2375.0,debit,110397.0,Transport,False,,Indian Oil Petrol,POS XXXX95 INDIAN OIL PETROL MUMBAI,Transport,rule,priya
+2026-08-17,UPI/DR/437031275833/RAPIDO/okaxis/Payment,207.0,debit,110190.0,Transport,False,,Rapido,UPI/DR/XXXX33/RAPIDO/okaxis/Payment,Transport,rule,priya
+2026-08-17,UPI/DR/768495678846/RAPIDO/paytm/Payment,176.0,debit,110014.0,Transport,False,,Rapido,UPI/DR/XXXX46/RAPIDO/paytm/Payment,Transport,rule,priya
+2026-08-17,UPI/DR/812073272083/ANKIT SHARMA/okaxis/Split,1965.0,debit,108049.0,Transfers,False,,Ankit Sharma,UPI/DR/XXXX83/[PERSON]/okaxis/Split,Transfers,llm,priya
+2026-08-18,UPI/DR/878396667655/BLINKIT/okaxis/Payment,1327.0,debit,106722.0,Groceries,False,,Blinkit,UPI/DR/XXXX55/BLINKIT/okaxis/Payment,Groceries,rule,priya
+2026-08-18,UPI/DR/783480188102/UBER INDIA/ibl/Payment,372.0,debit,106350.0,Transport,False,,Uber,UPI/DR/XXXX02/UBER INDIA/ibl/Payment,Transport,rule,priya
+2026-08-20,POS 7498235311476247 CULTFIT MUMBAI,1499.0,debit,104851.0,Subscriptions,False,,Cultfit,POS XXXX47 CULTFIT MUMBAI,Subscriptions,llm,priya
+2026-08-20,POS 9351071082664358 NATURES BASKET HYDERABAD,1697.0,debit,103154.0,Groceries,False,,Natures Basket,POS XXXX58 NATURES BASKET HYDERABAD,Groceries,llm,priya
+2026-08-20,UPI/DR/954313652763/MYNTRA/ibl/Payment,1166.0,debit,101988.0,Shopping,False,,Myntra,UPI/DR/XXXX63/MYNTRA/ibl/Payment,Shopping,rule,priya
+2026-08-21,POS 4964539868037242 LINKEDIN PREMIUM MUMBAI,1650.0,debit,100338.0,Subscriptions,False,,Linkedin Premium,POS XXXX42 LINKEDIN PREMIUM MUMBAI,Subscriptions,llm,priya
+2026-08-21,UPI/DR/641368953219/SWIGGY/oksbi/Payment,583.0,debit,99755.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX19/SWIGGY/oksbi/Payment,Food & Dining,rule,priya
+2026-08-21,UPI/DR/397026994703/SWIGGY/ybl/Payment,357.0,debit,99398.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX03/SWIGGY/ybl/Payment,Food & Dining,rule,priya
+2026-08-21,POS 0002881824727593 CHAI POINT PUNE,493.0,debit,98905.0,Food & Dining,False,,Chai Point,POS XXXX93 CHAI POINT PUNE,Food & Dining,llm,priya
+2026-08-21,POS 9861628976305011 SHELL FUEL STATION BANGALORE,2126.0,debit,96779.0,Transport,False,,Shell Fuel Station,POS XXXX11 SHELL FUEL STATION BANGALORE,Transport,llm,priya
+2026-08-24,UPI/DR/265960353896/RAPIDO/okaxis/Payment,580.0,debit,96199.0,Transport,False,,Rapido,UPI/DR/XXXX96/RAPIDO/okaxis/Payment,Transport,rule,priya
+2026-08-25,POS 7745591101177183 BIRYANI BLUES DELHI,836.0,debit,95363.0,Food & Dining,False,,Biryani Blues,POS XXXX83 BIRYANI BLUES DELHI,Food & Dining,llm,priya
+2026-08-25,UPI/DR/673865724786/THYROCARE/okhdfcbank/Payment,1666.0,debit,93697.0,Health,False,,Thyrocare,UPI/DR/XXXX86/THYROCARE/okhdfcbank/Payment,Health,llm,priya
+2026-08-27,UPI/DR/686421969163/FLIPKART/oksbi/Payment,3242.0,debit,90455.0,Shopping,False,,Flipkart,UPI/DR/XXXX63/FLIPKART/oksbi/Payment,Shopping,rule,priya
+2026-08-28,POS 4649475865922742 IKEA PUNE,3598.0,debit,86857.0,Shopping,False,,Ikea,POS XXXX42 IKEA PUNE,Shopping,llm,priya
+2026-09-01,SALARY CREDIT GLOBEX FINSERV SEP,120000.0,credit,206857.0,Income,False,,Globex Finserv,SALARY CREDIT GLOBEX FINSERV SEP,Income,rule,priya
+2026-09-02,UPI/DR/057983008434/NESTAWAY TECHNOLOGIES/ibl/Monthly,28000.0,debit,178857.0,Rent & Housing,False,,Nestaway,UPI/DR/XXXX34/NESTAWAY TECHNOLOGIES/ibl/Monthly,Subscriptions,llm,priya
+2026-09-02,UPI/DR/476046307386/DOMINOS PIZZA/ybl/Payment,432.0,debit,178425.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX86/DOMINOS PIZZA/ybl/Payment,Food & Dining,rule,priya
+2026-09-02,UPI/DR/699084117058/DMART/okaxis/Payment,2088.0,debit,176337.0,Groceries,False,,Dmart,UPI/DR/XXXX58/DMART/okaxis/Payment,Groceries,rule,priya
+2026-09-02,UPI/DR/183146323443/ANKIT SHARMA/ybl/Split,1637.0,debit,174700.0,Transfers,False,,Ankit Sharma,UPI/DR/XXXX43/[PERSON]/ybl/Split,Transfers,llm,priya
+2026-09-03,POS 2377010146850441 FRESH PICK MART HYDERABAD,845.0,debit,173855.0,Groceries,False,,Fresh Pick Mart,POS XXXX41 FRESH PICK MART HYDERABAD,Groceries,llm,priya
+2026-09-03,UPI/DR/487326998369/BOOKMYSHOW/okaxis/Payment,732.0,debit,173123.0,Entertainment,False,,Bookmyshow,UPI/DR/XXXX69/BOOKMYSHOW/okaxis/Payment,Entertainment,rule,priya
+2026-09-04,NEFT/N0258046922/SUNITA IYER/MOM,10000.0,debit,163123.0,Transfers,False,,Sunita Iyer,NEFT/NXXXX22/[PERSON]/MOM,Transfers,llm,priya
+2026-09-04,UPI/DR/444307907337/DMART/okicici/Payment,1462.0,debit,161661.0,Groceries,False,,Dmart,UPI/DR/XXXX37/DMART/okicici/Payment,Groceries,rule,priya
+2026-09-04,UPI/DR/039090533648/BLINKIT/okaxis/Payment,1379.0,debit,160282.0,Groceries,False,,Blinkit,UPI/DR/XXXX48/BLINKIT/okaxis/Payment,Groceries,rule,priya
+2026-09-04,POS 2346789961798893 SHELL FUEL STATION PUNE,2387.0,debit,157895.0,Transport,False,,Shell Fuel Station,POS XXXX93 SHELL FUEL STATION PUNE,Transport,llm,priya
+2026-09-04,UPI/DR/393507674388/FLIPKART/oksbi/Payment,1007.0,debit,156888.0,Shopping,False,,Flipkart,UPI/DR/XXXX88/FLIPKART/oksbi/Payment,Shopping,rule,priya
+2026-09-04,UPI/DR/009729284267/PVR CINEMAS/paytm/Payment,927.0,debit,155961.0,Entertainment,False,,Pvr Cinemas,UPI/DR/XXXX67/PVR CINEMAS/paytm/Payment,Entertainment,rule,priya
+2026-09-05,ACH/HDB FINANCIAL SERVICES/5626786118,12500.0,debit,143461.0,EMI & Loans,False,,Hdb Financial,ACH/HDB FINANCIAL SERVICES/XXXX18,EMI & Loans,llm,priya
+2026-09-06,UPI/DR/365808265754/HOTSTAR/okaxis/Subscription,299.0,debit,143162.0,Subscriptions,False,,Hotstar,UPI/DR/XXXX54/HOTSTAR/okaxis/Subscription,Subscriptions,rule,priya
+2026-09-07,UPI/DR/666307774836/DMART/okicici/Payment,883.0,debit,142279.0,Groceries,False,,Dmart,UPI/DR/XXXX36/DMART/okicici/Payment,Groceries,rule,priya
+2026-09-07,POS 2456743068523311 LENSKART MUMBAI,4313.0,debit,137966.0,Shopping,False,,Lenskart,POS XXXX11 LENSKART MUMBAI,Health,llm,priya
+2026-09-08,UPI/DR/564528963962/JIO POSTPAID/ybl/Bill,699.0,debit,137267.0,Bills & Utilities,False,,Jio Postpaid,UPI/DR/XXXX62/JIO POSTPAID/ybl/Bill,Bills & Utilities,rule,priya
+2026-09-10,UPI/DR/143568009234/DOMINOS PIZZA/oksbi/Payment,723.0,debit,136544.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX34/DOMINOS PIZZA/oksbi/Payment,Food & Dining,rule,priya
+2026-09-10,UPI/DR/290160316452/ZOMATO/okhdfcbank/Payment,495.0,debit,136049.0,Food & Dining,False,,Zomato,UPI/DR/XXXX52/ZOMATO/okhdfcbank/Payment,Food & Dining,rule,priya
+2026-09-11,UPI/DR/332413196573/TORRENT POWER/okaxis/Bill,1884.0,debit,134165.0,Bills & Utilities,False,,Torrent Power,UPI/DR/XXXX73/TORRENT POWER/okaxis/Bill,Bills & Utilities,llm,priya
+2026-09-11,UPI/DR/088926970376/NYKAA/okhdfcbank/Payment,2535.0,debit,131630.0,Shopping,False,,Nykaa,UPI/DR/XXXX76/NYKAA/okhdfcbank/Payment,Shopping,rule,priya
+2026-09-11,UPI/DR/374629761592/PHARMEASY/okhdfcbank/Payment,825.0,debit,130805.0,Health,False,,Pharmeasy,UPI/DR/XXXX92/PHARMEASY/okhdfcbank/Payment,Health,rule,priya
+2026-09-11,UPI/DR/572705648517/DR MEHTA CLINIC/okhdfcbank/Payment,550.0,debit,130255.0,Health,False,,Dr Mehta Clinic,UPI/DR/XXXX17/DR MEHTA CLINIC/okhdfcbank/Payment,Health,llm,priya
+2026-09-12,UPI/DR/338036155209/INDANE GAS/ibl/Cylinder,905.0,debit,129350.0,Bills & Utilities,False,,Indane Gas,UPI/DR/XXXX09/INDANE GAS/ibl/Cylinder,Bills & Utilities,llm,priya
+2026-09-12,UPI/DR/390661197274/DMART/okhdfcbank/Payment,1168.0,debit,128182.0,Groceries,False,,Dmart,UPI/DR/XXXX74/DMART/okhdfcbank/Payment,Groceries,rule,priya
+2026-09-14,UPI/DR/384298982997/DOMINOS PIZZA/ibl/Payment,646.0,debit,127536.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX97/DOMINOS PIZZA/ibl/Payment,Food & Dining,rule,priya
+2026-09-14,POS 2447848316119994 NATURES BASKET BANGALORE,1705.0,debit,125831.0,Groceries,False,,Natures Basket,POS XXXX94 NATURES BASKET BANGALORE,Groceries,llm,priya
+2026-09-14,UPI/DR/144111189627/OLA CABS/oksbi/Payment,306.0,debit,125525.0,Transport,False,,Ola Cabs,UPI/DR/XXXX27/OLA CABS/oksbi/Payment,Transport,rule,priya
+2026-09-14,UPI/DR/283586347937/UBER INDIA/okhdfcbank/Payment,496.0,debit,125029.0,Transport,False,,Uber,UPI/DR/XXXX37/UBER INDIA/okhdfcbank/Payment,Transport,rule,priya
+2026-09-15,UPI/DR/788444976212/NETFLIX/okhdfcbank/Subscription,649.0,debit,124380.0,Subscriptions,False,,Netflix,UPI/DR/XXXX12/NETFLIX/okhdfcbank/Subscription,Subscriptions,rule,priya
+2026-09-16,UPI/DR/212052058142/ZOMATO/okhdfcbank/Payment,832.0,debit,123548.0,Food & Dining,False,,Zomato,UPI/DR/XXXX42/ZOMATO/okhdfcbank/Payment,Food & Dining,rule,priya
+2026-09-16,POS 3776485287522455 SHELL FUEL STATION BANGALORE,1953.0,debit,121595.0,Transport,False,,Shell Fuel Station,POS XXXX55 SHELL FUEL STATION BANGALORE,Transport,llm,priya
+2026-09-16,POS 0731949611448525 INDIAN OIL PETROL HYDERABAD,2043.0,debit,119552.0,Transport,False,,Indian Oil Petrol,POS XXXX25 INDIAN OIL PETROL HYDERABAD,Transport,rule,priya
+2026-09-18,UPI/DR/269632485195/STARBUCKS/paytm/Payment,222.0,debit,119330.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX95/STARBUCKS/paytm/Payment,Food & Dining,rule,priya
+2026-09-18,UPI/DR/613618119252/DMART/okhdfcbank/Payment,2394.0,debit,116936.0,Groceries,False,,Dmart,UPI/DR/XXXX52/DMART/okhdfcbank/Payment,Groceries,rule,priya
+2026-09-18,UPI/DR/719356445410/KAVYA NAIR/oksbi/Split,1547.0,debit,115389.0,Transfers,False,,Kavya Nair,UPI/DR/XXXX10/[PERSON]/oksbi/Split,Transfers,llm,priya
+2026-09-19,UPI/DR/791685381348/NAMMA METRO/paytm/Payment,478.0,debit,114911.0,Transport,False,,Namma Metro,UPI/DR/XXXX48/NAMMA METRO/paytm/Payment,Transport,rule,priya
+2026-09-20,POS 2036227455007548 CULTFIT DELHI,1499.0,debit,113412.0,Subscriptions,False,,Cultfit,POS XXXX48 CULTFIT DELHI,Subscriptions,llm,priya
+2026-09-20,POS 9138882205894850 FRESH PICK MART BANGALORE,1444.0,debit,111968.0,Groceries,False,,Fresh Pick Mart,POS XXXX50 FRESH PICK MART BANGALORE,Groceries,llm,priya
+2026-09-21,POS 0868351109581481 LINKEDIN PREMIUM HYDERABAD,1650.0,debit,110318.0,Subscriptions,False,,Linkedin Premium,POS XXXX81 LINKEDIN PREMIUM HYDERABAD,Subscriptions,llm,priya
+2026-09-21,POS 1182551986205058 TRUFFLES CAFE BANGALORE,374.0,debit,109944.0,Food & Dining,False,,Truffles Cafe,POS XXXX58 TRUFFLES CAFE BANGALORE,Food & Dining,llm,priya
+2026-09-22,UPI/DR/428550626139/ZOMATO/okaxis/Payment,327.0,debit,109617.0,Food & Dining,False,,Zomato,UPI/DR/XXXX39/ZOMATO/okaxis/Payment,Food & Dining,rule,priya
+2026-09-22,UPI/DR/951900202429/NYKAA/ibl/Payment,2698.0,debit,106919.0,Shopping,False,,Nykaa,UPI/DR/XXXX29/NYKAA/ibl/Payment,Shopping,rule,priya
+2026-09-22,UPI/DR/590600813824/NYKAA/okaxis/Payment,832.0,debit,106087.0,Shopping,False,,Nykaa,UPI/DR/XXXX24/NYKAA/okaxis/Payment,Shopping,rule,priya
+2026-09-24,UPI/DR/367354936966/STARBUCKS/paytm/Payment,453.0,debit,105634.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX66/STARBUCKS/paytm/Payment,Food & Dining,rule,priya
+2026-09-24,UPI/DR/296269928903/BIGBASKET/okhdfcbank/Payment,1743.0,debit,103891.0,Groceries,False,,Bigbasket,UPI/DR/XXXX03/BIGBASKET/okhdfcbank/Payment,Groceries,rule,priya
+2026-09-25,POS 4088855839188868 THIRD WAVE COFFEE HYDERABAD,736.0,debit,103155.0,Food & Dining,False,,Third Wave Coffee,POS XXXX68 THIRD WAVE COFFEE HYDERABAD,Food & Dining,llm,priya
+2026-09-25,UPI/DR/964141674488/UBER INDIA/okicici/Payment,267.0,debit,102888.0,Transport,False,,Uber,UPI/DR/XXXX88/UBER INDIA/okicici/Payment,Transport,rule,priya
+2026-09-27,POS 2279969187963466 THIRD WAVE COFFEE MUMBAI,655.0,debit,102233.0,Food & Dining,False,,Third Wave Coffee,POS XXXX66 THIRD WAVE COFFEE MUMBAI,Food & Dining,llm,priya
+2026-09-28,POS 0107318538864853 MEGHANA FOODS PUNE,1351.0,debit,100882.0,Food & Dining,False,,Meghana Foods,POS XXXX53 MEGHANA FOODS PUNE,Food & Dining,llm,priya
+2026-09-28,POS 8034342089670666 CHAI POINT MUMBAI,822.0,debit,100060.0,Food & Dining,False,,Chai Point,POS XXXX66 CHAI POINT MUMBAI,Food & Dining,llm,priya
+2026-09-28,POS 9691110106170538 BEWAKOOF BRANDS DELHI,3773.0,debit,96287.0,Shopping,False,,Bewakoof Brands,POS XXXX38 BEWAKOOF BRANDS DELHI,Shopping,llm,priya
+2026-10-01,SALARY CREDIT GLOBEX FINSERV OCT,120000.0,credit,216287.0,Income,False,,Globex Finserv,SALARY CREDIT GLOBEX FINSERV OCT,Income,rule,priya
+2026-10-01,UPI/DR/211472442174/ZOMATO/ibl/Payment,882.0,debit,215405.0,Food & Dining,False,,Zomato,UPI/DR/XXXX74/ZOMATO/ibl/Payment,Food & Dining,rule,priya
+2026-10-02,UPI/DR/890432732889/NESTAWAY TECHNOLOGIES/paytm/Monthly,28000.0,debit,187405.0,Rent & Housing,False,,Nestaway,UPI/DR/XXXX89/NESTAWAY TECHNOLOGIES/paytm/Monthly,Subscriptions,llm,priya
+2026-10-02,POS 9793117046139473 SHELL FUEL STATION MUMBAI,1967.0,debit,185438.0,Transport,False,,Shell Fuel Station,POS XXXX73 SHELL FUEL STATION MUMBAI,Transport,llm,priya
+2026-10-03,UPI/DR/817151867184/SWIGGY/oksbi/Payment,432.0,debit,185006.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX84/SWIGGY/oksbi/Payment,Food & Dining,rule,priya
+2026-10-03,UPI/DR/934090668276/DMART/okaxis/Payment,463.0,debit,184543.0,Groceries,False,,Dmart,UPI/DR/XXXX76/DMART/okaxis/Payment,Groceries,rule,priya
+2026-10-04,NEFT/N5760031185/SUNITA IYER/MOM,10000.0,debit,174543.0,Transfers,False,,Sunita Iyer,NEFT/NXXXX85/[PERSON]/MOM,Transfers,llm,priya
+2026-10-04,UPI/DR/450328562962/DMART/ybl/Payment,1908.0,debit,172635.0,Groceries,False,,Dmart,UPI/DR/XXXX62/DMART/ybl/Payment,Groceries,rule,priya
+2026-10-05,ACH/HDB FINANCIAL SERVICES/8340941510,12500.0,debit,160135.0,EMI & Loans,False,,Hdb Financial,ACH/HDB FINANCIAL SERVICES/[PHONE],EMI & Loans,llm,priya
+2026-10-05,UPI/DR/305252896449/DMART/ybl/Payment,2292.0,debit,157843.0,Groceries,False,,Dmart,UPI/DR/XXXX49/DMART/ybl/Payment,Groceries,rule,priya
+2026-10-05,POS 0801029773315304 NATURES BASKET HYDERABAD,1502.0,debit,156341.0,Groceries,False,,Natures Basket,POS XXXX04 NATURES BASKET HYDERABAD,Groceries,llm,priya
+2026-10-05,UPI/DR/361619103396/UBER INDIA/oksbi/Payment,407.0,debit,155934.0,Transport,False,,Uber,UPI/DR/XXXX96/UBER INDIA/oksbi/Payment,Transport,rule,priya
+2026-10-05,UPI/DR/755004897003/ROHIT VERMA/okicici/Split,1742.0,debit,154192.0,Transfers,False,,Rohit Verma,UPI/DR/XXXX03/[PERSON]/okicici/Split,Transfers,llm,priya
+2026-10-06,UPI/DR/173349896010/HOTSTAR/paytm/Subscription,299.0,debit,153893.0,Subscriptions,False,,Hotstar,UPI/DR/XXXX10/HOTSTAR/paytm/Subscription,Subscriptions,rule,priya
+2026-10-06,POS 1576196915433160 HALDIRAMS MUMBAI,348.0,debit,153545.0,Food & Dining,False,,Haldirams,POS XXXX60 HALDIRAMS MUMBAI,Groceries,llm,priya
+2026-10-07,UPI/DR/866035358741/PVR CINEMAS/okhdfcbank/Payment,848.0,debit,152697.0,Entertainment,False,,Pvr Cinemas,UPI/DR/XXXX41/PVR CINEMAS/okhdfcbank/Payment,Entertainment,rule,priya
+2026-10-08,UPI/DR/457072039397/JIO POSTPAID/paytm/Bill,699.0,debit,151998.0,Bills & Utilities,False,,Jio Postpaid,UPI/DR/XXXX97/JIO POSTPAID/paytm/Bill,Bills & Utilities,rule,priya
+2026-10-08,UPI/DR/287369281494/STARBUCKS/okaxis/Payment,615.0,debit,151383.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX94/STARBUCKS/okaxis/Payment,Food & Dining,rule,priya
+2026-10-08,POS 3023384026171605 INDIAN OIL PETROL BANGALORE,1730.0,debit,149653.0,Transport,False,,Indian Oil Petrol,POS XXXX05 INDIAN OIL PETROL BANGALORE,Transport,rule,priya
+2026-10-09,REFUND AMAZON ORDER 402-881,1299.0,credit,150952.0,Income,False,,Refund Amazon Order 402 881,REFUND AMAZON ORDER 402-881,Income,rule,priya
+2026-10-09,UPI/DR/846497357804/AJIO/oksbi/Payment,3763.0,debit,147189.0,Shopping,False,,Ajio,UPI/DR/XXXX04/AJIO/oksbi/Payment,Shopping,rule,priya
+2026-10-11,UPI/DR/548076573894/TORRENT POWER/ybl/Bill,6450.0,debit,140739.0,Bills & Utilities,True,spike,Torrent Power,UPI/DR/XXXX94/TORRENT POWER/ybl/Bill,Bills & Utilities,llm,priya
+2026-10-12,UPI/DR/226583534346/INDANE GAS/okaxis/Cylinder,905.0,debit,139834.0,Bills & Utilities,False,,Indane Gas,UPI/DR/XXXX46/INDANE GAS/okaxis/Cylinder,Bills & Utilities,llm,priya
+2026-10-12,UPI/DR/341671905661/UBER INDIA/okicici/Payment,297.0,debit,139537.0,Transport,False,,Uber,UPI/DR/XXXX61/UBER INDIA/okicici/Payment,Transport,rule,priya
+2026-10-13,UPI/DR/285604282702/BOOKMYSHOW/okaxis/Payment,463.0,debit,139074.0,Entertainment,False,,Bookmyshow,UPI/DR/XXXX02/BOOKMYSHOW/okaxis/Payment,Entertainment,rule,priya
+2026-10-13,UPI/DR/345929006750/MYNTRA/ybl/Order,15800.0,debit,123274.0,Shopping,True,spike,Myntra,UPI/DR/XXXX50/MYNTRA/ybl/Order,Shopping,rule,priya
+2026-10-14,UPI/DR/399120075919/UBER INDIA/okhdfcbank/Payment,433.0,debit,122841.0,Transport,False,,Uber,UPI/DR/XXXX19/UBER INDIA/okhdfcbank/Payment,Transport,rule,priya
+2026-10-15,UPI/DR/556234621129/NETFLIX/okicici/Subscription,649.0,debit,122192.0,Subscriptions,False,,Netflix,UPI/DR/XXXX29/NETFLIX/okicici/Subscription,Subscriptions,rule,priya
+2026-10-16,UPI/DR/588263842434/SWIGGY/ibl/Payment,491.0,debit,121701.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX34/SWIGGY/ibl/Payment,Food & Dining,rule,priya
+2026-10-16,UPI/DR/868448056438/NYKAA/okhdfcbank/Payment,971.0,debit,120730.0,Shopping,False,,Nykaa,UPI/DR/XXXX38/NYKAA/okhdfcbank/Payment,Shopping,rule,priya
+2026-10-17,UPI/DR/034287149028/ZOMATO/oksbi/Payment,283.0,debit,120447.0,Food & Dining,False,,Zomato,UPI/DR/XXXX28/ZOMATO/oksbi/Payment,Food & Dining,rule,priya
+2026-10-17,UPI/DR/727053295635/AMAZON SELLER SERVICES/okaxis/Payment,3266.0,debit,117181.0,Shopping,False,,Amazon Seller,UPI/DR/XXXX35/AMAZON SELLER SERVICES/okaxis/Payment,Shopping,rule,priya
+2026-10-17,POS 9120934558370336 APOLLO PHARMACY BANGALORE,9400.0,debit,107781.0,Health,True,spike,Apollo Pharmacy,POS XXXX36 APOLLO PHARMACY BANGALORE,Health,rule,priya
+2026-10-18,UPI/DR/863182602351/DMART/ibl/Payment,2060.0,debit,105721.0,Groceries,False,,Dmart,UPI/DR/XXXX51/DMART/ibl/Payment,Groceries,rule,priya
+2026-10-18,UPI/DR/870074560752/THYROCARE/paytm/Payment,1450.0,debit,104271.0,Health,False,,Thyrocare,UPI/DR/XXXX52/THYROCARE/paytm/Payment,Health,llm,priya
+2026-10-19,UPI/DR/878782623215/ARJUN REDDY/paytm/Split,424.0,debit,103847.0,Transfers,False,,Arjun Reddy,UPI/DR/XXXX15/[PERSON]/paytm/Split,Transfers,llm,priya
+2026-10-19,UPI/DR/845311198527/ZOMATO/okaxis/Order,568.0,debit,103279.0,Food & Dining,False,,Zomato,UPI/DR/XXXX27/ZOMATO/okaxis/Order,Food & Dining,rule,priya
+2026-10-19,UPI/DR/170077808783/ZOMATO/ibl/Order,568.0,debit,102711.0,Food & Dining,True,duplicate,Zomato,UPI/DR/XXXX83/ZOMATO/ibl/Order,Food & Dining,rule,priya
+2026-10-20,POS 5480320389928012 CULTFIT PUNE,1499.0,debit,101212.0,Subscriptions,False,,Cultfit,POS XXXX12 CULTFIT PUNE,Subscriptions,llm,priya
+2026-10-20,UPI/DR/219878504862/ZOMATO/okaxis/Payment,785.0,debit,100427.0,Food & Dining,False,,Zomato,UPI/DR/XXXX62/ZOMATO/okaxis/Payment,Food & Dining,rule,priya
+2026-10-20,UPI/DR/222430808278/DMART/okhdfcbank/Payment,1182.0,debit,99245.0,Groceries,False,,Dmart,UPI/DR/XXXX78/DMART/okhdfcbank/Payment,Groceries,rule,priya
+2026-10-20,UPI/DR/685815732193/NAMMA METRO/okaxis/Payment,382.0,debit,98863.0,Transport,False,,Namma Metro,UPI/DR/XXXX93/NAMMA METRO/okaxis/Payment,Transport,rule,priya
+2026-10-20,POS 1454700051717268 BEWAKOOF BRANDS PUNE,3514.0,debit,95349.0,Shopping,False,,Bewakoof Brands,POS XXXX68 BEWAKOOF BRANDS PUNE,Shopping,llm,priya
+2026-10-20,UPI/DR/463435864017/TATA 1MG/oksbi/Payment,797.0,debit,94552.0,Health,False,,Tata 1Mg,UPI/DR/XXXX17/TATA 1MG/oksbi/Payment,Health,rule,priya
+2026-10-21,POS 0055238040959759 LINKEDIN PREMIUM MUMBAI,1650.0,debit,92902.0,Subscriptions,False,,Linkedin Premium,POS XXXX59 LINKEDIN PREMIUM MUMBAI,Subscriptions,llm,priya
+2026-10-21,POS 5746920689803179 HALDIRAMS PUNE,1417.0,debit,91485.0,Food & Dining,False,,Haldirams,POS XXXX79 HALDIRAMS PUNE,Groceries,llm,priya
+2026-10-21,POS 1769317434138553 SHELL FUEL STATION PUNE,2404.0,debit,89081.0,Transport,False,,Shell Fuel Station,POS XXXX53 SHELL FUEL STATION PUNE,Transport,llm,priya
+2026-10-22,POS 6114195397147266 SHARMA DHABA PUNE,861.0,debit,88220.0,Food & Dining,False,,Sharma Dhaba,POS XXXX66 SHARMA DHABA PUNE,Food & Dining,llm,priya
+2026-10-23,POS 4904547891020569 BIRYANI BLUES MUMBAI,347.0,debit,87873.0,Food & Dining,False,,Biryani Blues,POS XXXX69 BIRYANI BLUES MUMBAI,Food & Dining,llm,priya
+2026-10-24,UPI/DR/825943159633/ZOMATO/okaxis/Payment,263.0,debit,87610.0,Food & Dining,False,,Zomato,UPI/DR/XXXX33/ZOMATO/okaxis/Payment,Food & Dining,rule,priya
+2026-10-24,POS 5980681379678758 SRI BALAJI STORES BANGALORE,801.0,debit,86809.0,Groceries,False,,Sri Balaji Stores,POS XXXX58 SRI BALAJI STORES BANGALORE,Shopping,llm,priya
+2026-10-24,POS 3901056484158865 FRESH PICK MART BANGALORE,844.0,debit,85965.0,Groceries,False,,Fresh Pick Mart,POS XXXX65 FRESH PICK MART BANGALORE,Groceries,llm,priya
+2026-10-24,UPI/DR/246132985020/GOA BEACH RESORTS/okaxis/Booking,18500.0,debit,67465.0,Entertainment,True,new_merchant,Goa Beach Resorts,UPI/DR/XXXX20/GOA BEACH RESORTS/okaxis/Booking,Entertainment,llm,priya
+2026-10-26,POS 9531957107482538 THIRD WAVE COFFEE HYDERABAD,626.0,debit,66839.0,Food & Dining,False,,Third Wave Coffee,POS XXXX38 THIRD WAVE COFFEE HYDERABAD,Food & Dining,llm,priya
+2026-10-26,UPI/DR/523695158311/ZEPTO/okhdfcbank/Payment,597.0,debit,66242.0,Groceries,False,,Zepto,UPI/DR/XXXX11/ZEPTO/okhdfcbank/Payment,Groceries,rule,priya
+2026-10-26,POS 8979989852036284 LIFESTYLE STORES DELHI,2888.0,debit,63354.0,Shopping,False,,Lifestyle Stores,POS XXXX84 LIFESTYLE STORES DELHI,Shopping,llm,priya
+2026-10-27,UPI/DR/318643992295/STARBUCKS/okicici/Payment,445.0,debit,62909.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX95/STARBUCKS/okicici/Payment,Food & Dining,rule,priya
+2026-10-27,UPI/DR/707129085447/BLINKIT/okicici/Payment,1379.0,debit,61530.0,Groceries,False,,Blinkit,UPI/DR/XXXX47/BLINKIT/okicici/Payment,Groceries,rule,priya
+2026-10-28,UPI/DR/082811266035/FLIPKART/oksbi/Payment,901.0,debit,60629.0,Shopping,False,,Flipkart,UPI/DR/XXXX35/FLIPKART/oksbi/Payment,Shopping,rule,priya
+2026-08-01,UPI/DR/126802359930/THYROCARE/okaxis/Payment,542.0,debit,29458.0,Health,False,,Thyrocare,UPI/DR/XXXX30/THYROCARE/okaxis/Payment,Health,llm,rohan
+2026-08-01,UPI/DR/175670685557/SNEHA PATIL/paytm/Split,1466.0,debit,27992.0,Transfers,False,,Sneha Patil,UPI/DR/XXXX57/[PERSON]/paytm/Split,Transfers,llm,rohan
+2026-08-03,UPI/DR/366199609193/SPOTIFY/okhdfcbank/Subscription,119.0,debit,27873.0,Subscriptions,False,,Spotify,UPI/DR/XXXX93/SPOTIFY/okhdfcbank/Subscription,Subscriptions,rule,rohan
+2026-08-03,UPI/DR/738114739831/DOMINOS PIZZA/okaxis/Payment,343.0,debit,27530.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX31/DOMINOS PIZZA/okaxis/Payment,Food & Dining,rule,rohan
+2026-08-03,UPI/DR/981825695557/OLA CABS/oksbi/Payment,271.0,debit,27259.0,Transport,False,,Ola Cabs,UPI/DR/XXXX57/OLA CABS/oksbi/Payment,Transport,rule,rohan
+2026-08-03,ATM WDL SBI HYDERABAD 755528,3000.0,debit,24259.0,Cash Withdrawal,False,,ATM Withdrawal,ATM WDL SBI HYDERABAD XXXX28,Cash Withdrawal,rule,rohan
+2026-08-05,UPI/DR/665359382534/SURESH NAIK/okaxis/RENT AUG,12000.0,debit,12259.0,Rent & Housing,False,,Suresh Naik,UPI/DR/XXXX34/[PERSON]/okaxis/RENT AUG,Rent & Housing,rule,rohan
+2026-08-06,NEFT/N0554203499/UPWORK ESCROW/INVOICE,43652.0,credit,55911.0,Income,False,,Upwork Escrow,NEFT/NXXXX99/UPWORK ESCROW/INVOICE,Income,llm,rohan
+2026-08-06,UPI/DR/675922466140/SWIGGY/ibl/Payment,251.0,debit,55660.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX40/SWIGGY/ibl/Payment,Food & Dining,rule,rohan
+2026-08-06,UPI/DR/398828432288/SWIGGY/okicici/Payment,478.0,debit,55182.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX88/SWIGGY/okicici/Payment,Food & Dining,rule,rohan
+2026-08-06,UPI/DR/401802760702/BLUSMART MOBILITY/okhdfcbank/Payment,106.0,debit,55076.0,Transport,False,,Blusmart Mobility,UPI/DR/XXXX02/BLUSMART MOBILITY/okhdfcbank/Payment,Shopping,llm,rohan
+2026-08-08,POS 1098763007711653 NOTION LABS PUNE,830.0,debit,54246.0,Subscriptions,False,,Notion Labs,POS XXXX53 NOTION LABS PUNE,Subscriptions,llm,rohan
+2026-08-08,UPI/DR/243378775661/YULU BIKES/okicici/Payment,155.0,debit,54091.0,Transport,False,,Yulu Bikes,UPI/DR/XXXX61/YULU BIKES/okicici/Payment,Shopping,llm,rohan
+2026-08-09,UPI/DR/787435729788/BESCOM ELECTRICITY/ibl/Bill,812.0,debit,53279.0,Bills & Utilities,False,,Bescom Electricity,UPI/DR/XXXX88/BESCOM ELECTRICITY/ibl/Bill,Bills & Utilities,rule,rohan
+2026-08-09,UPI/DR/611394209771/MORE SUPERMARKET/okhdfcbank/Payment,316.0,debit,52963.0,Groceries,False,,More Supermarket,UPI/DR/XXXX71/MORE SUPERMARKET/okhdfcbank/Payment,Groceries,llm,rohan
+2026-08-09,UPI/DR/953671877075/OLA CABS/paytm/Payment,244.0,debit,52719.0,Transport,False,,Ola Cabs,UPI/DR/XXXX75/OLA CABS/paytm/Payment,Transport,rule,rohan
+2026-08-10,UPI/DR/107934675284/AIRTEL XSTREAM FIBER/paytm/Bill,799.0,debit,51920.0,Bills & Utilities,False,,Airtel Xstream Fiber,UPI/DR/XXXX84/AIRTEL XSTREAM FIBER/paytm/Bill,Bills & Utilities,rule,rohan
+2026-08-10,UPI/DR/004828160491/DOMINOS PIZZA/ybl/Payment,560.0,debit,51360.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX91/DOMINOS PIZZA/ybl/Payment,Food & Dining,rule,rohan
+2026-08-11,POS 4878270025607482 ADOBE SYSTEMS PUNE,1675.0,debit,49685.0,Subscriptions,False,,Adobe Systems,POS XXXX82 ADOBE SYSTEMS PUNE,Subscriptions,llm,rohan
+2026-08-11,UPI/DR/824622688063/MORE SUPERMARKET/ybl/Payment,345.0,debit,49340.0,Groceries,False,,More Supermarket,UPI/DR/XXXX63/MORE SUPERMARKET/ybl/Payment,Groceries,llm,rohan
+2026-08-11,UPI/DR/755038599140/NAMMA METRO/ybl/Payment,170.0,debit,49170.0,Transport,False,,Namma Metro,UPI/DR/XXXX40/NAMMA METRO/ybl/Payment,Transport,rule,rohan
+2026-08-11,UPI/DR/754823677602/SMAAAASH/okaxis/Payment,1056.0,debit,48114.0,Entertainment,False,,Smaaaash,UPI/DR/XXXX02/SMAAAASH/okaxis/Payment,Entertainment,llm,rohan
+2026-08-12,UPI/DR/740134552377/BIGBASKET/okaxis/Payment,654.0,debit,47460.0,Groceries,False,,Bigbasket,UPI/DR/XXXX77/BIGBASKET/okaxis/Payment,Groceries,rule,rohan
+2026-08-13,UPI/DR/538593145895/SHARMA DHABA/okicici/Payment,180.0,debit,47280.0,Food & Dining,False,,Sharma Dhaba,UPI/DR/XXXX95/SHARMA DHABA/okicici/Payment,Food & Dining,llm,rohan
+2026-08-14,UPI/DR/731796588419/HALDIRAMS/paytm/Payment,656.0,debit,46624.0,Food & Dining,False,,Haldirams,UPI/DR/XXXX19/HALDIRAMS/paytm/Payment,Food & Dining,llm,rohan
+2026-08-14,UPI/DR/796275378852/OLA CABS/oksbi/Payment,314.0,debit,46310.0,Transport,False,,Ola Cabs,UPI/DR/XXXX52/OLA CABS/oksbi/Payment,Transport,rule,rohan
+2026-08-15,UPI/DR/679760412012/ZOMATO/okicici/Payment,550.0,debit,45760.0,Food & Dining,False,,Zomato,UPI/DR/XXXX12/ZOMATO/okicici/Payment,Food & Dining,rule,rohan
+2026-08-16,UPI/DR/727310842997/DOMINOS PIZZA/ybl/Payment,498.0,debit,45262.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX97/DOMINOS PIZZA/ybl/Payment,Food & Dining,rule,rohan
+2026-08-17,NEFT/N0989809300/UPWORK ESCROW/INVOICE,41860.0,credit,87122.0,Income,False,,Upwork Escrow,NEFT/NXXXX00/UPWORK ESCROW/INVOICE,Income,llm,rohan
+2026-08-17,UPI/DR/195543057488/HALDIRAMS/ybl/Payment,143.0,debit,86979.0,Food & Dining,False,,Haldirams,UPI/DR/XXXX88/HALDIRAMS/ybl/Payment,Food & Dining,llm,rohan
+2026-08-17,UPI/DR/180942689421/OLA CABS/ybl/Payment,147.0,debit,86832.0,Transport,False,,Ola Cabs,UPI/DR/XXXX21/OLA CABS/ybl/Payment,Transport,rule,rohan
+2026-08-18,POS 9546383370042920 OPENAI CHATGPT BANGALORE,1999.0,debit,84833.0,Subscriptions,False,,Openai Chatgpt,POS XXXX20 OPENAI CHATGPT BANGALORE,Subscriptions,llm,rohan
+2026-08-20,UPI/DR/427993231396/CHAI POINT/ibl/Payment,454.0,debit,84379.0,Food & Dining,False,,Chai Point,UPI/DR/XXXX96/CHAI POINT/ibl/Payment,Food & Dining,llm,rohan
+2026-08-21,UPI/DR/820311460836/AJIO/okhdfcbank/Payment,313.0,debit,84066.0,Shopping,False,,Ajio,UPI/DR/XXXX36/AJIO/okhdfcbank/Payment,Shopping,rule,rohan
+2026-08-22,UPI/DR/832053909143/STARBUCKS/oksbi/Payment,490.0,debit,83576.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX43/STARBUCKS/oksbi/Payment,Food & Dining,rule,rohan
+2026-08-23,UPI/DR/464650685230/SWIGGY/okaxis/Payment,291.0,debit,83285.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX30/SWIGGY/okaxis/Payment,Food & Dining,rule,rohan
+2026-08-24,UPI/DR/999586885906/SWIGGY/oksbi/Payment,346.0,debit,82939.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX06/SWIGGY/oksbi/Payment,Food & Dining,rule,rohan
+2026-08-24,UPI/DR/616640687819/MEGHANA FOODS/paytm/Payment,645.0,debit,82294.0,Food & Dining,False,,Meghana Foods,UPI/DR/XXXX19/MEGHANA FOODS/paytm/Payment,Food & Dining,llm,rohan
+2026-08-25,NEFT/N9243689717/RAZORPAY CLIENT PAYOUT/PROJECT,17365.0,credit,99659.0,Income,False,,Razorpay Client Payout,NEFT/N[PHONE]/RAZORPAY CLIENT PAYOUT/PROJECT,Income,llm,rohan
+2026-08-25,UPI/DR/563461189193/YULU BIKES/okhdfcbank/Payment,54.0,debit,99605.0,Transport,False,,Yulu Bikes,UPI/DR/XXXX93/YULU BIKES/okhdfcbank/Payment,Shopping,llm,rohan
+2026-08-26,UPI/DR/632912830241/DMART/okhdfcbank/Payment,521.0,debit,99084.0,Groceries,False,,Dmart,UPI/DR/XXXX41/DMART/okhdfcbank/Payment,Groceries,rule,rohan
+2026-08-26,UPI/DR/111794269944/OLA CABS/ybl/Payment,57.0,debit,99027.0,Transport,False,,Ola Cabs,UPI/DR/XXXX44/OLA CABS/ybl/Payment,Transport,rule,rohan
+2026-08-27,UPI/DR/110689091117/SWIGGY/ybl/Payment,533.0,debit,98494.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX17/SWIGGY/ybl/Payment,Food & Dining,rule,rohan
+2026-08-27,UPI/DR/328160053088/MEGHANA FOODS/ibl/Payment,169.0,debit,98325.0,Food & Dining,False,,Meghana Foods,UPI/DR/XXXX88/MEGHANA FOODS/ibl/Payment,Food & Dining,llm,rohan
+2026-08-27,UPI/DR/019212746062/BIGBASKET/ibl/Payment,692.0,debit,97633.0,Groceries,False,,Bigbasket,UPI/DR/XXXX62/BIGBASKET/ibl/Payment,Groceries,rule,rohan
+2026-08-27,UPI/DR/134776538305/RAPIDO/paytm/Payment,230.0,debit,97403.0,Transport,False,,Rapido,UPI/DR/XXXX05/RAPIDO/paytm/Payment,Transport,rule,rohan
+2026-08-27,POS 6402580764883321 LENSKART MUMBAI,1268.0,debit,96135.0,Shopping,False,,Lenskart,POS XXXX21 LENSKART MUMBAI,Shopping,llm,rohan
+2026-08-28,UPI/DR/817853850620/DOMINOS PIZZA/ybl/Payment,379.0,debit,95756.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX20/DOMINOS PIZZA/ybl/Payment,Food & Dining,rule,rohan
+2026-08-28,UPI/DR/147307448967/ZOMATO/ybl/Payment,445.0,debit,95311.0,Food & Dining,False,,Zomato,UPI/DR/XXXX67/ZOMATO/ybl/Payment,Food & Dining,rule,rohan
+2026-08-28,UPI/DR/734329256272/OLA CABS/okhdfcbank/Payment,100.0,debit,95211.0,Transport,False,,Ola Cabs,UPI/DR/XXXX72/OLA CABS/okhdfcbank/Payment,Transport,rule,rohan
+2026-08-28,UPI/DR/732187781049/AJIO/ybl/Payment,2076.0,debit,93135.0,Shopping,False,,Ajio,UPI/DR/XXXX49/AJIO/ybl/Payment,Shopping,rule,rohan
+2026-08-28,UPI/DR/712232777638/ARJUN REDDY/ibl/Split,1658.0,debit,91477.0,Transfers,False,,Arjun Reddy,UPI/DR/XXXX38/[PERSON]/ibl/Split,Transfers,llm,rohan
+2026-09-03,UPI/DR/141448124810/SPOTIFY/okaxis/Subscription,119.0,debit,91358.0,Subscriptions,False,,Spotify,UPI/DR/XXXX10/SPOTIFY/okaxis/Subscription,Subscriptions,rule,rohan
+2026-09-03,UPI/DR/423239722739/KAVYA NAIR/okicici/Split,929.0,debit,90429.0,Transfers,False,,Kavya Nair,UPI/DR/XXXX39/[PERSON]/okicici/Split,Transfers,llm,rohan
+2026-09-04,UPI/DR/001044481045/CHAI POINT/okaxis/Payment,407.0,debit,90022.0,Food & Dining,False,,Chai Point,UPI/DR/XXXX45/CHAI POINT/okaxis/Payment,Food & Dining,llm,rohan
+2026-09-04,UPI/DR/571266185968/OLA CABS/oksbi/Payment,94.0,debit,89928.0,Transport,False,,Ola Cabs,UPI/DR/XXXX68/OLA CABS/oksbi/Payment,Transport,rule,rohan
+2026-09-05,UPI/DR/148231255561/SURESH NAIK/ybl/RENT SEP,12000.0,debit,77928.0,Rent & Housing,False,,Suresh Naik,UPI/DR/XXXX61/[PERSON]/ybl/RENT SEP,Rent & Housing,rule,rohan
+2026-09-05,UPI/DR/450402175021/YULU BIKES/ibl/Payment,147.0,debit,77781.0,Transport,False,,Yulu Bikes,UPI/DR/XXXX21/YULU BIKES/ibl/Payment,Shopping,llm,rohan
+2026-09-05,UPI/DR/504277755523/QUICKRIDE/ybl/Payment,63.0,debit,77718.0,Transport,False,,Quickride,UPI/DR/XXXX23/QUICKRIDE/ybl/Payment,Transport,llm,rohan
+2026-09-06,UPI/DR/708386562566/SHARMA DHABA/oksbi/Payment,276.0,debit,77442.0,Food & Dining,False,,Sharma Dhaba,UPI/DR/XXXX66/SHARMA DHABA/oksbi/Payment,Food & Dining,llm,rohan
+2026-09-07,UPI/DR/499155835990/SWIGGY/okhdfcbank/Payment,418.0,debit,77024.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX90/SWIGGY/okhdfcbank/Payment,Food & Dining,rule,rohan
+2026-09-08,POS 0343877321944004 NOTION LABS PUNE,830.0,debit,76194.0,Subscriptions,False,,Notion Labs,POS XXXX04 NOTION LABS PUNE,Subscriptions,llm,rohan
+2026-09-09,UPI/DR/105091226882/BESCOM ELECTRICITY/ibl/Bill,801.0,debit,75393.0,Bills & Utilities,False,,Bescom Electricity,UPI/DR/XXXX82/BESCOM ELECTRICITY/ibl/Bill,Bills & Utilities,rule,rohan
+2026-09-09,UPI/DR/604909417451/BIGBASKET/oksbi/Payment,739.0,debit,74654.0,Groceries,False,,Bigbasket,UPI/DR/XXXX51/BIGBASKET/oksbi/Payment,Groceries,rule,rohan
+2026-09-09,UPI/DR/813706464047/QUICKRIDE/okicici/Payment,148.0,debit,74506.0,Transport,False,,Quickride,UPI/DR/XXXX47/QUICKRIDE/okicici/Payment,Transport,llm,rohan
+2026-09-09,ATM WDL SBI PUNE 627349,1000.0,debit,73506.0,Cash Withdrawal,False,,ATM Withdrawal,ATM WDL SBI PUNE XXXX49,Cash Withdrawal,rule,rohan
+2026-09-10,UPI/DR/191625938414/AIRTEL XSTREAM FIBER/ybl/Bill,799.0,debit,72707.0,Bills & Utilities,False,,Airtel Xstream Fiber,UPI/DR/XXXX14/AIRTEL XSTREAM FIBER/ybl/Bill,Bills & Utilities,rule,rohan
+2026-09-10,UPI/DR/061643433412/NAMMA METRO/okhdfcbank/Payment,88.0,debit,72619.0,Transport,False,,Namma Metro,UPI/DR/XXXX12/NAMMA METRO/okhdfcbank/Payment,Transport,rule,rohan
+2026-09-11,POS 2170094431034527 ADOBE SYSTEMS HYDERABAD,1675.0,debit,70944.0,Subscriptions,False,,Adobe Systems,POS XXXX27 ADOBE SYSTEMS HYDERABAD,Subscriptions,llm,rohan
+2026-09-12,UPI/DR/869124604187/SRI BALAJI STORES/oksbi/Payment,847.0,debit,70097.0,Groceries,False,,Sri Balaji Stores,UPI/DR/XXXX87/SRI BALAJI STORES/oksbi/Payment,Groceries,llm,rohan
+2026-09-13,UPI/DR/859121939322/DOMINOS PIZZA/okaxis/Payment,194.0,debit,69903.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX22/DOMINOS PIZZA/okaxis/Payment,Food & Dining,rule,rohan
+2026-09-13,UPI/DR/764528291877/TRUFFLES CAFE/oksbi/Payment,329.0,debit,69574.0,Food & Dining,False,,Truffles Cafe,UPI/DR/XXXX77/TRUFFLES CAFE/oksbi/Payment,Food & Dining,llm,rohan
+2026-09-14,UPI/DR/930619339324/SWIGGY/ybl/Payment,278.0,debit,69296.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX24/SWIGGY/ybl/Payment,Food & Dining,rule,rohan
+2026-09-14,UPI/DR/362448630550/ZOMATO/oksbi/Payment,571.0,debit,68725.0,Food & Dining,False,,Zomato,UPI/DR/XXXX50/ZOMATO/oksbi/Payment,Food & Dining,rule,rohan
+2026-09-14,UPI/DR/050046812926/ZOMATO/oksbi/Payment,563.0,debit,68162.0,Food & Dining,False,,Zomato,UPI/DR/XXXX26/ZOMATO/oksbi/Payment,Food & Dining,rule,rohan
+2026-09-14,UPI/DR/270975287263/OLA CABS/okhdfcbank/Payment,143.0,debit,68019.0,Transport,False,,Ola Cabs,UPI/DR/XXXX63/OLA CABS/okhdfcbank/Payment,Transport,rule,rohan
+2026-09-15,UPI/DR/677453391382/NAMMA METRO/ybl/Payment,315.0,debit,67704.0,Transport,False,,Namma Metro,UPI/DR/XXXX82/NAMMA METRO/ybl/Payment,Transport,rule,rohan
+2026-09-16,NEFT/N8305730532/UPWORK ESCROW/INVOICE,32235.0,credit,99939.0,Income,False,,Upwork Escrow,NEFT/N[PHONE]/UPWORK ESCROW/INVOICE,Income,llm,rohan
+2026-09-16,UPI/DR/055483318366/DOMINOS PIZZA/paytm/Payment,597.0,debit,99342.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX66/DOMINOS PIZZA/paytm/Payment,Food & Dining,rule,rohan
+2026-09-16,UPI/DR/887573803936/BIRYANI BLUES/okicici/Payment,670.0,debit,98672.0,Food & Dining,False,,Biryani Blues,UPI/DR/XXXX36/BIRYANI BLUES/okicici/Payment,Food & Dining,llm,rohan
+2026-09-18,NEFT/N1505603739/RAZORPAY CLIENT PAYOUT/PROJECT,25137.0,credit,123809.0,Income,False,,Razorpay Client Payout,NEFT/NXXXX39/RAZORPAY CLIENT PAYOUT/PROJECT,Income,llm,rohan
+2026-09-18,POS 3561717872134024 OPENAI CHATGPT BANGALORE,1999.0,debit,121810.0,Subscriptions,False,,Openai Chatgpt,POS XXXX24 OPENAI CHATGPT BANGALORE,Subscriptions,llm,rohan
+2026-09-18,UPI/DR/666687011299/AJIO/okicici/Payment,387.0,debit,121423.0,Shopping,False,,Ajio,UPI/DR/XXXX99/AJIO/okicici/Payment,Shopping,rule,rohan
+2026-09-19,UPI/DR/921549598076/NAMMA METRO/okicici/Payment,130.0,debit,121293.0,Transport,False,,Namma Metro,UPI/DR/XXXX76/NAMMA METRO/okicici/Payment,Transport,rule,rohan
+2026-09-20,UPI/DR/069905705773/CHAI POINT/okaxis/Payment,567.0,debit,120726.0,Food & Dining,False,,Chai Point,UPI/DR/XXXX73/CHAI POINT/okaxis/Payment,Food & Dining,llm,rohan
+2026-09-20,POS 4123203671809576 BEWAKOOF BRANDS PUNE,1851.0,debit,118875.0,Shopping,False,,Bewakoof Brands,POS XXXX76 BEWAKOOF BRANDS PUNE,Shopping,llm,rohan
+2026-09-20,UPI/DR/296700872065/SMAAAASH/okicici/Payment,1200.0,debit,117675.0,Entertainment,False,,Smaaaash,UPI/DR/XXXX65/SMAAAASH/okicici/Payment,Entertainment,llm,rohan
+2026-09-22,UPI/DR/577878722137/DOMINOS PIZZA/okaxis/Payment,404.0,debit,117271.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX37/DOMINOS PIZZA/okaxis/Payment,Food & Dining,rule,rohan
+2026-09-23,UPI/DR/244175394986/ZOMATO/okicici/Payment,324.0,debit,116947.0,Food & Dining,False,,Zomato,UPI/DR/XXXX86/ZOMATO/okicici/Payment,Food & Dining,rule,rohan
+2026-09-23,UPI/DR/341461300994/NAMMA METRO/okhdfcbank/Payment,288.0,debit,116659.0,Transport,False,,Namma Metro,UPI/DR/XXXX94/NAMMA METRO/okhdfcbank/Payment,Transport,rule,rohan
+2026-09-24,UPI/DR/839875396119/RAPIDO/okicici/Payment,284.0,debit,116375.0,Transport,False,,Rapido,UPI/DR/XXXX19/RAPIDO/okicici/Payment,Transport,rule,rohan
+2026-09-25,UPI/DR/606147417947/DOMINOS PIZZA/okaxis/Payment,206.0,debit,116169.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX47/DOMINOS PIZZA/okaxis/Payment,Food & Dining,rule,rohan
+2026-09-25,UPI/DR/422750894556/PRACTO/okicici/Payment,468.0,debit,115701.0,Health,False,,Practo,UPI/DR/XXXX56/PRACTO/okicici/Payment,Health,llm,rohan
+2026-09-25,UPI/DR/279560191774/SNEHA PATIL/oksbi/Split,662.0,debit,115039.0,Transfers,False,,Sneha Patil,UPI/DR/XXXX74/[PERSON]/oksbi/Split,Transfers,llm,rohan
+2026-09-26,UPI/DR/101860390090/BIGBASKET/paytm/Payment,763.0,debit,114276.0,Groceries,False,,Bigbasket,UPI/DR/XXXX90/BIGBASKET/paytm/Payment,Groceries,rule,rohan
+2026-09-26,UPI/DR/366801703618/SRI BALAJI STORES/okhdfcbank/Payment,495.0,debit,113781.0,Groceries,False,,Sri Balaji Stores,UPI/DR/XXXX18/SRI BALAJI STORES/okhdfcbank/Payment,Groceries,llm,rohan
+2026-09-27,UPI/DR/488682146514/SWIGGY/paytm/Payment,388.0,debit,113393.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX14/SWIGGY/paytm/Payment,Food & Dining,rule,rohan
+2026-09-27,UPI/DR/618800237094/STARBUCKS/ybl/Payment,195.0,debit,113198.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX94/STARBUCKS/ybl/Payment,Food & Dining,rule,rohan
+2026-09-27,UPI/DR/359614945524/ZOMATO/okaxis/Payment,275.0,debit,112923.0,Food & Dining,False,,Zomato,UPI/DR/XXXX24/ZOMATO/okaxis/Payment,Food & Dining,rule,rohan
+2026-09-27,UPI/DR/460905067091/ZEPTO/ybl/Payment,1141.0,debit,111782.0,Groceries,False,,Zepto,UPI/DR/XXXX91/ZEPTO/ybl/Payment,Groceries,rule,rohan
+2026-09-27,UPI/DR/839229134988/NAMMA METRO/ibl/Payment,93.0,debit,111689.0,Transport,False,,Namma Metro,UPI/DR/XXXX88/NAMMA METRO/ibl/Payment,Transport,rule,rohan
+2026-09-27,UPI/DR/540479847258/MYNTRA/paytm/Payment,2150.0,debit,109539.0,Shopping,False,,Myntra,UPI/DR/XXXX58/MYNTRA/paytm/Payment,Shopping,rule,rohan
+2026-09-28,UPI/DR/495963536168/MEGHANA FOODS/okicici/Payment,308.0,debit,109231.0,Food & Dining,False,,Meghana Foods,UPI/DR/XXXX68/MEGHANA FOODS/okicici/Payment,Food & Dining,llm,rohan
+2026-10-01,UPI/DR/737141932287/SHARMA DHABA/ybl/Payment,433.0,debit,108798.0,Food & Dining,False,,Sharma Dhaba,UPI/DR/XXXX87/SHARMA DHABA/ybl/Payment,Food & Dining,llm,rohan
+2026-10-02,UPI/DR/563659241443/SWIGGY/paytm/Payment,355.0,debit,108443.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX43/SWIGGY/paytm/Payment,Food & Dining,rule,rohan
+2026-10-03,UPI/DR/335479709178/SPOTIFY/ibl/Subscription,119.0,debit,108324.0,Subscriptions,False,,Spotify,UPI/DR/XXXX78/SPOTIFY/ibl/Subscription,Subscriptions,rule,rohan
+2026-10-03,UPI/DR/521304138930/CHAI POINT/okaxis/Payment,403.0,debit,107921.0,Food & Dining,False,,Chai Point,UPI/DR/XXXX30/CHAI POINT/okaxis/Payment,Food & Dining,llm,rohan
+2026-10-03,UPI/DR/364378734247/RAPIDO/oksbi/Payment,302.0,debit,107619.0,Transport,False,,Rapido,UPI/DR/XXXX47/RAPIDO/oksbi/Payment,Transport,rule,rohan
+2026-10-04,UPI/DR/713882760036/MEGHANA FOODS/ibl/Payment,309.0,debit,107310.0,Food & Dining,False,,Meghana Foods,UPI/DR/XXXX36/MEGHANA FOODS/ibl/Payment,Food & Dining,llm,rohan
+2026-10-04,UPI/DR/872524874783/TRUFFLES CAFE/oksbi/Payment,311.0,debit,106999.0,Food & Dining,False,,Truffles Cafe,UPI/DR/XXXX83/TRUFFLES CAFE/oksbi/Payment,Food & Dining,llm,rohan
+2026-10-05,UPI/DR/387798540396/SURESH NAIK/ibl/RENT OCT,12000.0,debit,94999.0,Rent & Housing,False,,Suresh Naik,UPI/DR/XXXX96/[PERSON]/ibl/RENT OCT,Rent & Housing,rule,rohan
+2026-10-05,UPI/DR/398848216080/OLA CABS/oksbi/Payment,294.0,debit,94705.0,Transport,False,,Ola Cabs,UPI/DR/XXXX80/OLA CABS/oksbi/Payment,Transport,rule,rohan
+2026-10-06,UPI/DR/172818525576/ZEPTO/okhdfcbank/Payment,1133.0,debit,93572.0,Groceries,False,,Zepto,UPI/DR/XXXX76/ZEPTO/okhdfcbank/Payment,Groceries,rule,rohan
+2026-10-06,UPI/DR/223329970235/NAMMA METRO/okicici/Payment,83.0,debit,93489.0,Transport,False,,Namma Metro,UPI/DR/XXXX35/NAMMA METRO/okicici/Payment,Transport,rule,rohan
+2026-10-06,UPI/DR/574066766368/YULU BIKES/oksbi/Payment,92.0,debit,93397.0,Transport,False,,Yulu Bikes,UPI/DR/XXXX68/YULU BIKES/oksbi/Payment,Shopping,llm,rohan
+2026-10-06,UPI/DR/046644430905/QUICKRIDE/ybl/Payment,153.0,debit,93244.0,Transport,False,,Quickride,UPI/DR/XXXX05/QUICKRIDE/ybl/Payment,Transport,llm,rohan
+2026-10-08,POS 2607736252657291 NOTION LABS MUMBAI,830.0,debit,92414.0,Subscriptions,False,,Notion Labs,POS XXXX91 NOTION LABS MUMBAI,Subscriptions,llm,rohan
+2026-10-08,UPI/DR/639967743515/DOMINOS PIZZA/okicici/Payment,569.0,debit,91845.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX15/DOMINOS PIZZA/okicici/Payment,Food & Dining,rule,rohan
+2026-10-08,UPI/DR/736125147895/DOMINOS PIZZA/ybl/Payment,166.0,debit,91679.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX95/DOMINOS PIZZA/ybl/Payment,Food & Dining,rule,rohan
+2026-10-08,UPI/DR/433579512657/BIGBASKET/ybl/Payment,953.0,debit,90726.0,Groceries,False,,Bigbasket,UPI/DR/XXXX57/BIGBASKET/ybl/Payment,Groceries,rule,rohan
+2026-10-09,UPI/DR/402635395910/BESCOM ELECTRICITY/oksbi/Bill,820.0,debit,89906.0,Bills & Utilities,False,,Bescom Electricity,UPI/DR/XXXX10/BESCOM ELECTRICITY/oksbi/Bill,Bills & Utilities,rule,rohan
+2026-10-09,UPI/DR/948423135165/ZOMATO/okaxis/Payment,304.0,debit,89602.0,Food & Dining,False,,Zomato,UPI/DR/XXXX65/ZOMATO/okaxis/Payment,Food & Dining,rule,rohan
+2026-10-10,UPI/DR/934338154383/AIRTEL XSTREAM FIBER/okicici/Bill,799.0,debit,88803.0,Bills & Utilities,False,,Airtel Xstream Fiber,UPI/DR/XXXX83/AIRTEL XSTREAM FIBER/okicici/Bill,Bills & Utilities,rule,rohan
+2026-10-10,UPI/DR/331424570434/ZOMATO/ybl/Payment,140.0,debit,88663.0,Food & Dining,False,,Zomato,UPI/DR/XXXX34/ZOMATO/ybl/Payment,Food & Dining,rule,rohan
+2026-10-10,UPI/DR/403723876242/DOMINOS PIZZA/paytm/Payment,284.0,debit,88379.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX42/DOMINOS PIZZA/paytm/Payment,Food & Dining,rule,rohan
+2026-10-10,UPI/DR/072966040212/MYNTRA/ibl/Payment,2447.0,debit,85932.0,Shopping,False,,Myntra,UPI/DR/XXXX12/MYNTRA/ibl/Payment,Shopping,rule,rohan
+2026-10-10,UPI/DR/852989123719/KAVYA NAIR/ibl/Split,1037.0,debit,84895.0,Transfers,False,,Kavya Nair,UPI/DR/XXXX19/[PERSON]/ibl/Split,Transfers,llm,rohan
+2026-10-11,POS 1500212693672246 ADOBE SYSTEMS MUMBAI,1675.0,debit,83220.0,Subscriptions,False,,Adobe Systems,POS XXXX46 ADOBE SYSTEMS MUMBAI,Subscriptions,llm,rohan
+2026-10-11,UPI/DR/963874203270/HALDIRAMS/okicici/Payment,110.0,debit,83110.0,Food & Dining,False,,Haldirams,UPI/DR/XXXX70/HALDIRAMS/okicici/Payment,Food & Dining,llm,rohan
+2026-10-11,POS 1983529861240566 ADOBE SYSTEMS HYDERABAD,1675.0,debit,81435.0,Subscriptions,True,duplicate,Adobe Systems,POS XXXX66 ADOBE SYSTEMS HYDERABAD,Subscriptions,llm,rohan
+2026-10-12,UPI/DR/974103009693/NAMMA METRO/ibl/Payment,249.0,debit,81186.0,Transport,False,,Namma Metro,UPI/DR/XXXX93/NAMMA METRO/ibl/Payment,Transport,rule,rohan
+2026-10-12,UPI/DR/646244322563/SMAAAASH/ybl/Payment,311.0,debit,80875.0,Entertainment,False,,Smaaaash,UPI/DR/XXXX63/SMAAAASH/ybl/Payment,Entertainment,llm,rohan
+2026-10-13,UPI/DR/150757512823/BIGBASKET/okaxis/Payment,1171.0,debit,79704.0,Groceries,False,,Bigbasket,UPI/DR/XXXX23/BIGBASKET/okaxis/Payment,Groceries,rule,rohan
+2026-10-14,NEFT/N9726608857/UPWORK ESCROW/INVOICE,40200.0,credit,119904.0,Income,False,,Upwork Escrow,NEFT/N[PHONE]/UPWORK ESCROW/INVOICE,Income,llm,rohan
+2026-10-14,UPI/DR/062271005400/RAPIDO/okicici/Ride,1850.0,debit,118054.0,Transport,True,spike,Rapido,UPI/DR/XXXX00/RAPIDO/okicici/Ride,Transport,rule,rohan
+2026-10-15,UPI/DR/983245783033/ZOMATO/ibl/Payment,539.0,debit,117515.0,Food & Dining,False,,Zomato,UPI/DR/XXXX33/ZOMATO/ibl/Payment,Food & Dining,rule,rohan
+2026-10-15,UPI/DR/008261197322/TRUFFLES CAFE/ybl/Payment,288.0,debit,117227.0,Food & Dining,False,,Truffles Cafe,UPI/DR/XXXX22/TRUFFLES CAFE/ybl/Payment,Food & Dining,llm,rohan
+2026-10-15,UPI/DR/925705165191/OLA CABS/paytm/Payment,207.0,debit,117020.0,Transport,False,,Ola Cabs,UPI/DR/XXXX91/OLA CABS/paytm/Payment,Transport,rule,rohan
+2026-10-15,UPI/DR/779343132169/OLA CABS/ybl/Payment,233.0,debit,116787.0,Transport,False,,Ola Cabs,UPI/DR/XXXX69/OLA CABS/ybl/Payment,Transport,rule,rohan
+2026-10-15,ATM WDL SBI DELHI 314134,2000.0,debit,114787.0,Cash Withdrawal,False,,ATM Withdrawal,ATM WDL SBI DELHI XXXX34,Cash Withdrawal,rule,rohan
+2026-10-17,UPI/DR/189762664971/MORE SUPERMARKET/paytm/Payment,754.0,debit,114033.0,Groceries,False,,More Supermarket,UPI/DR/XXXX71/MORE SUPERMARKET/paytm/Payment,Groceries,llm,rohan
+2026-10-18,NEFT/N3168769470/UPWORK ESCROW/INVOICE,53850.0,credit,167883.0,Income,False,,Upwork Escrow,NEFT/NXXXX70/UPWORK ESCROW/INVOICE,Income,llm,rohan
+2026-10-18,POS 4138695812848013 OPENAI CHATGPT HYDERABAD,1999.0,debit,165884.0,Subscriptions,False,,Openai Chatgpt,POS XXXX13 OPENAI CHATGPT HYDERABAD,Subscriptions,llm,rohan
+2026-10-18,UPI/DR/414073059221/DOMINOS PIZZA/paytm/Payment,314.0,debit,165570.0,Food & Dining,False,,Dominos Pizza,UPI/DR/XXXX21/DOMINOS PIZZA/paytm/Payment,Food & Dining,rule,rohan
+2026-10-18,UPI/DR/832236514379/PRACTO/paytm/Payment,547.0,debit,165023.0,Health,False,,Practo,UPI/DR/XXXX79/PRACTO/paytm/Payment,Health,llm,rohan
+2026-10-19,POS 0989501955260268 LIFESTYLE STORES PUNE,698.0,debit,164325.0,Shopping,False,,Lifestyle Stores,POS XXXX68 LIFESTYLE STORES PUNE,Shopping,llm,rohan
+2026-10-20,UPI/DR/736498282685/RAPIDO/ibl/Payment,92.0,debit,164233.0,Transport,False,,Rapido,UPI/DR/XXXX85/RAPIDO/ibl/Payment,Transport,rule,rohan
+2026-10-20,UPI/DR/301263906207/RAPIDO/oksbi/Payment,263.0,debit,163970.0,Transport,False,,Rapido,UPI/DR/XXXX07/RAPIDO/oksbi/Payment,Transport,rule,rohan
+2026-10-21,UPI/DR/312443419563/SWIGGY/ibl/Payment,506.0,debit,163464.0,Food & Dining,False,,Swiggy,UPI/DR/XXXX63/SWIGGY/ibl/Payment,Food & Dining,rule,rohan
+2026-10-21,UPI/DR/680428552649/BLINKIT/okhdfcbank/Order,3950.0,debit,159514.0,Groceries,True,spike,Blinkit,UPI/DR/XXXX49/BLINKIT/okhdfcbank/Order,Groceries,rule,rohan
+2026-10-22,UPI/DR/747012428248/MYNTRA/okaxis/Payment,2321.0,debit,157193.0,Shopping,False,,Myntra,UPI/DR/XXXX48/MYNTRA/okaxis/Payment,Shopping,rule,rohan
+2026-10-23,NEFT/N9141936519/RAZORPAY CLIENT PAYOUT/PROJECT,24928.0,credit,182121.0,Income,False,,Razorpay Client Payout,NEFT/N[PHONE]/RAZORPAY CLIENT PAYOUT/PROJECT,Income,llm,rohan
+2026-10-23,UPI/DR/501848429109/MORE SUPERMARKET/oksbi/Payment,376.0,debit,181745.0,Groceries,False,,More Supermarket,UPI/DR/XXXX09/MORE SUPERMARKET/oksbi/Payment,Groceries,llm,rohan
+2026-10-23,UPI/DR/138599454666/SNEHA PATIL/ybl/Split,1025.0,debit,180720.0,Transfers,False,,Sneha Patil,UPI/DR/XXXX66/[PERSON]/ybl/Split,Transfers,llm,rohan
+2026-10-24,UPI/DR/367494798406/STARBUCKS/ybl/Payment,452.0,debit,180268.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX06/STARBUCKS/ybl/Payment,Food & Dining,rule,rohan
+2026-10-24,UPI/DR/371231947603/STARBUCKS/oksbi/Payment,365.0,debit,179903.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX03/STARBUCKS/oksbi/Payment,Food & Dining,rule,rohan
+2026-10-24,POS 3127091165349210 SIMPLILEARN BANGALORE,2499.0,debit,177404.0,Education,False,,Simplilearn,POS XXXX10 SIMPLILEARN BANGALORE,Education,llm,rohan
+2026-10-26,UPI/DR/981485416401/MAKEMYTRIP/okicici/Booking,21450.0,debit,155954.0,Transport,True,new_merchant,Makemytrip,UPI/DR/XXXX01/MAKEMYTRIP/okicici/Booking,Transport,llm,rohan
+2026-10-27,UPI/DR/401928601653/STARBUCKS/ibl/Payment,162.0,debit,155792.0,Food & Dining,False,,Starbucks,UPI/DR/XXXX53/STARBUCKS/ibl/Payment,Food & Dining,rule,rohan
+2026-10-27,UPI/DR/374709508018/QUICKRIDE/okicici/Payment,97.0,debit,155695.0,Transport,False,,Quickride,UPI/DR/XXXX18/QUICKRIDE/okicici/Payment,Transport,llm,rohan

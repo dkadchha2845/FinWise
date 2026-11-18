@@ -1,0 +1,448 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{newtxtext,newtxmath}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,fit,backgrounds}
+\usepackage[hidelinks]{hyperref}
+\makeatletter
+\newcommand{\linebreakand}{\end{@IEEEauthorhalign}\hfill\mbox{}\par\mbox{}\hfill\begin{@IEEEauthorhalign}}
+\makeatother
+
+\newcommand{\INR}{\text{\rupee}}
+\DeclareRobustCommand{\rupee}{Rs.\,}
+
+\begin{document}
+
+\title{FinWise: Grounded Natural-Language Explanation of Personal Financial Transactions via Text-to-Analytics and Numeric Claim Verification}
+
+\author{
+\IEEEauthorblockN{Dhrumil Kadchha}
+\IEEEauthorblockA{\textit{Dept. of CSE} \\
+\textit{Dayananda Sagar University}\\
+Bengaluru, India \\
+dhrumilkadchha@gmail.com}
+\and
+\IEEEauthorblockN{Prathameshjee Sisodia}
+\IEEEauthorblockA{\textit{Dept. of CSE} \\
+\textit{Dayananda Sagar University}\\
+Bengaluru, India \\
+prathameshjeeesisodia@gmail.com}
+\linebreakand
+\IEEEauthorblockN{Pratyush Chauhan}
+\IEEEauthorblockA{\textit{Dept. of CSE} \\
+\textit{Dayananda Sagar University}\\
+Bengaluru, India \\
+pratyushchauhan099@gmail.com}
+\and
+\IEEEauthorblockN{Akmal Ahmad}
+\IEEEauthorblockA{\textit{Assistant Professor} \\
+\textit{Dept. of CSE} \\
+\textit{Dayananda Sagar University}\\
+Bengaluru, India \\
+akmalahmad2018@gmail.com}
+}
+
+\maketitle
+
+\begin{abstract}
+Bank and UPI statements record \emph{what} a person spent but not \emph{why} their finances behave as they do. Large language models (LLMs) can explain such data in plain language, but given a raw statement they routinely invent totals, percentages and comparisons, which is unacceptable in a financial setting. This paper presents \textbf{FinWise}, a transaction explainer that ingests CSV, Excel and PDF statements, categorises every transaction, explains unusual expenses, surfaces spending patterns and answers free-form questions. FinWise separates \emph{computation} from \emph{narration}. A deterministic analytics engine computes every number. The LLM only classifies unfamiliar merchants, maps questions to typed analytics tools (\emph{Text-to-Analytics}) and narrates their results. A \emph{Numeric Claim Verifier} then checks every amount, percentage and ratio in the generated text against the computed facts, and its output defines a reference-free metric, the \emph{Grounded Faithfulness Score} (GFS). On 535 labelled Indian transactions in three file formats, the cost-aware hybrid categoriser reaches 97.2\% accuracy (95\% CI 95.4--98.3\%), compared with 64.3\% for rules and 93.3\% for an LLM-only baseline, while using 49\% fewer tokens. A context-aware robust detector recovers all 15 planted anomalies, against at most 6 for z-score baselines. Text-to-Analytics answers 90\% of benchmark questions correctly, against 25\% for context stuffing ($p<10^{-5}$), with about 5$\times$ fewer tokens, and verification raises numeric claim precision from 96.8\% to 100\%.
+\end{abstract}
+
+\begin{IEEEkeywords}
+large language models, personal finance, explainable AI, hallucination mitigation, tool-augmented LLMs, anomaly detection, transaction categorisation
+\end{IEEEkeywords}
+
+%% =====================================================================
+\section{Introduction}
+Digital payments have made personal financial data abundant. India's Unified Payments Interface (UPI) processes billions of transactions every month \cite{npci}, and each one appears in a bank statement as a terse narration such as \texttt{UPI/DR/4123../SWIGGY/okaxis/Payment}. Expense trackers aggregate these rows into charts and budgets. However, they leave unanswered the questions users actually ask: \emph{Why was October so expensive? Which charges are unusual? What am I paying for every month without noticing?}
+
+LLMs \cite{brown2020} offer a natural-language interface to such questions, and finance-specific models have been proposed \cite{wu2023bloomberggpt,yang2023fingpt,xie2023pixiu}. Three obstacles prevent their direct use on personal statements. First, LLMs are unreliable at multi-step arithmetic over long tables \cite{chen2021finqa,zhu2021tatqa} and hallucinate plausible but wrong figures \cite{ji2023survey}. A financial assistant that misstates a user's spending is worse than none. Second, statements contain personal data, such as account references, UPI handles and the names of friends, which should not be sent to a hosted model. Third, statements are long. Long prompts degrade recall \cite{liu2024lost}, raise cost, and exceed the per-request limits of the free API tiers that students and small developers rely on.
+
+FinWise addresses these obstacles by treating the LLM as an \emph{explainer} rather than a \emph{calculator}. The contributions of this paper are:
+\begin{enumerate}
+\item \textbf{Grounded Explain-then-Verify}, a pipeline in which deterministic analytics compute a structured fact set, the LLM narrates only those facts, and a Numeric Claim Verifier checks every numeric claim before display, triggering one feedback-guided regeneration on failure.
+\item \textbf{Grounded Faithfulness Score (GFS)}, a reference-free metric that needs no extra LLM calls: the fraction of numeric claims in an answer that are supported by computed facts.
+\item \textbf{Text-to-Analytics question answering}, in which the LLM maps a question to one of eleven typed tools instead of reading the statement. Prompt size is then independent of statement length, and accuracy rises from 25\% to 90\%.
+\item \textbf{A cost-aware hybrid categoriser} (merchant cache, then rules, then batched LLM) with PII masking. It outperforms rules-only and LLM-only categorisation while halving token cost.
+\item \textbf{A context-aware anomaly detector} that combines robust z-scores with habitual-merchant suppression, duplicate-charge and new-merchant rules, with an ablation of every component.
+\end{enumerate}
+Section~II reviews related work, Section~III formalises the problem, Section~IV details the method, Section~V describes the implementation, Sections~VI and VII present the experimental setup and results, and Section~VIII concludes.
+
+%% =====================================================================
+\section{Related Work}
+\textbf{LLMs in finance.} BloombergGPT \cite{wu2023bloomberggpt} and FinGPT \cite{yang2023fingpt} adapt LLMs to financial text, while PIXIU \cite{xie2023pixiu} and FLUE \cite{shah2022flue} provide benchmarks. These efforts target market news, filings and sentiment rather than \emph{personal} transaction data, and they place no constraint on the numbers a model may state.
+
+\textbf{Numerical reasoning and tool use.} FinQA \cite{chen2021finqa} and TAT-QA \cite{zhu2021tatqa} show that numerical reasoning over financial tables is difficult even for strong models. Program-aided approaches such as PAL \cite{gao2023pal} and Program-of-Thoughts \cite{chen2023pot} delegate computation to an interpreter. ReAct \cite{yao2023react} and Toolformer \cite{schick2023toolformer} interleave reasoning with tool calls, and text-to-SQL systems \cite{yu2018spider,rajkumar2022sql} translate questions into database queries. FinWise follows this line but restricts the LLM to a small vocabulary of \emph{typed, parameterised} tools. The model never emits executable code, which removes a class of injection and runtime errors and makes every computation auditable.
+
+\textbf{Hallucination detection.} Surveys catalogue hallucination in natural language generation \cite{ji2023survey}. SelfCheckGPT \cite{manakul2023selfcheck} detects it through sampling consistency, and FActScore \cite{min2023factscore} measures the precision of atomic facts against a knowledge source. Retrieval augmentation \cite{lewis2020rag} grounds generation in retrieved documents. The FinWise verifier is closest to FActScore but differs in three ways. It is specialised to numeric claims, it checks them against \emph{computed} rather than retrieved facts, and it is fully deterministic, so it adds no model calls.
+
+\textbf{Anomaly detection and cost control.} Outlier detection is surveyed in \cite{chandola2009anomaly}. FinWise adopts the modified z-score of Iglewicz and Hoaglin \cite{iglewicz1993}, which is robust to the outliers it seeks, and adds domain rules. FrugalGPT \cite{chen2023frugal} motivates cascading inexpensive predictors before expensive ones, an idea the hybrid categoriser applies to merchant classification. Table~\ref{tab:compare} positions FinWise against representative approaches.
+
+\begin{table}[t]
+\caption{Comparison with existing approaches}
+\label{tab:compare}
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Capability & \shortstack{Expense\\tracker} & \shortstack{Generic\\LLM chat} & \shortstack{Finance\\LLMs \cite{wu2023bloomberggpt,yang2023fingpt}} & \shortstack{PAL /\\PoT \cite{gao2023pal,chen2023pot}} & \textbf{FinWise} \\
+\midrule
+Long-tail categorisation & partial & \checkmark & -- & -- & \checkmark \\
+NL explanations & -- & \checkmark & \checkmark & \checkmark & \checkmark \\
+Exact arithmetic & \checkmark & -- & -- & \checkmark & \checkmark \\
+Explains anomalies & -- & partial & -- & -- & \checkmark \\
+Numeric verification & n/a & -- & -- & -- & \checkmark \\
+PII masking & n/a & -- & -- & -- & \checkmark \\
+No generated code run & \checkmark & \checkmark & \checkmark & -- & \checkmark \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+%% =====================================================================
+\section{Problem Formulation}
+A statement is a sequence $D=\{t_i\}_{i=1}^{n}$ with $t_i=(d_i, s_i, a_i, \delta_i)$: date, raw narration, amount $a_i>0$ and direction $\delta_i\in\{\text{debit},\text{credit}\}$. Let $\mathcal{K}$ be a fixed set of $|\mathcal{K}|=15$ spending categories and $m(s_i)$ the merchant extracted from a narration. FinWise solves three tasks.
+
+\textbf{T1 -- Categorisation:} learn $f: (s_i,\delta_i,a_i)\mapsto k\in\mathcal{K}$ that maximises accuracy while minimising the number of tokens sent to an external model. Only a masked view $\mu(s_i)$ may leave the system.
+
+\textbf{T2 -- Anomaly explanation:} find $A\subseteq D$ of expenses a user would consider unusual, and for each $t\in A$ produce a reason and an action, both consistent with $D$.
+
+\textbf{T3 -- Grounded question answering:} given a question $q$, produce an answer $y$ that is correct and \emph{numerically faithful}. Let $C(y)$ be the numeric claims in $y$ and $F$ the set of facts computable from $D$. Every $c\in C(y)$ must be supported by some $f\in F$ within a tolerance $\tau$:
+\begin{equation}
+\forall c\in C(y)\;\; \exists f\in F:\; \lvert v(c)-f\rvert \le \tau(c,f).
+\end{equation}
+The degree to which an answer meets this constraint is measured by
+\begin{equation}
+\mathrm{GFS}(y)=\frac{\lvert\{c\in C(y): c \text{ supported by } F\}\rvert}{\lvert C(y)\rvert},
+\end{equation}
+with $\mathrm{GFS}(y)=1$ when $C(y)=\emptyset$.
+
+%% =====================================================================
+\section{Proposed Methodology}
+\begin{figure}[t]
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tikzpicture}[
+  box/.style={draw, rounded corners=2pt, align=center, font=\scriptsize, minimum height=0.62cm, inner sep=2pt, fill=white},
+  llm/.style={box, fill=violet!12, draw=violet!70},
+  det/.style={box, fill=cyan!8, draw=cyan!60!black},
+  arr/.style={-{Stealth[length=1.6mm]}, thick, gray!70!black},
+  node distance=0.32cm and 0.32cm]
+\node[box] (up) {Statement\\CSV / XLSX / PDF};
+\node[det, right=of up] (ing) {Parser +\\column detect};
+\node[det, right=of ing] (pii) {PII\\masking};
+\node[det, right=of pii] (cat) {Hybrid\\categoriser};
+\node[llm, below=of cat] (lcat) {LLM batch\\(unknown only)};
+\node[det, below=0.55cm of ing] (db) {SQLite\\store};
+\node[det, below=0.55cm of up] (ana) {Analytics +\\anomaly engine};
+\node[box, below=0.85cm of ana] (q) {User\\question};
+\node[llm, right=of q] (route) {LLM tool\\router};
+\node[det, right=of route] (tool) {Typed tool\\execution};
+\node[llm, right=of tool] (narr) {LLM\\narrator};
+\node[det, below=of narr] (ver) {Numeric Claim\\Verifier (GFS)};
+\node[box, left=of ver] (ui) {Answer + chart\\+ verification};
+\draw[arr] (up)--(ing); \draw[arr] (ing)--(pii); \draw[arr] (pii)--(cat);
+\draw[arr] (cat)--(lcat); \draw[arr] (lcat.west) -- ++(-0.25,0) |- (db.east);
+\draw[arr] (db)--(ana); \draw[arr] (q)--(route); \draw[arr] (route)--(tool);
+\draw[arr] (ana.south) -- ++(0,-0.25) -| (tool.north); \draw[arr] (tool)--(narr);
+\draw[arr] (narr)--(ver); \draw[arr] (ver)--(ui);
+\draw[arr, dashed, violet] (ver.east) -- ++(0.22,0) |- node[pos=0.25, right, font=\tiny, align=left]{regen.\\once} (narr.east);
+\end{tikzpicture}}
+\caption{FinWise architecture. Deterministic components (cyan) compute every number; LLM components (violet) only classify unknown merchants, select tools and narrate verified facts.}
+\label{fig:arch}
+\end{figure}
+
+Fig.~\ref{fig:arch} shows the two pipelines: statement ingestion (top) and question answering (bottom).
+
+\subsection{Ingestion and Privacy Masking}
+Indian banks export statements in heterogeneous layouts. The parser first locates the header row, skipping banner rows, and then maps columns by synonym matching (e.g.\ \emph{Narration}, \emph{Particulars}, \emph{Withdrawal Amt.}, \emph{Dr/Cr}). It supports three amount layouts: separate debit and credit columns, signed amounts, and amount plus type. PDF tables are read with \texttt{pdfplumber}, with a regular-expression fallback for unruled text statements, and dates are parsed day-first. Merchants are extracted with channel-specific grammars (UPI: fourth field; NEFT/IMPS: third; ACH: second; POS: text after the card token, minus city suffixes), after which legal suffixes, month tokens and digits are removed.
+
+The masking function $\mu$ replaces e-mail addresses, UPI handles, PAN numbers, phone numbers and digit runs longer than five. It also replaces payees whose first token is a common Indian given name with a \texttt{[PERSON]} token. This keeps friends' names private and is itself a strong cue for the \emph{Transfers} category. On the evaluation data, $\mu$ redacted reference numbers in 518 of 535 narrations (96.8\%) and payee names in 33.
+
+\subsection{Cost-Aware Hybrid Categorisation}
+Each transaction passes through a cascade. (i) A \emph{merchant cache} keyed by $(m,\delta)$ holds earlier decisions, including user corrections. (ii) A \emph{rule dictionary} of 86 regular-expression patterns covers well-known Indian merchants, billers and keywords (e.g.\ \emph{salary}, \emph{rent}); income rules apply only to credits. (iii) Each remaining \emph{unique} $(m,\delta)$ pair is represented by one masked example with its direction and rounded amount, and examples are sent to the LLM in batches of $B=30$. The prompt lists the categories, nine disambiguation guidelines and three few-shot examples, and the LLM must return JSON (temperature 0). Outputs outside $\mathcal{K}$ are discarded. (iv) Unresolved items fall back to a heuristic. If $M_u$ is the set of unique merchants unknown to the rules, categorisation needs $\lceil |M_u|/B\rceil$ LLM calls, independent of $n$, and decisions are cached so repeat uploads cost nothing.
+
+\subsection{Context-Aware Anomaly Detection}
+Let $X_c$ be the debit amounts of category $c$, excluding rent, EMIs, transfers and cash, with median $\tilde{m}_c$. The robust z-score is
+\begin{equation}
+z(x)=\frac{0.6745\,(x-\tilde{m}_c)}{\mathrm{MAD}_c},\qquad \mathrm{MAD}_c=\operatorname{median}_{y\in X_c}\lvert y-\tilde{m}_c\rvert ,
+\end{equation}
+and a transaction is a \emph{spike} if $z(x)>3.5$, $x\ge 2.5\,\tilde{m}_c$ and $x\ge$ \rupee 500, provided $\lvert X_c\rvert\ge 5$ (\emph{minimum history}) \cite{iglewicz1993}. Unlike the mean and standard deviation, the median and MAD are not inflated by the outliers being sought.
+
+Categories such as \emph{Transport} are bimodal (cheap rides and expensive refuelling), so a category-level test alone raises false alarms. \emph{Habitual-merchant suppression} therefore skips any transaction whose merchant has at least three payments and whose amount is at most $2\,\tilde{m}_{m}$, where $\tilde{m}_{m}$ is that merchant's median. The same robust test applied per merchant ($\ge 4$ payments, $x\ge 3\,\tilde{m}_m$) catches spikes at a single payee. Two rules capture anomalies that are not statistical outliers. A \emph{duplicate charge} is the same merchant and amount within one day. A \emph{new high-value merchant} is first seen in the latest month with $x\ge\max(\text{\rupee}5000, P_{95})$. Each flag carries a reason containing the exact computed values (e.g.\ ``\rupee 4,250 at Swiggy is 8.9$\times$ your usual \rupee 475''), which becomes part of the fact set for the explanation. Detection costs $O(n\log n)$ (median computation and sorting).
+
+\subsection{Text-to-Analytics Question Answering}
+Table~\ref{tab:tools} lists the eleven typed tools. The router prompt contains the tool signatures, the available months and the category list, and the LLM must return JSON $\{t,a\}$ at temperature 0. The four most recent conversation turns are included so that follow-up questions resolve correctly. Arguments are validated and normalised: relative months such as \emph{latest} and \emph{previous} are resolved, and category names are fuzzy-matched. The tool then executes deterministically and returns a result $R$ and an optional chart specification. The LLM never sees the raw statement during question answering, so each question costs exactly two model calls, plus at most one regeneration, whatever the value of $n$.
+
+\begin{table}[t]
+\caption{Typed analytics tools available to the router}
+\label{tab:tools}
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lll@{}}
+\toprule
+Tool & Arguments & Returns \\
+\midrule
+\texttt{spending\_summary} & month & totals, savings rate, by category \\
+\texttt{category\_spend} & category, month & total, mean, max, top merchants \\
+\texttt{top\_merchants} & $n$, month, category & ranked merchants \\
+\texttt{compare\_months} & month$_a$, month$_b$ & per-category change \\
+\texttt{find\_transactions} & text, category, range & matching rows, total \\
+\texttt{subscriptions} & -- & services, monthly/annual cost \\
+\texttt{upcoming\_bills} & -- & payments due in 30 days \\
+\texttt{unusual\_expenses} & -- & anomalies with reasons \\
+\texttt{budget\_suggestion} & -- & 50/30/20 targets vs.\ actual \\
+\texttt{health\_score} & -- & score, five components \\
+\texttt{spending\_patterns} & -- & weekday/weekend, recurring \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\subsection{Grounded Explain-then-Verify}
+The narrator receives $q$ and $R$ and is instructed to copy numbers exactly, round to the nearest rupee, never derive new values, and say so when $R$ lacks the needed information (temperature 0.3). The verifier extracts claims in three classes. \emph{Amounts} are numbers with a currency marker (\rupee, INR), including the Indian \emph{k}, \emph{lakh} and \emph{crore} scales, or bare numbers with digit grouping or of at least 1,000. \emph{Percentages} carry a \% sign, and \emph{ratios} carry $\times$, \emph{x} or \emph{times}. Dates and years are removed first. The fact set $F$ is every number in $R$, the tool arguments and $q$, plus the percentage form of ratios. Tolerances are $\tau=\max(1, 0.01f)$ for amounts, widened to half a unit of the stated precision for scaled forms (e.g.\ \rupee 1.2 lakh), 0.6 percentage points for percentages and 0.15 for ratios. Algorithm~\ref{alg:gev} gives the loop. The same procedure grounds the anomaly explanations (with $F$ = anomaly facts) and the five dashboard insights (with $F$ = a global fact sheet). Verification costs $O(\lvert C(y)\rvert\cdot\lvert F\rvert)$ and needs no model call.
+
+\begin{algorithm}[t]
+\caption{Grounded Explain-then-Verify}\label{alg:gev}
+\begin{algorithmic}[1]
+\Require question $q$, transactions $D$, tools $\mathcal{T}$, retries $K{=}1$
+\State $(t,a) \gets \textsc{LLM-Route}(q,\mathcal{T})$ \Comment{JSON mode}
+\State $R \gets t(D,a)$ \Comment{deterministic}
+\State $y \gets \textsc{LLM-Narrate}(q,R)$; \ $F \gets \mathrm{nums}(R)\cup\mathrm{nums}(a)\cup\mathrm{nums}(q)$
+\For{$k=1$ \textbf{to} $K$}
+  \State $U \gets \{c\in C(y): c \text{ unsupported by } F\}$
+  \If{$U=\emptyset$} \textbf{break} \EndIf
+  \State $y \gets \textsc{LLM-Narrate}(q,R,\text{feedback}=U)$
+\EndFor
+\State \Return $y$, $\mathrm{GFS}(y)$, $U$ \Comment{unresolved claims are flagged}
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Patterns and Financial Health Score}
+A merchant is \emph{recurring} if it appears in at least $M-1$ of $M$ months with a median gap of 20--40 days, at most 1.5 payments per month, and a coefficient of variation of amounts of at most 0.35 for bills, subscriptions, rent and EMIs, or at most 0.03 (with presence in every month) otherwise. The next due date is the last payment plus the median gap. The 0--100 health score (Table~\ref{tab:health}) is a transparent sum of five clipped components, so each point can be traced to a measurable behaviour.
+
+\begin{table}[t]
+\caption{Financial health score components (total 100)}
+\label{tab:health}
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}llc@{}}
+\toprule
+Component & Formula (clipped to $[0,\max]$) & Max \\
+\midrule
+Savings rate $r$ (\%) & $40\,r/30$ & 40 \\
+Discretionary share $d$ (\%) & $20-0.5\max(0,d-30)$ & 20 \\
+Subscriptions $u$ (\% of income) & $15-3\max(0,u-3)$ & 15 \\
+Unusual expenses $n_a$ & $10-1.5\,n_a$ & 10 \\
+Stability (CV of monthly spend) & $15-30\,\mathrm{CV}$ & 15 \\
+\bottomrule
+\multicolumn{3}{@{}l}{\footnotesize Labels: $\ge$80 Excellent, $\ge$65 Good, $\ge$45 Fair, otherwise Needs attention.}
+\end{tabular}}
+\end{table}
+
+%% =====================================================================
+\section{Implementation}
+The backend is written in Python 3.12 with FastAPI, pandas and SQLite. It exposes REST endpoints for upload, dashboard, transactions, insights and anomalies, and a Server-Sent-Events endpoint that streams a tool event, the answer tokens and finally a verification event. The LLM layer targets OpenAI-compatible APIs. The experiments use \texttt{gpt-oss-120b} \cite{openai2025gptoss} served by Groq, with Gemini as an interchangeable provider. The layer provides JSON mode, exponential back-off on rate limits, a response cache and client-side throttling, and an offline mode (rules plus templates) keeps every analytic feature available without an API key. The web client (React, TypeScript, Recharts) presents a dashboard, a transaction table with inline re-categorisation, an insights view and a chat assistant. Every AI-generated text carries a badge showing how many of its numbers were verified, and each category label shows whether it came from a rule, the AI or the user. A user correction updates all transactions of that merchant and the cache.
+
+%% =====================================================================
+\section{Experimental Setup}
+\textbf{Dataset.} No public, labelled corpus of personal bank statements exists, for privacy reasons. We therefore generated realistic Indian statements for three personas over August--October 2026 (Table~\ref{tab:data}) with fixed random seeds. Narrations follow real UPI, NEFT, POS and ACH grammars, and each persona is exported in a different format. Of the 88 unique merchants, 46 are a long tail of local businesses deliberately absent from the rule dictionary (e.g.\ cafes, kirana stores, clinics, bike rentals). The category distribution is realistically skewed: Food \& Dining 168, Transport 102, Groceries 64, Shopping 42, Subscriptions 38, Transfers 27, Bills 24, and 70 across the remaining seven categories. Fifteen anomalies were planted: 9 spikes, 3 duplicate charges and 3 new high-value merchants.
+
+\begin{table}[t]
+\caption{Evaluation dataset}
+\label{tab:data}
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Persona & Format & Txns & Merchants & Anomalies & Profile \\
+\midrule
+Aarav & CSV & 209 & 58 & 6 & salaried, renter \\
+Priya & XLSX & 166 & 59 & 5 & salaried, car EMI \\
+Rohan & PDF & 160 & 45 & 4 & freelancer \\
+\midrule
+Total & 3 formats & 535 & 88 & 15 & 14 categories \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\textbf{Experiments and metrics.} \emph{E1} compares rules-only, LLM-only (every transaction sent to the LLM) and hybrid categorisation using accuracy with 95\% Wilson intervals, macro-F1, LLM calls and tokens. \emph{E2} compares a global z-score ($z>3$), a per-category z-score and the FinWise detector, using ground-truth and predicted categories, followed by a one-component-removed ablation. \emph{E3} poses ten templated questions per persona (30 in total, e.g.\ \emph{``By how much did my total spending change from September to October?''}), with answers computed from ground-truth labels. Three strategies are compared: (a) \emph{context stuffing}, with the whole masked statement in the prompt as CSV; (b) Text-to-Analytics without verification; and (c) Text-to-Analytics with the verifier. An answer is correct if it states the expected value within 1\% (0.6 points for percentages). We report accuracy, claim precision (supported claims / all claims), mean GFS and the share of fully grounded answers ($\mathrm{GFS}=1$), and test differences in accuracy with Fisher's exact test. All runs use \texttt{gpt-oss-120b} on the Groq free tier.
+
+%% =====================================================================
+\section{Results and Discussion}
+\subsection{Categorisation (E1)}
+Table~\ref{tab:cat} shows that rules alone label well-known brands perfectly but leave the long tail as \emph{Other}, giving 64.3\% accuracy. Sending every transaction to the LLM reaches 93.3\% but uses 13.3k tokens. It also mislabels some easy cases that rules handle reliably, which lowers macro-F1 to 0.858. The hybrid cascade reaches 97.2\% accuracy with macro-F1 0.967. Its confidence interval (95.4--98.3\%) does not overlap that of the LLM-only baseline (90.8--95.1\%), and it needs half the calls and 49\% fewer tokens. Within the hybrid, the 344 rule-labelled transactions were all correct, and the 191 LLM-labelled transactions (46 unique merchants) were 92.1\% correct.
+
+\begin{table}[t]
+\caption{E1: Transaction categorisation (535 txns, 15 classes)}
+\label{tab:cat}
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+Mode & Acc. & 95\% CI & Macro-F1 & Calls & Tokens & Txns via LLM \\
+\midrule
+Rules only & 0.643 & [0.602, 0.682] & 0.676 & 0 & 0 & 0 \\
+LLM only & 0.933 & [0.908, 0.951] & 0.858 & 6 & 13{,}319 & 535 \\
+\textbf{Hybrid (ours)} & \textbf{0.972} & [0.954, 0.983] & \textbf{0.967} & 3 & 6{,}832 & 191 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+Table~\ref{tab:perclass} reports per-category F1 for the hybrid. Nine categories are classified perfectly. All 15 errors come from just six long-tail merchants. A kirana store and an electric bike rental were labelled \emph{Shopping} (4 transactions each), a rental platform's monthly debit was labelled \emph{Subscriptions} (3), a snack-and-sweets chain was labelled \emph{Groceries} (2), and an EV cab service and an eyewear retailer were mislabelled once each. These are genuinely ambiguous names. A single user correction fixes each of them permanently through the merchant cache.
+
+\begin{table}[t]
+\caption{Per-category F1 of the hybrid categoriser (support in brackets)}
+\label{tab:perclass}
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lc|lc@{}}
+\toprule
+Category & F1 & Category & F1 \\
+\midrule
+Food \& Dining (168) & 0.994 & Bills \& Utilities (24) & 1.000 \\
+Transport (102) & 0.975 & Income (16) & 1.000 \\
+Groceries (64) & 0.952 & Entertainment (16) & 1.000 \\
+Shopping (42) & 0.891 & Health (14) & 0.966 \\
+Subscriptions (38) & 0.962 & Rent \& Housing (9) & 0.800 \\
+Transfers (27) & 1.000 & EMI, Cash, Education (15) & 1.000 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\subsection{Anomaly Detection (E2)}
+Both z-score baselines miss most planted anomalies (recall 0.33--0.40, Table~\ref{tab:anom}). Large outliers inflate the mean and standard deviation that are supposed to expose them (the \emph{masking} effect), and duplicate charges are not outliers at all. The FinWise detector recovers all 15 anomalies (recall 95\% CI 0.80--1.00; Fisher $p=7\times10^{-4}$ against the global z-score). With categories predicted by the hybrid categoriser, two false alarms appear because a few misclassified transactions shift category medians, but F1 remains 0.94.
+
+\begin{table}[t]
+\caption{E2: Anomaly detection (15 planted anomalies)}
+\label{tab:anom}
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+Categories & Method & TP/FP/FN & P & R & F1 \\
+\midrule
+\multirow{3}{*}{Ground truth} & Global $z$ & 6/0/9 & 1.000 & 0.400 & 0.571 \\
+ & Category $z$ & 5/1/10 & 0.833 & 0.333 & 0.476 \\
+ & \textbf{FinWise} & 15/0/0 & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} \\
+\midrule
+\multirow{3}{*}{Predicted} & Global $z$ & 5/3/10 & 0.625 & 0.333 & 0.435 \\
+ & Category $z$ & 6/1/9 & 0.857 & 0.400 & 0.545 \\
+ & \textbf{FinWise} & 15/2/0 & \textbf{0.882} & \textbf{1.000} & \textbf{0.938} \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+The ablation (Table~\ref{tab:abl}) shows which components matter. Removing habitual-merchant suppression adds six false alarms, all refuelling payments in the bimodal \emph{Transport} category. Removing the minimum-history guard flags two one-off course purchases, and removing the duplicate rule misses all three double charges. The merchant-level and new-merchant rules are redundant on this dataset, since category-level spikes already catch those cases, but they produce more specific explanations (``first-ever payment to \ldots''). Table~\ref{tab:explain} lists explanations generated for one statement. The detector supplies the type and the computed reason, and the LLM adds a plausible cause and an action. All numbers in the generated text passed verification.
+
+
+
+\begin{table}[t]
+\caption{E2b: Detector ablation (ground-truth categories)}
+\label{tab:abl}
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Component removed & TP/FP/FN & P & R & F1 \\
+\midrule
+None (full detector) & 15/0/0 & 1.000 & 1.000 & 1.000 \\
+Habitual-merchant suppression & 15/6/0 & 0.714 & 1.000 & 0.833 \\
+Minimum-history guard & 15/2/0 & 0.882 & 1.000 & 0.938 \\
+Duplicate-charge rule & 12/0/3 & 1.000 & 0.800 & 0.889 \\
+Merchant-level spike & 15/0/0 & 1.000 & 1.000 & 1.000 \\
+New-merchant rule & 15/0/0 & 1.000 & 1.000 & 1.000 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[t]
+\caption{Generated anomaly explanations (Aarav statement, abridged)}
+\label{tab:explain}
+\centering
+\footnotesize
+\begin{tabular}{@{}p{0.17\columnwidth}p{0.75\columnwidth}@{}}
+\toprule
+Type & Computed reason $\rightarrow$ generated explanation / action \\
+\midrule
+Duplicate & Rs.\,649 charged twice at Netflix on 02 Oct $\rightarrow$ ``indicates a duplicate transaction; request a refund from Netflix support.'' \\
+Spike (merchant) & Rs.\,2,380 at Uber is 6.4$\times$ the usual Rs.\,373 $\rightarrow$ ``check the receipt for distance or surge pricing.'' \\
+Spike (category) & Rs.\,4,860 electricity bill is 4.6$\times$ the median utility spend of Rs.\,1,059 $\rightarrow$ ``inspect the bill for meter-reading errors.'' \\
+New merchant & First payment to Croma, Rs.\,18,990, above 95\% of expenses $\rightarrow$ ``verify the purchase; set a limit for new merchants.'' \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Question Answering and Faithfulness (E3)}
+Table~\ref{tab:qa} contains the central result. Context stuffing could not run at all for the largest statement (209 rows): all ten requests exceeded the provider's per-request token limit, a practical failure mode for long statements. On the 20 questions it could attempt, it answered 25\% correctly (16.7\% over all 30). Several answers refused (``I can't calculate that total''), and others gave confident but wrong figures, such as a monthly spend near \rupee 2.7 lakh when the true value was far lower. Only 51.7\% of its numeric claims were supported by the facts. Text-to-Analytics answered 90\% correctly (95\% CI 74--97\%; Fisher $p=3.6\times10^{-6}$), with 96.8\% claim precision and about 1.25k tokens per question (690 for routing, about 560 for narration) against 6.3k for stuffing. The verifier caught the single unsupported claim, an invented ``10\%'', and corrected it in one regeneration. All 30 answers were then fully grounded, at a cost of one extra call in 30 (3.3\%).
+
+\begin{table}[t]
+\caption{E3: QA correctness and numeric faithfulness}
+\label{tab:qa}
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+Strategy & $N$ & Acc. & 95\% CI & Claim prec. & Mean GFS & Tokens/q \\
+\midrule
+Context stuffing & 20$^\dagger$ & 0.250 & [0.11, 0.47] & 0.517 & 0.631 & 6{,}334 \\
+Text-to-Analytics & 30 & 0.900 & [0.74, 0.97] & 0.968 & 0.983 & $\approx$1{,}250 \\
+\textbf{+ Verifier (ours)} & 30 & \textbf{0.900} & [0.74, 0.97] & \textbf{1.000} & \textbf{1.000} & +3.3\% calls \\
+\bottomrule
+\multicolumn{7}{@{}l}{\footnotesize $^\dagger$The other 10 of 30 requests exceeded the API's per-request token limit.}
+\end{tabular}}
+\end{table}
+
+
+\textbf{Worked example.} For the question \emph{``Why was October so expensive compared to September?''}, the router selected \texttt{compare\_months(previous, latest)}. The narrator explained that total spending rose from \rupee 62,229 to \rupee 99,680 (+60.18\%), driven mainly by Shopping (\rupee 10,717 to \rupee 40,656), and suggested a weekly shopping budget. All 29 numeric claims in the answer were verified ($\mathrm{GFS}=1$).
+
+\textbf{Error analysis.} All three incorrect Text-to-Analytics answers were faithful to the computed facts ($\mathrm{GFS}=1$) but inherited categorisation errors from E1. Two grocery totals were affected by the kirana store and the snack chain, and one subscription total included the rental platform. This marks the boundary of the guarantee: the verifier ensures \emph{faithfulness}, meaning the explanation matches the computation, not the \emph{correctness} of upstream labels. The interface reduces the gap by exposing each label's source and making corrections one click and persistent.
+
+\textbf{Cost and scalability.} FinWise's cost scales with the number of questions and new merchants, not with statement length. A 12-month statement of about 800 transactions needs the same $\approx$1.25k tokens per question, whereas context stuffing would need roughly four times the 6.3k tokens observed here. Categorisation becomes cheaper with use, because the cache absorbs previously seen merchants.
+
+\textbf{Design implications.} Three lessons generalise beyond personal finance. First, a narrow, typed tool vocabulary was sufficient: the router chose a valid tool for every benchmark question, and typed arguments made failures easy to detect and repair. Second, deterministic verification is cheap enough to run on every response and turns hallucination from a silent failure into a visible, correctable one. Third, cost-aware cascades improve accuracy as well as cost, because rules are more reliable than an LLM on the cases they cover.
+
+\textbf{Threats to validity.} The data is synthetic, and the detector's thresholds were chosen on the same personas, so the perfect ground-truth F1 is optimistic. The QA benchmark is small (30 questions) and templated. The verifier checks numbers, not qualitative claims such as ``your largest expense''. All results use a single LLM, and latency was dominated by deliberate free-tier throttling, so it is not reported as a result.
+
+\textbf{Reproducibility.} The generator seeds, prompts, tool definitions, evaluation scripts and raw outputs (per-answer texts and verification reports) are kept with the implementation, and every reported figure can be regenerated with one command.
+
+%% =====================================================================
+\section{Conclusion and Future Work}
+FinWise shows that LLMs can deliver trustworthy natural-language financial insights when they are confined to the roles they perform well: understanding questions, classifying unfamiliar merchants and explaining results, while computation stays deterministic and every number is verified. On labelled Indian statements, this design raised categorisation accuracy to 97.2\% at half the token cost, recovered all planted anomalies with grounded explanations, and raised question-answering accuracy from 25\% to 90\% with fully grounded answers. Future work includes evaluation on consented, anonymised statements obtained through India's Account Aggregator framework, a user study of trust and comprehension, Hindi and code-mixed queries, verification of non-numeric claims, and on-device small models that keep all data local.
+
+\section*{Acknowledgment}
+The authors thank the Department of Computer Science and Engineering, Dayananda Sagar University, Bengaluru, for the facilities and support provided for this work.
+
+\begin{thebibliography}{00}
+\bibitem{npci} National Payments Corporation of India, ``UPI product statistics,'' 2025. [Online]. Available: https://www.npci.org.in/what-we-do/upi/product-statistics
+\bibitem{brown2020} T. B. Brown \emph{et al.}, ``Language models are few-shot learners,'' in \emph{Proc. NeurIPS}, 2020, pp. 1877--1901.
+\bibitem{wu2023bloomberggpt} S. Wu \emph{et al.}, ``BloombergGPT: A large language model for finance,'' arXiv:2303.17564, 2023.
+\bibitem{yang2023fingpt} H. Yang, X.-Y. Liu, and C. D. Wang, ``FinGPT: Open-source financial large language models,'' arXiv:2306.06031, 2023.
+\bibitem{xie2023pixiu} Q. Xie \emph{et al.}, ``PIXIU: A large language model, instruction data and evaluation benchmark for finance,'' in \emph{Proc. NeurIPS Datasets and Benchmarks Track}, 2023.
+\bibitem{shah2022flue} R. S. Shah \emph{et al.}, ``When FLUE meets FLANG: Benchmarks and large pretrained language model for financial domain,'' in \emph{Proc. EMNLP}, 2022, pp. 2322--2335.
+\bibitem{chen2021finqa} Z. Chen \emph{et al.}, ``FinQA: A dataset of numerical reasoning over financial data,'' in \emph{Proc. EMNLP}, 2021, pp. 3697--3711.
+\bibitem{zhu2021tatqa} F. Zhu \emph{et al.}, ``TAT-QA: A question answering benchmark on a hybrid of tabular and textual content in finance,'' in \emph{Proc. ACL}, 2021, pp. 3277--3287.
+\bibitem{ji2023survey} Z. Ji \emph{et al.}, ``Survey of hallucination in natural language generation,'' \emph{ACM Comput. Surv.}, vol. 55, no. 12, pp. 1--38, 2023.
+\bibitem{liu2024lost} N. F. Liu \emph{et al.}, ``Lost in the middle: How language models use long contexts,'' \emph{Trans. Assoc. Comput. Linguistics}, vol. 12, pp. 157--173, 2024.
+\bibitem{gao2023pal} L. Gao \emph{et al.}, ``PAL: Program-aided language models,'' in \emph{Proc. ICML}, 2023, pp. 10764--10799.
+\bibitem{chen2023pot} W. Chen, X. Ma, X. Wang, and W. W. Cohen, ``Program of thoughts prompting: Disentangling computation from reasoning for numerical reasoning tasks,'' \emph{Trans. Mach. Learn. Res.}, 2023.
+\bibitem{yao2023react} S. Yao \emph{et al.}, ``ReAct: Synergizing reasoning and acting in language models,'' in \emph{Proc. ICLR}, 2023.
+\bibitem{schick2023toolformer} T. Schick \emph{et al.}, ``Toolformer: Language models can teach themselves to use tools,'' in \emph{Proc. NeurIPS}, 2023.
+\bibitem{yu2018spider} T. Yu \emph{et al.}, ``Spider: A large-scale human-labeled dataset for complex and cross-domain semantic parsing and text-to-SQL task,'' in \emph{Proc. EMNLP}, 2018, pp. 3911--3921.
+\bibitem{rajkumar2022sql} N. Rajkumar, R. Li, and D. Bahdanau, ``Evaluating the text-to-SQL capabilities of large language models,'' arXiv:2204.00498, 2022.
+\bibitem{manakul2023selfcheck} P. Manakul, A. Liusie, and M. J. F. Gales, ``SelfCheckGPT: Zero-resource black-box hallucination detection for generative large language models,'' in \emph{Proc. EMNLP}, 2023, pp. 9004--9017.
+\bibitem{min2023factscore} S. Min \emph{et al.}, ``FActScore: Fine-grained atomic evaluation of factual precision in long form text generation,'' in \emph{Proc. EMNLP}, 2023, pp. 12076--12100.
+\bibitem{lewis2020rag} P. Lewis \emph{et al.}, ``Retrieval-augmented generation for knowledge-intensive NLP tasks,'' in \emph{Proc. NeurIPS}, 2020, pp. 9459--9474.
+\bibitem{chandola2009anomaly} V. Chandola, A. Banerjee, and V. Kumar, ``Anomaly detection: A survey,'' \emph{ACM Comput. Surv.}, vol. 41, no. 3, pp. 1--58, 2009.
+\bibitem{iglewicz1993} B. Iglewicz and D. C. Hoaglin, \emph{How to Detect and Handle Outliers}. Milwaukee, WI, USA: ASQC Quality Press, 1993.
+\bibitem{chen2023frugal} L. Chen, M. Zaharia, and J. Zou, ``FrugalGPT: How to use large language models while reducing cost and improving performance,'' arXiv:2305.05176, 2023.
+\bibitem{openai2025gptoss} OpenAI, ``gpt-oss-120b \& gpt-oss-20b model card,'' arXiv:2508.10925, 2025.
+\end{thebibliography}
+
+\end{document}

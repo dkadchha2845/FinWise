@@ -1,0 +1,1662 @@
+[
+ {
+  "date": "2026-08-01",
+  "description": "SALARY CREDIT GLOBEX FINSERV AUG",
+  "amount": 120000.0,
+  "direction": "credit",
+  "balance": 205000.0,
+  "category": "Income",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-02",
+  "description": "UPI/DR/171056262592/NESTAWAY TECHNOLOGIES/okhdfcbank/Monthly",
+  "amount": 28000.0,
+  "direction": "debit",
+  "balance": 177000.0,
+  "category": "Rent & Housing",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-02",
+  "description": "POS 7262244229530493 MORE SUPERMARKET BANGALORE",
+  "amount": 532.0,
+  "direction": "debit",
+  "balance": 176468.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-03",
+  "description": "POS 5646105449543481 COURSERA MUMBAI",
+  "amount": 3999.0,
+  "direction": "debit",
+  "balance": 172469.0,
+  "category": "Education",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-04",
+  "description": "NEFT/N3255367627/SUNITA IYER/MOM",
+  "amount": 10000.0,
+  "direction": "debit",
+  "balance": 162469.0,
+  "category": "Transfers",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-04",
+  "description": "UPI/DR/070206934948/DOMINOS PIZZA/ybl/Payment",
+  "amount": 488.0,
+  "direction": "debit",
+  "balance": 161981.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-04",
+  "description": "UPI/DR/752798372886/ZEPTO/ibl/Payment",
+  "amount": 2074.0,
+  "direction": "debit",
+  "balance": 159907.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-04",
+  "description": "POS 6041577379454969 MORE SUPERMARKET MUMBAI",
+  "amount": 1920.0,
+  "direction": "debit",
+  "balance": 157987.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-05",
+  "description": "ACH/HDB FINANCIAL SERVICES/4915414468",
+  "amount": 12500.0,
+  "direction": "debit",
+  "balance": 145487.0,
+  "category": "EMI & Loans",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-05",
+  "description": "UPI/DR/341406294467/ZOMATO/okhdfcbank/Payment",
+  "amount": 597.0,
+  "direction": "debit",
+  "balance": 144890.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-06",
+  "description": "UPI/DR/192570200558/HOTSTAR/okhdfcbank/Subscription",
+  "amount": 299.0,
+  "direction": "debit",
+  "balance": 144591.0,
+  "category": "Subscriptions",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-06",
+  "description": "UPI/DR/089312347310/BOOKMYSHOW/paytm/Payment",
+  "amount": 414.0,
+  "direction": "debit",
+  "balance": 144177.0,
+  "category": "Entertainment",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-07",
+  "description": "UPI/DR/620209785324/DOMINOS PIZZA/okaxis/Payment",
+  "amount": 800.0,
+  "direction": "debit",
+  "balance": 143377.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-08",
+  "description": "UPI/DR/559130574814/JIO POSTPAID/okicici/Bill",
+  "amount": 699.0,
+  "direction": "debit",
+  "balance": 142678.0,
+  "category": "Bills & Utilities",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-08",
+  "description": "UPI/DR/345939644431/STARBUCKS/okaxis/Payment",
+  "amount": 613.0,
+  "direction": "debit",
+  "balance": 142065.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-09",
+  "description": "POS 0116480084484888 BEWAKOOF BRANDS PUNE",
+  "amount": 2843.0,
+  "direction": "debit",
+  "balance": 139222.0,
+  "category": "Shopping",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-09",
+  "description": "UPI/DR/838033053427/PVR CINEMAS/okhdfcbank/Payment",
+  "amount": 880.0,
+  "direction": "debit",
+  "balance": 138342.0,
+  "category": "Entertainment",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-10",
+  "description": "UPI/DR/880722773139/ZOMATO/ibl/Payment",
+  "amount": 855.0,
+  "direction": "debit",
+  "balance": 137487.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-10",
+  "description": "UPI/DR/242374813530/ZEPTO/okhdfcbank/Payment",
+  "amount": 2300.0,
+  "direction": "debit",
+  "balance": 135187.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-11",
+  "description": "UPI/DR/669124911988/TORRENT POWER/ybl/Bill",
+  "amount": 1469.0,
+  "direction": "debit",
+  "balance": 133718.0,
+  "category": "Bills & Utilities",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-11",
+  "description": "UPI/DR/959772674559/ROHIT VERMA/okaxis/Split",
+  "amount": 1677.0,
+  "direction": "debit",
+  "balance": 132041.0,
+  "category": "Transfers",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-12",
+  "description": "UPI/DR/733014981809/INDANE GAS/ibl/Cylinder",
+  "amount": 905.0,
+  "direction": "debit",
+  "balance": 131136.0,
+  "category": "Bills & Utilities",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-12",
+  "description": "UPI/DR/617493899692/MYNTRA/okhdfcbank/Payment",
+  "amount": 2142.0,
+  "direction": "debit",
+  "balance": 128994.0,
+  "category": "Shopping",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-13",
+  "description": "UPI/DR/315312792827/STARBUCKS/okaxis/Payment",
+  "amount": 334.0,
+  "direction": "debit",
+  "balance": 128660.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-13",
+  "description": "POS 0182494644615886 MEGHANA FOODS PUNE",
+  "amount": 1553.0,
+  "direction": "debit",
+  "balance": 127107.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-13",
+  "description": "UPI/DR/655684569265/BLINKIT/paytm/Payment",
+  "amount": 2210.0,
+  "direction": "debit",
+  "balance": 124897.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-13",
+  "description": "UPI/DR/529089132197/NYKAA/okaxis/Payment",
+  "amount": 3278.0,
+  "direction": "debit",
+  "balance": 121619.0,
+  "category": "Shopping",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-14",
+  "description": "UPI/DR/374082555740/TATA 1MG/ibl/Payment",
+  "amount": 544.0,
+  "direction": "debit",
+  "balance": 121075.0,
+  "category": "Health",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-15",
+  "description": "UPI/DR/867736727439/NETFLIX/okaxis/Subscription",
+  "amount": 649.0,
+  "direction": "debit",
+  "balance": 120426.0,
+  "category": "Subscriptions",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-15",
+  "description": "POS 4750154777052683 BIRYANI BLUES HYDERABAD",
+  "amount": 538.0,
+  "direction": "debit",
+  "balance": 119888.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-16",
+  "description": "UPI/DR/371791590680/ZEPTO/ibl/Payment",
+  "amount": 752.0,
+  "direction": "debit",
+  "balance": 119136.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-16",
+  "description": "POS 6928106851251815 SHELL FUEL STATION DELHI",
+  "amount": 2778.0,
+  "direction": "debit",
+  "balance": 116358.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-17",
+  "description": "POS 4027591599086201 TRUFFLES CAFE BANGALORE",
+  "amount": 809.0,
+  "direction": "debit",
+  "balance": 115549.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-17",
+  "description": "UPI/DR/863390697776/BLINKIT/okaxis/Payment",
+  "amount": 715.0,
+  "direction": "debit",
+  "balance": 114834.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-17",
+  "description": "UPI/DR/993808069181/BLINKIT/okhdfcbank/Payment",
+  "amount": 2062.0,
+  "direction": "debit",
+  "balance": 112772.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-17",
+  "description": "POS 5457460439033695 INDIAN OIL PETROL MUMBAI",
+  "amount": 2375.0,
+  "direction": "debit",
+  "balance": 110397.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-17",
+  "description": "UPI/DR/437031275833/RAPIDO/okaxis/Payment",
+  "amount": 207.0,
+  "direction": "debit",
+  "balance": 110190.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-17",
+  "description": "UPI/DR/768495678846/RAPIDO/paytm/Payment",
+  "amount": 176.0,
+  "direction": "debit",
+  "balance": 110014.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-17",
+  "description": "UPI/DR/812073272083/ANKIT SHARMA/okaxis/Split",
+  "amount": 1965.0,
+  "direction": "debit",
+  "balance": 108049.0,
+  "category": "Transfers",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-18",
+  "description": "UPI/DR/878396667655/BLINKIT/okaxis/Payment",
+  "amount": 1327.0,
+  "direction": "debit",
+  "balance": 106722.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-18",
+  "description": "UPI/DR/783480188102/UBER INDIA/ibl/Payment",
+  "amount": 372.0,
+  "direction": "debit",
+  "balance": 106350.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-20",
+  "description": "POS 7498235311476247 CULTFIT MUMBAI",
+  "amount": 1499.0,
+  "direction": "debit",
+  "balance": 104851.0,
+  "category": "Subscriptions",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-20",
+  "description": "POS 9351071082664358 NATURES BASKET HYDERABAD",
+  "amount": 1697.0,
+  "direction": "debit",
+  "balance": 103154.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-20",
+  "description": "UPI/DR/954313652763/MYNTRA/ibl/Payment",
+  "amount": 1166.0,
+  "direction": "debit",
+  "balance": 101988.0,
+  "category": "Shopping",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-21",
+  "description": "POS 4964539868037242 LINKEDIN PREMIUM MUMBAI",
+  "amount": 1650.0,
+  "direction": "debit",
+  "balance": 100338.0,
+  "category": "Subscriptions",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-21",
+  "description": "UPI/DR/641368953219/SWIGGY/oksbi/Payment",
+  "amount": 583.0,
+  "direction": "debit",
+  "balance": 99755.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-21",
+  "description": "UPI/DR/397026994703/SWIGGY/ybl/Payment",
+  "amount": 357.0,
+  "direction": "debit",
+  "balance": 99398.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-21",
+  "description": "POS 0002881824727593 CHAI POINT PUNE",
+  "amount": 493.0,
+  "direction": "debit",
+  "balance": 98905.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-21",
+  "description": "POS 9861628976305011 SHELL FUEL STATION BANGALORE",
+  "amount": 2126.0,
+  "direction": "debit",
+  "balance": 96779.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-24",
+  "description": "UPI/DR/265960353896/RAPIDO/okaxis/Payment",
+  "amount": 580.0,
+  "direction": "debit",
+  "balance": 96199.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-25",
+  "description": "POS 7745591101177183 BIRYANI BLUES DELHI",
+  "amount": 836.0,
+  "direction": "debit",
+  "balance": 95363.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-25",
+  "description": "UPI/DR/673865724786/THYROCARE/okhdfcbank/Payment",
+  "amount": 1666.0,
+  "direction": "debit",
+  "balance": 93697.0,
+  "category": "Health",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-27",
+  "description": "UPI/DR/686421969163/FLIPKART/oksbi/Payment",
+  "amount": 3242.0,
+  "direction": "debit",
+  "balance": 90455.0,
+  "category": "Shopping",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-08-28",
+  "description": "POS 4649475865922742 IKEA PUNE",
+  "amount": 3598.0,
+  "direction": "debit",
+  "balance": 86857.0,
+  "category": "Shopping",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-01",
+  "description": "SALARY CREDIT GLOBEX FINSERV SEP",
+  "amount": 120000.0,
+  "direction": "credit",
+  "balance": 206857.0,
+  "category": "Income",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-02",
+  "description": "UPI/DR/057983008434/NESTAWAY TECHNOLOGIES/ibl/Monthly",
+  "amount": 28000.0,
+  "direction": "debit",
+  "balance": 178857.0,
+  "category": "Rent & Housing",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-02",
+  "description": "UPI/DR/476046307386/DOMINOS PIZZA/ybl/Payment",
+  "amount": 432.0,
+  "direction": "debit",
+  "balance": 178425.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-02",
+  "description": "UPI/DR/699084117058/DMART/okaxis/Payment",
+  "amount": 2088.0,
+  "direction": "debit",
+  "balance": 176337.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-02",
+  "description": "UPI/DR/183146323443/ANKIT SHARMA/ybl/Split",
+  "amount": 1637.0,
+  "direction": "debit",
+  "balance": 174700.0,
+  "category": "Transfers",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-03",
+  "description": "POS 2377010146850441 FRESH PICK MART HYDERABAD",
+  "amount": 845.0,
+  "direction": "debit",
+  "balance": 173855.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-03",
+  "description": "UPI/DR/487326998369/BOOKMYSHOW/okaxis/Payment",
+  "amount": 732.0,
+  "direction": "debit",
+  "balance": 173123.0,
+  "category": "Entertainment",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-04",
+  "description": "NEFT/N0258046922/SUNITA IYER/MOM",
+  "amount": 10000.0,
+  "direction": "debit",
+  "balance": 163123.0,
+  "category": "Transfers",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-04",
+  "description": "UPI/DR/444307907337/DMART/okicici/Payment",
+  "amount": 1462.0,
+  "direction": "debit",
+  "balance": 161661.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-04",
+  "description": "UPI/DR/039090533648/BLINKIT/okaxis/Payment",
+  "amount": 1379.0,
+  "direction": "debit",
+  "balance": 160282.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-04",
+  "description": "POS 2346789961798893 SHELL FUEL STATION PUNE",
+  "amount": 2387.0,
+  "direction": "debit",
+  "balance": 157895.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-04",
+  "description": "UPI/DR/393507674388/FLIPKART/oksbi/Payment",
+  "amount": 1007.0,
+  "direction": "debit",
+  "balance": 156888.0,
+  "category": "Shopping",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-04",
+  "description": "UPI/DR/009729284267/PVR CINEMAS/paytm/Payment",
+  "amount": 927.0,
+  "direction": "debit",
+  "balance": 155961.0,
+  "category": "Entertainment",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-05",
+  "description": "ACH/HDB FINANCIAL SERVICES/5626786118",
+  "amount": 12500.0,
+  "direction": "debit",
+  "balance": 143461.0,
+  "category": "EMI & Loans",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-06",
+  "description": "UPI/DR/365808265754/HOTSTAR/okaxis/Subscription",
+  "amount": 299.0,
+  "direction": "debit",
+  "balance": 143162.0,
+  "category": "Subscriptions",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-07",
+  "description": "UPI/DR/666307774836/DMART/okicici/Payment",
+  "amount": 883.0,
+  "direction": "debit",
+  "balance": 142279.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-07",
+  "description": "POS 2456743068523311 LENSKART MUMBAI",
+  "amount": 4313.0,
+  "direction": "debit",
+  "balance": 137966.0,
+  "category": "Shopping",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-08",
+  "description": "UPI/DR/564528963962/JIO POSTPAID/ybl/Bill",
+  "amount": 699.0,
+  "direction": "debit",
+  "balance": 137267.0,
+  "category": "Bills & Utilities",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-10",
+  "description": "UPI/DR/143568009234/DOMINOS PIZZA/oksbi/Payment",
+  "amount": 723.0,
+  "direction": "debit",
+  "balance": 136544.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-10",
+  "description": "UPI/DR/290160316452/ZOMATO/okhdfcbank/Payment",
+  "amount": 495.0,
+  "direction": "debit",
+  "balance": 136049.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-11",
+  "description": "UPI/DR/332413196573/TORRENT POWER/okaxis/Bill",
+  "amount": 1884.0,
+  "direction": "debit",
+  "balance": 134165.0,
+  "category": "Bills & Utilities",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-11",
+  "description": "UPI/DR/088926970376/NYKAA/okhdfcbank/Payment",
+  "amount": 2535.0,
+  "direction": "debit",
+  "balance": 131630.0,
+  "category": "Shopping",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-11",
+  "description": "UPI/DR/374629761592/PHARMEASY/okhdfcbank/Payment",
+  "amount": 825.0,
+  "direction": "debit",
+  "balance": 130805.0,
+  "category": "Health",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-11",
+  "description": "UPI/DR/572705648517/DR MEHTA CLINIC/okhdfcbank/Payment",
+  "amount": 550.0,
+  "direction": "debit",
+  "balance": 130255.0,
+  "category": "Health",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-12",
+  "description": "UPI/DR/338036155209/INDANE GAS/ibl/Cylinder",
+  "amount": 905.0,
+  "direction": "debit",
+  "balance": 129350.0,
+  "category": "Bills & Utilities",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-12",
+  "description": "UPI/DR/390661197274/DMART/okhdfcbank/Payment",
+  "amount": 1168.0,
+  "direction": "debit",
+  "balance": 128182.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-14",
+  "description": "UPI/DR/384298982997/DOMINOS PIZZA/ibl/Payment",
+  "amount": 646.0,
+  "direction": "debit",
+  "balance": 127536.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-14",
+  "description": "POS 2447848316119994 NATURES BASKET BANGALORE",
+  "amount": 1705.0,
+  "direction": "debit",
+  "balance": 125831.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-14",
+  "description": "UPI/DR/144111189627/OLA CABS/oksbi/Payment",
+  "amount": 306.0,
+  "direction": "debit",
+  "balance": 125525.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-14",
+  "description": "UPI/DR/283586347937/UBER INDIA/okhdfcbank/Payment",
+  "amount": 496.0,
+  "direction": "debit",
+  "balance": 125029.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-15",
+  "description": "UPI/DR/788444976212/NETFLIX/okhdfcbank/Subscription",
+  "amount": 649.0,
+  "direction": "debit",
+  "balance": 124380.0,
+  "category": "Subscriptions",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-16",
+  "description": "UPI/DR/212052058142/ZOMATO/okhdfcbank/Payment",
+  "amount": 832.0,
+  "direction": "debit",
+  "balance": 123548.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-16",
+  "description": "POS 3776485287522455 SHELL FUEL STATION BANGALORE",
+  "amount": 1953.0,
+  "direction": "debit",
+  "balance": 121595.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-16",
+  "description": "POS 0731949611448525 INDIAN OIL PETROL HYDERABAD",
+  "amount": 2043.0,
+  "direction": "debit",
+  "balance": 119552.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-18",
+  "description": "UPI/DR/269632485195/STARBUCKS/paytm/Payment",
+  "amount": 222.0,
+  "direction": "debit",
+  "balance": 119330.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-18",
+  "description": "UPI/DR/613618119252/DMART/okhdfcbank/Payment",
+  "amount": 2394.0,
+  "direction": "debit",
+  "balance": 116936.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-18",
+  "description": "UPI/DR/719356445410/KAVYA NAIR/oksbi/Split",
+  "amount": 1547.0,
+  "direction": "debit",
+  "balance": 115389.0,
+  "category": "Transfers",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-19",
+  "description": "UPI/DR/791685381348/NAMMA METRO/paytm/Payment",
+  "amount": 478.0,
+  "direction": "debit",
+  "balance": 114911.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-20",
+  "description": "POS 2036227455007548 CULTFIT DELHI",
+  "amount": 1499.0,
+  "direction": "debit",
+  "balance": 113412.0,
+  "category": "Subscriptions",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-20",
+  "description": "POS 9138882205894850 FRESH PICK MART BANGALORE",
+  "amount": 1444.0,
+  "direction": "debit",
+  "balance": 111968.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-21",
+  "description": "POS 0868351109581481 LINKEDIN PREMIUM HYDERABAD",
+  "amount": 1650.0,
+  "direction": "debit",
+  "balance": 110318.0,
+  "category": "Subscriptions",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-21",
+  "description": "POS 1182551986205058 TRUFFLES CAFE BANGALORE",
+  "amount": 374.0,
+  "direction": "debit",
+  "balance": 109944.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-22",
+  "description": "UPI/DR/428550626139/ZOMATO/okaxis/Payment",
+  "amount": 327.0,
+  "direction": "debit",
+  "balance": 109617.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-22",
+  "description": "UPI/DR/951900202429/NYKAA/ibl/Payment",
+  "amount": 2698.0,
+  "direction": "debit",
+  "balance": 106919.0,
+  "category": "Shopping",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-22",
+  "description": "UPI/DR/590600813824/NYKAA/okaxis/Payment",
+  "amount": 832.0,
+  "direction": "debit",
+  "balance": 106087.0,
+  "category": "Shopping",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-24",
+  "description": "UPI/DR/367354936966/STARBUCKS/paytm/Payment",
+  "amount": 453.0,
+  "direction": "debit",
+  "balance": 105634.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-24",
+  "description": "UPI/DR/296269928903/BIGBASKET/okhdfcbank/Payment",
+  "amount": 1743.0,
+  "direction": "debit",
+  "balance": 103891.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-25",
+  "description": "POS 4088855839188868 THIRD WAVE COFFEE HYDERABAD",
+  "amount": 736.0,
+  "direction": "debit",
+  "balance": 103155.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-25",
+  "description": "UPI/DR/964141674488/UBER INDIA/okicici/Payment",
+  "amount": 267.0,
+  "direction": "debit",
+  "balance": 102888.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-27",
+  "description": "POS 2279969187963466 THIRD WAVE COFFEE MUMBAI",
+  "amount": 655.0,
+  "direction": "debit",
+  "balance": 102233.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-28",
+  "description": "POS 0107318538864853 MEGHANA FOODS PUNE",
+  "amount": 1351.0,
+  "direction": "debit",
+  "balance": 100882.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-28",
+  "description": "POS 8034342089670666 CHAI POINT MUMBAI",
+  "amount": 822.0,
+  "direction": "debit",
+  "balance": 100060.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-09-28",
+  "description": "POS 9691110106170538 BEWAKOOF BRANDS DELHI",
+  "amount": 3773.0,
+  "direction": "debit",
+  "balance": 96287.0,
+  "category": "Shopping",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-01",
+  "description": "SALARY CREDIT GLOBEX FINSERV OCT",
+  "amount": 120000.0,
+  "direction": "credit",
+  "balance": 216287.0,
+  "category": "Income",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-01",
+  "description": "UPI/DR/211472442174/ZOMATO/ibl/Payment",
+  "amount": 882.0,
+  "direction": "debit",
+  "balance": 215405.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-02",
+  "description": "UPI/DR/890432732889/NESTAWAY TECHNOLOGIES/paytm/Monthly",
+  "amount": 28000.0,
+  "direction": "debit",
+  "balance": 187405.0,
+  "category": "Rent & Housing",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-02",
+  "description": "POS 9793117046139473 SHELL FUEL STATION MUMBAI",
+  "amount": 1967.0,
+  "direction": "debit",
+  "balance": 185438.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-03",
+  "description": "UPI/DR/817151867184/SWIGGY/oksbi/Payment",
+  "amount": 432.0,
+  "direction": "debit",
+  "balance": 185006.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-03",
+  "description": "UPI/DR/934090668276/DMART/okaxis/Payment",
+  "amount": 463.0,
+  "direction": "debit",
+  "balance": 184543.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-04",
+  "description": "NEFT/N5760031185/SUNITA IYER/MOM",
+  "amount": 10000.0,
+  "direction": "debit",
+  "balance": 174543.0,
+  "category": "Transfers",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-04",
+  "description": "UPI/DR/450328562962/DMART/ybl/Payment",
+  "amount": 1908.0,
+  "direction": "debit",
+  "balance": 172635.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-05",
+  "description": "ACH/HDB FINANCIAL SERVICES/8340941510",
+  "amount": 12500.0,
+  "direction": "debit",
+  "balance": 160135.0,
+  "category": "EMI & Loans",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-05",
+  "description": "UPI/DR/305252896449/DMART/ybl/Payment",
+  "amount": 2292.0,
+  "direction": "debit",
+  "balance": 157843.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-05",
+  "description": "POS 0801029773315304 NATURES BASKET HYDERABAD",
+  "amount": 1502.0,
+  "direction": "debit",
+  "balance": 156341.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-05",
+  "description": "UPI/DR/361619103396/UBER INDIA/oksbi/Payment",
+  "amount": 407.0,
+  "direction": "debit",
+  "balance": 155934.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-05",
+  "description": "UPI/DR/755004897003/ROHIT VERMA/okicici/Split",
+  "amount": 1742.0,
+  "direction": "debit",
+  "balance": 154192.0,
+  "category": "Transfers",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-06",
+  "description": "UPI/DR/173349896010/HOTSTAR/paytm/Subscription",
+  "amount": 299.0,
+  "direction": "debit",
+  "balance": 153893.0,
+  "category": "Subscriptions",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-06",
+  "description": "POS 1576196915433160 HALDIRAMS MUMBAI",
+  "amount": 348.0,
+  "direction": "debit",
+  "balance": 153545.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-07",
+  "description": "UPI/DR/866035358741/PVR CINEMAS/okhdfcbank/Payment",
+  "amount": 848.0,
+  "direction": "debit",
+  "balance": 152697.0,
+  "category": "Entertainment",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-08",
+  "description": "UPI/DR/457072039397/JIO POSTPAID/paytm/Bill",
+  "amount": 699.0,
+  "direction": "debit",
+  "balance": 151998.0,
+  "category": "Bills & Utilities",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-08",
+  "description": "UPI/DR/287369281494/STARBUCKS/okaxis/Payment",
+  "amount": 615.0,
+  "direction": "debit",
+  "balance": 151383.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-08",
+  "description": "POS 3023384026171605 INDIAN OIL PETROL BANGALORE",
+  "amount": 1730.0,
+  "direction": "debit",
+  "balance": 149653.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-09",
+  "description": "REFUND AMAZON ORDER 402-881",
+  "amount": 1299.0,
+  "direction": "credit",
+  "balance": 150952.0,
+  "category": "Income",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-09",
+  "description": "UPI/DR/846497357804/AJIO/oksbi/Payment",
+  "amount": 3763.0,
+  "direction": "debit",
+  "balance": 147189.0,
+  "category": "Shopping",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-11",
+  "description": "UPI/DR/548076573894/TORRENT POWER/ybl/Bill",
+  "amount": 6450.0,
+  "direction": "debit",
+  "balance": 140739.0,
+  "category": "Bills & Utilities",
+  "is_anomaly": true,
+  "anomaly_type": "spike"
+ },
+ {
+  "date": "2026-10-12",
+  "description": "UPI/DR/226583534346/INDANE GAS/okaxis/Cylinder",
+  "amount": 905.0,
+  "direction": "debit",
+  "balance": 139834.0,
+  "category": "Bills & Utilities",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-12",
+  "description": "UPI/DR/341671905661/UBER INDIA/okicici/Payment",
+  "amount": 297.0,
+  "direction": "debit",
+  "balance": 139537.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-13",
+  "description": "UPI/DR/285604282702/BOOKMYSHOW/okaxis/Payment",
+  "amount": 463.0,
+  "direction": "debit",
+  "balance": 139074.0,
+  "category": "Entertainment",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-13",
+  "description": "UPI/DR/345929006750/MYNTRA/ybl/Order",
+  "amount": 15800.0,
+  "direction": "debit",
+  "balance": 123274.0,
+  "category": "Shopping",
+  "is_anomaly": true,
+  "anomaly_type": "spike"
+ },
+ {
+  "date": "2026-10-14",
+  "description": "UPI/DR/399120075919/UBER INDIA/okhdfcbank/Payment",
+  "amount": 433.0,
+  "direction": "debit",
+  "balance": 122841.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-15",
+  "description": "UPI/DR/556234621129/NETFLIX/okicici/Subscription",
+  "amount": 649.0,
+  "direction": "debit",
+  "balance": 122192.0,
+  "category": "Subscriptions",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-16",
+  "description": "UPI/DR/588263842434/SWIGGY/ibl/Payment",
+  "amount": 491.0,
+  "direction": "debit",
+  "balance": 121701.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-16",
+  "description": "UPI/DR/868448056438/NYKAA/okhdfcbank/Payment",
+  "amount": 971.0,
+  "direction": "debit",
+  "balance": 120730.0,
+  "category": "Shopping",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-17",
+  "description": "UPI/DR/034287149028/ZOMATO/oksbi/Payment",
+  "amount": 283.0,
+  "direction": "debit",
+  "balance": 120447.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-17",
+  "description": "UPI/DR/727053295635/AMAZON SELLER SERVICES/okaxis/Payment",
+  "amount": 3266.0,
+  "direction": "debit",
+  "balance": 117181.0,
+  "category": "Shopping",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-17",
+  "description": "POS 9120934558370336 APOLLO PHARMACY BANGALORE",
+  "amount": 9400.0,
+  "direction": "debit",
+  "balance": 107781.0,
+  "category": "Health",
+  "is_anomaly": true,
+  "anomaly_type": "spike"
+ },
+ {
+  "date": "2026-10-18",
+  "description": "UPI/DR/863182602351/DMART/ibl/Payment",
+  "amount": 2060.0,
+  "direction": "debit",
+  "balance": 105721.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-18",
+  "description": "UPI/DR/870074560752/THYROCARE/paytm/Payment",
+  "amount": 1450.0,
+  "direction": "debit",
+  "balance": 104271.0,
+  "category": "Health",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-19",
+  "description": "UPI/DR/878782623215/ARJUN REDDY/paytm/Split",
+  "amount": 424.0,
+  "direction": "debit",
+  "balance": 103847.0,
+  "category": "Transfers",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-19",
+  "description": "UPI/DR/845311198527/ZOMATO/okaxis/Order",
+  "amount": 568.0,
+  "direction": "debit",
+  "balance": 103279.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-19",
+  "description": "UPI/DR/170077808783/ZOMATO/ibl/Order",
+  "amount": 568.0,
+  "direction": "debit",
+  "balance": 102711.0,
+  "category": "Food & Dining",
+  "is_anomaly": true,
+  "anomaly_type": "duplicate"
+ },
+ {
+  "date": "2026-10-20",
+  "description": "POS 5480320389928012 CULTFIT PUNE",
+  "amount": 1499.0,
+  "direction": "debit",
+  "balance": 101212.0,
+  "category": "Subscriptions",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-20",
+  "description": "UPI/DR/219878504862/ZOMATO/okaxis/Payment",
+  "amount": 785.0,
+  "direction": "debit",
+  "balance": 100427.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-20",
+  "description": "UPI/DR/222430808278/DMART/okhdfcbank/Payment",
+  "amount": 1182.0,
+  "direction": "debit",
+  "balance": 99245.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-20",
+  "description": "UPI/DR/685815732193/NAMMA METRO/okaxis/Payment",
+  "amount": 382.0,
+  "direction": "debit",
+  "balance": 98863.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-20",
+  "description": "POS 1454700051717268 BEWAKOOF BRANDS PUNE",
+  "amount": 3514.0,
+  "direction": "debit",
+  "balance": 95349.0,
+  "category": "Shopping",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-20",
+  "description": "UPI/DR/463435864017/TATA 1MG/oksbi/Payment",
+  "amount": 797.0,
+  "direction": "debit",
+  "balance": 94552.0,
+  "category": "Health",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-21",
+  "description": "POS 0055238040959759 LINKEDIN PREMIUM MUMBAI",
+  "amount": 1650.0,
+  "direction": "debit",
+  "balance": 92902.0,
+  "category": "Subscriptions",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-21",
+  "description": "POS 5746920689803179 HALDIRAMS PUNE",
+  "amount": 1417.0,
+  "direction": "debit",
+  "balance": 91485.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-21",
+  "description": "POS 1769317434138553 SHELL FUEL STATION PUNE",
+  "amount": 2404.0,
+  "direction": "debit",
+  "balance": 89081.0,
+  "category": "Transport",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-22",
+  "description": "POS 6114195397147266 SHARMA DHABA PUNE",
+  "amount": 861.0,
+  "direction": "debit",
+  "balance": 88220.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-23",
+  "description": "POS 4904547891020569 BIRYANI BLUES MUMBAI",
+  "amount": 347.0,
+  "direction": "debit",
+  "balance": 87873.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-24",
+  "description": "UPI/DR/825943159633/ZOMATO/okaxis/Payment",
+  "amount": 263.0,
+  "direction": "debit",
+  "balance": 87610.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-24",
+  "description": "POS 5980681379678758 SRI BALAJI STORES BANGALORE",
+  "amount": 801.0,
+  "direction": "debit",
+  "balance": 86809.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-24",
+  "description": "POS 3901056484158865 FRESH PICK MART BANGALORE",
+  "amount": 844.0,
+  "direction": "debit",
+  "balance": 85965.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-24",
+  "description": "UPI/DR/246132985020/GOA BEACH RESORTS/okaxis/Booking",
+  "amount": 18500.0,
+  "direction": "debit",
+  "balance": 67465.0,
+  "category": "Entertainment",
+  "is_anomaly": true,
+  "anomaly_type": "new_merchant"
+ },
+ {
+  "date": "2026-10-26",
+  "description": "POS 9531957107482538 THIRD WAVE COFFEE HYDERABAD",
+  "amount": 626.0,
+  "direction": "debit",
+  "balance": 66839.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-26",
+  "description": "UPI/DR/523695158311/ZEPTO/okhdfcbank/Payment",
+  "amount": 597.0,
+  "direction": "debit",
+  "balance": 66242.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-26",
+  "description": "POS 8979989852036284 LIFESTYLE STORES DELHI",
+  "amount": 2888.0,
+  "direction": "debit",
+  "balance": 63354.0,
+  "category": "Shopping",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-27",
+  "description": "UPI/DR/318643992295/STARBUCKS/okicici/Payment",
+  "amount": 445.0,
+  "direction": "debit",
+  "balance": 62909.0,
+  "category": "Food & Dining",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-27",
+  "description": "UPI/DR/707129085447/BLINKIT/okicici/Payment",
+  "amount": 1379.0,
+  "direction": "debit",
+  "balance": 61530.0,
+  "category": "Groceries",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ },
+ {
+  "date": "2026-10-28",
+  "description": "UPI/DR/082811266035/FLIPKART/oksbi/Payment",
+  "amount": 901.0,
+  "direction": "debit",
+  "balance": 60629.0,
+  "category": "Shopping",
+  "is_anomaly": false,
+  "anomaly_type": ""
+ }
+]
