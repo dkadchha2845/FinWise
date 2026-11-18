@@ -253,15 +253,6 @@ FinWise/
 
 ---
 
-## Team
-
-| Name | Role |
-|---|---|
-| **Dhrumil Kadchha** | Student, Dept. of CSE, Dayananda Sagar University |
-| **Prathameshjee Sisodia** | Student, Dept. of CSE, Dayananda Sagar University |
-| **Pratyush Chauhan** | Student, Dept. of CSE, Dayananda Sagar University |
-| **Akmal Ahmad** | Assistant Professor, Dept. of CSE, Dayananda Sagar University (Guide) |
-
 ## License
 
 Released under the [MIT License](LICENSE).

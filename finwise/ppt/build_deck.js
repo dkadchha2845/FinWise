@@ -189,6 +189,30 @@ async function orb(size = 600) {
   });
   notes(s, "We surveyed five families of work. Finance LLMs focus on market text; tool-use methods execute generated code; hallucination detectors need extra LLM calls; statistical detectors lack context. FinWise combines tool use, robust statistics and a lightweight numeric verifier for personal finance.");
 
+  // ================================================================ 4b. Problem formulation
+  s = pres.addSlide({ masterName: "CONTENT_LIGHT", sectionTitle: "Introduction" });
+  s.addText("Problem formulation", { placeholder: "title" });
+  text(s, [
+    { text: "Statement  D = { tᵢ = (dateᵢ, narrationᵢ, amountᵢ, directionᵢ) },  i = 1…n", options: { bold: true, breakLine: true } },
+    { text: "15 spending categories K  ·  merchant m(sᵢ) extracted from each narration  ·  only a masked view μ(sᵢ) may leave the system", options: { color: MUTED } },
+  ], { x: 0.6, y: 1.55, w: 12.1, h: 0.85, fontSize: 16, paraSpaceAfter: 4 });
+  const tasks = [["T1", "Categorisation", "Learn f(narration, direction, amount) → k ∈ K. Maximise accuracy while minimising tokens sent to an external LLM.", C.accent5],
+    ["T2", "Anomaly explanation", "Find the expenses A ⊆ D a user would find unusual, with a reason and an action consistent with D.", C.accent3],
+    ["T3", "Grounded Q&A", "Answer question q with text y that is correct and numerically faithful: every claim c ∈ C(y) is supported by a computed fact f within a tolerance τ.", C.accent1]];
+  tasks.forEach(([k, h, b, col], i) => {
+    const x = 0.6 + i * 4.1;
+    card(s, x, 2.6, 3.8, 2.5, { name: k });
+    text(s, k, { x: x + 0.3, y: 2.8, w: 1.0, h: 0.6, fontSize: 28, bold: true, color: col });
+    text(s, h, { x: x + 1.15, y: 2.85, w: 2.5, h: 0.5, fontSize: 18, bold: true, valign: "middle" });
+    text(s, b, { x: x + 0.3, y: 3.5, w: 3.25, h: 1.5, fontSize: 14, color: MUTED });
+  });
+  card(s, 0.6, 5.35, 12.1, 1.25, { fill: "EFEAFF", line: "D8CCFF", name: "GFS definition" });
+  text(s, [
+    { text: "Grounded Faithfulness Score:  GFS(y) = |{ c ∈ C(y) : c supported by F }| ÷ |C(y)|", options: { bold: true, color: C.accent1, breakLine: true } },
+    { text: "Tolerance τ: ₹ amounts ±max(1, 1%) · percentages ±0.6 pt · ratios ±0.15.  GFS = 1 when an answer states no numbers.", options: { color: MUTED, fontSize: 14 } },
+  ], { x: 0.9, y: 5.45, w: 11.6, h: 1.05, fontSize: 17, paraSpaceAfter: 4, valign: "middle" });
+  notes(s, "This is the formal problem from Section III of the paper. Three tasks: categorisation under a token budget, anomaly explanation, and grounded question answering. GFS measures how well an answer satisfies the faithfulness constraint of T3.");
+
   // ================================================================ 5. Key idea
   pres.addSection({ title: "Methodology" });
   s = pres.addSlide({ masterName: "SECTION_DARK", sectionTitle: "Methodology" });
@@ -299,8 +323,41 @@ async function orb(size = 600) {
     { text: "GFS = supported numeric claims ÷ all numeric claims", options: { fontSize: 16, color: C.accent1, bold: true, breakLine: true } },
     { text: "Tolerance: ₹ ±1% · percentages ±0.6 pt · ratios ±0.15. No extra LLM calls needed.", options: { fontSize: 14, color: MUTED } },
   ], { x: 0.95, y: 4.9, w: 6.8, h: 1.6, paraSpaceAfter: 6 });
-  text(s, "11 tools: spending summary, category spend, top merchants, compare months, find transactions, subscriptions, upcoming bills, unusual expenses, budget (50/30/20), health score, spending patterns.", { x: 8.3, y: 4.75, w: 4.4, h: 1.9, fontSize: 14, color: MUTED });
+  text(s, "Each question costs exactly 2 LLM calls (+ at most 1 regeneration), whatever the statement length. Verification is a deterministic parser: no extra model call, O(|claims| × |facts|).", { x: 8.3, y: 4.75, w: 4.4, h: 1.9, fontSize: 14, color: MUTED });
   notes(s, "The LLM never sees the raw statement during Q&A, so prompt size does not grow with the statement. The verifier is a deterministic parser: it handles Indian formats such as lakh and k. GFS is our proposed metric; 1.0 means every number was supported.");
+
+  // ================================================================ 9b. Tools
+  s = pres.addSlide({ masterName: "CONTENT_LIGHT", sectionTitle: "Methodology" });
+  s.addText("Eleven typed analytics tools", { placeholder: "title" });
+  const th = (t) => ({ text: t, options: { bold: true, color: C.background1, fill: { color: C.text2 } } });
+  const tools = [["spending_summary", "month", "Totals, savings rate, spend by category"], ["category_spend", "category, month", "Total, mean, max, top merchants"],
+    ["top_merchants", "n, month, category", "Ranked merchants with totals"], ["compare_months", "month A, month B", "Per-category change (₹ and %)"],
+    ["find_transactions", "text, category, range, month", "Matching rows and their total"], ["subscriptions", "–", "Recurring services, monthly and annual cost"],
+    ["upcoming_bills", "–", "Recurring payments due in the next 30 days"], ["unusual_expenses", "–", "Flagged anomalies with computed reasons"],
+    ["budget_suggestion", "–", "50/30/20 targets vs current averages"], ["health_score", "–", "0–100 score and its five components"],
+    ["spending_patterns", "–", "Weekday vs weekend, recurring, month-over-month"]];
+  s.addTable([[th("Tool"), th("Arguments"), th("Returns")], ...tools.map(([a, b, c]) => [{ text: a, options: { fontFace: "Courier New", bold: true } }, b, c])], {
+    x: 0.6, y: 1.55, w: 12.1, colW: [3.4, 3.4, 5.3], fontSize: 14, color: C.text1, fontFace: "+mn-lt",
+    border: { type: "solid", pt: 0.75, color: "DADDEB" }, fill: { color: C.background1 }, rowH: 0.42, valign: "middle", margin: 0.06,
+  });
+  notes(s, "The router chooses exactly one of these tools and returns typed JSON arguments. Arguments are validated: relative months like 'latest' are resolved, and category names are fuzzy-matched. The model never writes code.");
+
+  // ================================================================ 9c. Health score + patterns
+  s = pres.addSlide({ masterName: "CONTENT_LIGHT", sectionTitle: "Methodology" });
+  s.addText("Spending patterns and a transparent health score", { placeholder: "title" });
+  const hs = [["Savings rate r", "40 × r / 30", "40"], ["Discretionary share d", "20 − 0.5 × max(0, d − 30)", "20"], ["Subscriptions u (% of income)", "15 − 3 × max(0, u − 3)", "15"],
+    ["Unusual expenses nₐ", "10 − 1.5 × nₐ", "10"], ["Stability (CV of monthly spend)", "15 − 30 × CV", "15"]];
+  s.addTable([[th("Component"), th("Points (clipped to 0…max)"), th("Max")], ...hs], {
+    x: 0.6, y: 1.55, w: 7.4, colW: [3.0, 3.6, 0.8], fontSize: 14, color: C.text1, fontFace: "+mn-lt",
+    border: { type: "solid", pt: 0.75, color: "DADDEB" }, fill: { color: C.background1 }, rowH: 0.55, valign: "middle", margin: 0.08,
+  });
+  text(s, "Labels: ≥ 80 Excellent · ≥ 65 Good · ≥ 45 Fair · otherwise Needs attention", { x: 0.6, y: 5.1, w: 7.4, h: 0.4, fontSize: 14, color: MUTED });
+  card(s, 8.4, 1.55, 4.3, 5.0, { name: "Recurring rule" });
+  badge(s, 8.7, 1.85, "FaRepeat", 0.62, C.accent5);
+  text(s, "Recurring payment rule", { x: 9.5, y: 1.9, w: 3.0, h: 0.5, fontSize: 18, bold: true, valign: "middle" });
+  const rr = ["Seen in ≥ M − 1 of M months", "Median gap of 20–40 days", "≤ 1.5 payments per month", "Amount CV ≤ 0.35 for bills, subscriptions, rent and EMI; ≤ 0.03 otherwise", "Next due date = last payment + median gap"];
+  text(s, rr.map((t, i) => ({ text: t, options: { bullet: true, breakLine: i < rr.length - 1 } })), { x: 8.7, y: 2.7, w: 3.8, h: 3.7, fontSize: 14, paraSpaceAfter: 8 });
+  notes(s, "Every point of the health score traces back to a measurable behaviour, which is what makes it explainable. Recurring-payment detection powers the subscriptions and upcoming-bills tools.");
 
   // ================================================================ 10. Novelty
   s = pres.addSlide({ masterName: "SECTION_DARK", sectionTitle: "Methodology" });
@@ -349,7 +406,7 @@ async function orb(size = 600) {
   pres.addSection({ title: "Results" });
   s = pres.addSlide({ masterName: "CONTENT_LIGHT", sectionTitle: "Results" });
   s.addText("Dataset and experimental setup", { placeholder: "title" });
-  [["535", "labelled INR transactions over 3 months"], ["3", "personas and file formats: CSV, Excel, PDF"], ["15", "planted anomalies: 9 spikes, 3 duplicates, 3 new merchants"], ["30", "benchmark questions with computed answers"]]
+  [["535", "labelled INR transactions, 3 personas, 3 months, CSV/XLSX/PDF"], ["88", "unique merchants, 46 of them long-tail (not in rules)"], ["15", "planted anomalies: 9 spikes, 3 duplicates, 3 new merchants"], ["30", "benchmark questions with computed answers"]]
     .forEach(([b, l], i) => stat(s, 0.6 + i * 3.1, 1.6, 2.8, b, l, [C.accent1, C.accent5, C.accent6, C.accent2][i]));
   const exps = [["E1", "Categorisation", "Rules-only vs LLM-only vs hybrid: accuracy, macro-F1, calls, tokens"],
     ["E2", "Anomaly detection", "Global z, per-category z vs FinWise, plus an ablation of each rule"],
@@ -370,10 +427,27 @@ async function orb(size = 600) {
     { name: "Accuracy", labels: ["Rules only", "LLM only", "Hybrid (ours)"], values: [0.643, 0.933, 0.972] },
     { name: "Macro-F1", labels: ["Rules only", "LLM only", "Hybrid (ours)"], values: [0.676, 0.858, 0.967] },
   ], { x: 0.6, y: 1.55, w: 7.4, h: 5.1, barDir: "col", chartColors: [HEX.accent1, HEX.accent2], ...chartStyle("Accuracy and macro-F1 (535 transactions, 15 classes)"), objectName: "E1 chart" });
-  stat(s, 8.6, 1.6, 4.1, "97.2%", "accuracy (macro-F1 0.967), vs 64.3% for rules and 93.3% for LLM-only");
+  stat(s, 8.6, 1.6, 4.1, "97.2%", "accuracy, 95% CI [95.4, 98.3]; LLM-only [90.8, 95.1] does not overlap");
   stat(s, 8.6, 3.35, 4.1, "−49%", "tokens vs LLM-only (6,832 vs 13,319) with half the API calls", C.accent5);
   stat(s, 8.6, 5.1, 4.1, "36%", "of transactions needed the LLM (191 of 535)", C.accent3);
-  notes(s, "Rules alone fail on the long tail. LLM-only mislabels some easy merchants and costs twice as much. The hybrid gets the best of both.");
+  notes(s, "Rules alone fail on the long tail. LLM-only mislabels some easy merchants and costs twice as much. The hybrid gets the best of both, and its Wilson confidence interval does not overlap the LLM-only one.");
+
+  // ================================================================ 14b. Per-category + errors
+  s = pres.addSlide({ masterName: "CONTENT_LIGHT", sectionTitle: "Results" });
+  s.addText("E1 deep-dive: per-category F1 and error analysis", { placeholder: "title" });
+  const pc = [["Food & Dining", 0.994], ["Transport", 0.975], ["Groceries", 0.952], ["Shopping", 0.891], ["Subscriptions", 0.962], ["Transfers", 1], ["Bills & Utilities", 1],
+    ["Income", 1], ["Entertainment", 1], ["Health", 0.966], ["Rent & Housing", 0.8], ["EMI, Cash, Education", 1]];
+  s.addChart(pres.charts.BAR, [{ name: "F1", labels: pc.map((x) => x[0]), values: pc.map((x) => x[1]) }], {
+    x: 0.6, y: 1.5, w: 6.9, h: 5.2, barDir: "bar", chartColors: [HEX.accent1], ...chartStyle("Hybrid categoriser: F1 per category"),
+    dataLabelFormatCode: "0.00", valAxisLabelFormatCode: "0.0", valAxisMinVal: 0.6, valAxisMaxVal: 1.0, showLegend: false, catAxisOrientation: "maxMin", barGapWidthPct: 40, objectName: "Per-category chart" });
+  stat(s, 8.0, 1.55, 4.7, "344 / 344", "rule-labelled transactions correct (100%)", C.accent5);
+  stat(s, 8.0, 3.15, 4.7, "92.1%", "accuracy on the 191 LLM-labelled transactions (46 merchants)", C.accent1);
+  card(s, 8.0, 4.85, 4.7, 1.8, { name: "Error breakdown" });
+  text(s, [
+    { text: "All 15 errors come from 6 ambiguous merchants", options: { bold: true, breakLine: true } },
+    { text: "kirana store → Shopping (4) · e-bike rental → Shopping (4) · rental platform → Subscriptions (3) · snack chain → Groceries (2) · 2 others. One user correction fixes each one permanently.", options: { color: MUTED, fontSize: 13 } },
+  ], { x: 8.25, y: 4.95, w: 4.25, h: 1.6, fontSize: 15, paraSpaceAfter: 4 });
+  notes(s, "Nine categories are perfect. Errors concentrate on genuinely ambiguous long-tail names. Rules were never wrong, which is why cascading rules before the LLM improves accuracy, not just cost.");
 
   // ================================================================ 15. E2
   s = pres.addSlide({ masterName: "CONTENT_LIGHT", sectionTitle: "Results" });
@@ -390,8 +464,22 @@ async function orb(size = 600) {
     text(s, h, { x: 8.85, y: y + 0.12, w: 3.7, h: 0.4, fontSize: 15, bold: true });
     text(s, b, { x: 8.85, y: y + 0.55, w: 3.7, h: 0.45, fontSize: 14, color: MUTED });
   });
-  text(s, "z-score baselines reach recall of only 0.33–0.40: big outliers mask themselves.", { x: 8.6, y: 6.2, w: 4.1, h: 0.6, fontSize: 12, italic: true, color: MUTED });
+  text(s, "Recall 15/15 (95% CI 0.80–1.00) vs 6/15 for global z; Fisher p = 7 × 10⁻⁴.", { x: 8.6, y: 6.2, w: 4.1, h: 0.6, fontSize: 12, italic: true, color: MUTED });
   notes(s, "FinWise reaches F1 1.00 with true categories and 0.94 end-to-end with predicted categories. The ablation shows habitual-merchant suppression and the duplicate rule matter most. Honest caveat: thresholds were tuned on this synthetic data.");
+
+  // ================================================================ 15b. Explanations
+  s = pres.addSlide({ masterName: "CONTENT_LIGHT", sectionTitle: "Results" });
+  s.addText("Generated anomaly explanations", { placeholder: "title" });
+  const ex = [["Duplicate", "₹649 charged twice at Netflix on 02 Oct", "“Indicates a duplicate transaction; request a refund from Netflix support.”"],
+    ["Spike (merchant)", "₹2,380 at Uber is 6.4× the usual ₹373", "“Check the receipt for distance or surge pricing.”"],
+    ["Spike (category)", "₹4,860 electricity bill is 4.6× the median utility spend of ₹1,059", "“Inspect the bill for meter-reading errors.”"],
+    ["New merchant", "First payment to Croma, ₹18,990, above 95% of expenses", "“Verify the purchase; set a limit for new merchants.”"]];
+  s.addTable([[th("Type"), th("Computed reason (detector)"), th("Explanation / action (LLM, verified)")], ...ex.map(([a, b, c]) => [{ text: a, options: { bold: true } }, b, { text: c, options: { italic: true } }])], {
+    x: 0.6, y: 1.55, w: 12.1, colW: [2.2, 4.8, 5.1], fontSize: 14, color: C.text1, fontFace: "+mn-lt",
+    border: { type: "solid", pt: 0.75, color: "DADDEB" }, fill: { color: C.background1 }, rowH: [0.6, 0.85, 0.85, 0.85, 0.85], valign: "middle", margin: 0.1,
+  });
+  text(s, "The detector supplies the type and the exact numbers; the LLM adds a plausible cause and an action. Every number in the generated text passed verification.", { x: 0.6, y: 6.2, w: 12.1, h: 0.55, fontSize: 14, color: MUTED });
+  notes(s, "These are real outputs on the Aarav statement. The numbers in the explanations come from the detector, which is why they are always right.");
 
   // ================================================================ 16. E3
   s = pres.addSlide({ masterName: "CONTENT_LIGHT", sectionTitle: "Results" });
@@ -400,10 +488,25 @@ async function orb(size = 600) {
     { name: "Answer accuracy", labels: ["Context stuffing", "Text-to-Analytics", "+ Verifier (ours)"], values: [0.25, 0.9, 0.9] },
     { name: "Claim precision", labels: ["Context stuffing", "Text-to-Analytics", "+ Verifier (ours)"], values: [0.517, 0.968, 1.0] },
   ], { x: 0.6, y: 1.55, w: 7.4, h: 5.1, barDir: "col", chartColors: [HEX.accent1, HEX.accent2], ...chartStyle("30 questions across 3 statements"), objectName: "E3 chart" });
-  stat(s, 8.6, 1.6, 4.1, "25% → 90%", "answer accuracy: context stuffing vs Text-to-Analytics");
+  stat(s, 8.6, 1.6, 4.1, "25% → 90%", "answer accuracy (95% CI 74–97%), p = 3.6×10⁻⁶");
   stat(s, 8.6, 3.35, 4.1, "100%", "of answers fully grounded with the verifier (GFS 0.983 → 1.000)", C.accent5);
   stat(s, 8.6, 5.1, 4.1, "≈5× fewer", "tokens per question (≈1.25k vs 6.3k)", C.accent3);
   notes(s, "Context stuffing could not even run on the largest statement: all 10 requests exceeded the API's per-request limit. The three wrong Text-to-Analytics answers came from upstream categorisation errors, not hallucination; the verifier guarantees faithfulness to computed facts.");
+
+  // ================================================================ 16b. Discussion
+  s = pres.addSlide({ masterName: "CONTENT_LIGHT", sectionTitle: "Results" });
+  s.addText("Discussion: error analysis, cost and design lessons", { placeholder: "title" });
+  const disc = [["FaMagnifyingGlassChart", "Faithful ≠ correct", "All 3 wrong answers had GFS = 1: they faithfully reported totals affected by an upstream category error. The verifier guarantees faithfulness to the computation, not the correctness of labels.", C.accent6],
+    ["FaCoins", "Cost and scalability", "Cost grows with questions and new merchants, not statement length. A 12-month statement (≈800 txns) still needs ≈1.25k tokens per question; stuffing would need ≈4× the 6.3k seen here.", C.accent5],
+    ["FaLightbulb", "Design lessons", "A narrow typed tool vocabulary was enough for every question. Deterministic verification is cheap enough for every response. Cascades improve accuracy as well as cost.", C.accent1]];
+  disc.forEach(([ic, h, b, col], i) => {
+    const x = 0.6 + i * 4.1;
+    card(s, x, 1.6, 3.8, 3.9, { name: h });
+    badge(s, x + 0.3, 1.9, ic, 0.66, col);
+    text(s, h, { x: x + 0.3, y: 2.75, w: 3.25, h: 0.5, fontSize: 19, bold: true });
+    text(s, b, { x: x + 0.3, y: 3.3, w: 3.25, h: 3.1, fontSize: 15, color: MUTED });
+  });
+  notes(s, "From the Discussion section of the paper. Be clear about what the verifier guarantees and what it does not.");
 
   // ================================================================ 17. Demo flow
   s = pres.addSlide({ masterName: "CONTENT_LIGHT", sectionTitle: "Results" });
@@ -430,16 +533,16 @@ async function orb(size = 600) {
   // ================================================================ 18. Limitations + future
   pres.addSection({ title: "Conclusion" });
   s = pres.addSlide({ masterName: "CONTENT_LIGHT", sectionTitle: "Conclusion" });
-  s.addText("Limitations and future work", { placeholder: "title" });
+  s.addText("Threats to validity and future work", { placeholder: "title" });
   const lim = ["Synthetic statements; detector thresholds tuned on the same personas",
+    "Small, templated Q&A benchmark (30 questions)",
     "Verifier checks numbers, not qualitative claims (“largest expense”)",
-    "Faithful ≠ correct: a wrong category stays wrong, though verified",
     "Single LLM evaluated; latency dominated by free-tier throttling"];
   const fut = ["Real, consented statements via India's Account Aggregator framework",
     "User study of trust and comprehension",
     "Hindi and code-mixed questions",
     "Semantic claim verification and on-device small models for full privacy"];
-  [[lim, "Limitations", C.accent6, 0.6, "FaTriangleExclamation"], [fut, "Future work", C.accent5, 6.85, "FaFlask"]].forEach(([items, h, col, x, ic]) => {
+  [[lim, "Threats to validity", C.accent6, 0.6, "FaTriangleExclamation"], [fut, "Future work", C.accent5, 6.85, "FaFlask"]].forEach(([items, h, col, x, ic]) => {
     card(s, x, 1.6, 5.85, 5.0, { name: h });
     badge(s, x + 0.35, 1.9, ic, 0.62, col);
     text(s, h, { x: x + 1.15, y: 1.95, w: 4.3, h: 0.55, fontSize: 22, bold: true, valign: "middle" });
