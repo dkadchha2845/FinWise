@@ -28,3 +28,4 @@ dist/
 .idea/
 .claude/
 *_backup.tex
+finwise/paper/finwise_ieee_alt.*
