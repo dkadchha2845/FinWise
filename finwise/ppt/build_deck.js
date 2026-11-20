@@ -43,7 +43,7 @@ async function orb(size = 600) {
   const pres = new pptxgen();
   pres.layout = "LAYOUT_WIDE";
   pres.title = "FinWise: Intelligent Financial Transaction Explainer";
-  pres.author = "Dhrumil Kadchha, Prathameshjee Sisodia, Pratyush Chauhan, Akmal Ahmad";
+  pres.author = "Dhrumil Kadchha, Prathameshjee Sisodia, Pratyush Chauhan, Manu T J, Akmal Ahmad";
   pres.subject = "LLM Mini Project, Dept. of CSE, Dayananda Sagar University";
   pres.theme = { headFontFace: THEME.headFontFace, bodyFontFace: THEME.bodyFontFace };
   const C = pres.SchemeColor;
@@ -118,7 +118,7 @@ async function orb(size = 600) {
   s.addText("FinWise", { placeholder: "title" });
   s.addText("Intelligent Financial Transaction Explainer: plain-English insights from your bank statement, with every number verified", { placeholder: "body" });
   text(s, [
-    { text: "Dhrumil Kadchha  ·  Prathameshjee Sisodia  ·  Pratyush Chauhan", options: { bold: true, color: C.background1, breakLine: true } },
+    { text: "Dhrumil Kadchha  ·  Prathameshjee Sisodia  ·  Pratyush Chauhan  ·  Manu T J", options: { bold: true, color: C.background1, breakLine: true } },
     { text: "Guide: Akmal Ahmad, Assistant Professor", options: { color: "C9CCE6", breakLine: true } },
     { text: "Dept. of CSE, Dayananda Sagar University, Bengaluru  ·  LLM Mini Project 2026", options: { color: "A3A8C8" } },
   ], { x: 0.8, y: 5.1, w: 9, h: 1.3, fontSize: 16, paraSpaceAfter: 4 });
